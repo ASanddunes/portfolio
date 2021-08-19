@@ -1,0 +1,149 @@
+/* LAYOUT */
+body {
+  background-image: url("https://i.pinimg.com/originals/b1/aa/2c/b1aa2c6322c087183a432a7ede2695ae.gif");
+	background-repeat: repeat;
+	background-position: top center;
+  background-size:cover;
+  height:100%;
+  font-family: "Kabel ITC", monospace;
+  color:#FFFFFF;
+	text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+  filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column {
+  float: left;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+/* Left column */
+.column.left {
+  width: 100%;
+  z-index: 5;
+  justify-content: center;
+}
+
+/* Column with main content*/
+.column.right {
+  width: 100%;
+}
+
+/* Puts columns in a row */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* TYPOGRAPHY */
+h1 {
+	font-size: 40px;
+	letter-spacing: 1.0px;
+	margin-left: 30px;
+}
+
+h2 {
+  font-size: 16px;
+  letter-spacing: 1.0px;
+  margin-left: 35px;
+}
+
+h3 {
+	font-size: 14px;
+	letter-spacing: 1.0px;
+	margin-top: 5px;
+	margin-left: 35px;
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  letter-spcing: 1.0px;
+  margin-left: 35px;
+}
+
+a
+{
+	color: rgba( 255, 255, 255, .75);
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:rgba( 181, 71, 60);
+}
+
+/* SLIDER */
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0px auto 0 auto;
+  /*border-radius: 4px;*/
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: inline;
+  float: left;
+  /*margin: 0;
+  padding: 0;*/
+  width: 1000px;
+  height: 631px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  /*background: #2a2a2a;*/
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+}
+
+/*a.control_prev {
+  border-radius: 0 2px 2px 0;
+}*/
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1090px) {
+  .column.right {
+    display: none;
+  }
+}

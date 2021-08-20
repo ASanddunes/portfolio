@@ -1,4 +1,4 @@
-/* LAYOUT */
+/* FOR ALL PAGES */
 body {
   background-image: url("https://i.pinimg.com/originals/b1/aa/2c/b1aa2c6322c087183a432a7ede2695ae.gif");
 	background-repeat: repeat;
@@ -42,6 +42,17 @@ body {
   clear: both;
 }
 
+@media only screen and (max-width: 768px) {
+  .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+  .column.left, .column.right {
+    width: 100%;
+  }
+}
 
 /* TYPOGRAPHY */
 h1 {
@@ -80,7 +91,91 @@ a:hover
 {
 	color:rgba( 181, 71, 60);
 }
+/* END */
 
+
+/* INDEX MAIN PAGE */
+/* hardware accelatator class */	
+	.trans3d
+	{
+		-webkit-transform-style: preserve-3d;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform-style: preserve-3d;
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform-style:preserve-3d;
+		-ms-transform: translate3d(0, 0, 0);
+		transform-style:preserve-3d;
+		transform: translate3d(0, 0, 0);
+
+		/*-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility:hidden;
+		backface-visibility:hidden;*/
+	}
+	
+	#contentContainer
+	{
+		position:absolute;
+		margin-left:-500px;
+		margin-top:-500px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
+	}
+
+@media only screen and (max-width: 768px) {
+  #contentContainer {
+    margin-top:-390px;
+  }
+}
+
+
+	#carouselContainer
+	{
+		position:absolute;
+		margin-left:-500px;
+		margin-top:-500px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
+	}
+	
+	.carouselItem
+	{
+		width:320px;
+		height:130px;
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-90px;
+		visibility:hidden;
+	}
+	
+	.carouselItemInner
+	{
+		width:330px;
+		height:140px;
+		position:absolute;
+		background-color:rgba(255, 255, 255, .0);
+		color:black;
+		font-size:30px;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-160px;
+		text-align:center;
+	}
+/* END */
+
+
+/* ERROR PAGE */
+
+/* END */
+
+/* PORTFOLIO LETTING GO */
 /* SLIDER */
 #slider {
   position: relative;
@@ -147,3 +242,4 @@ a.control_next {
     display: none;
   }
 }
+/* END */

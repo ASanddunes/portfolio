@@ -11,45 +11,44 @@ body {
   filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
-.row {
+.website-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  clear:both;
 }
 
-.column {
-  float: left;
+.website-column {
+  /*float: left;*/
   padding: 30px;
   margin-top: 30px;
 }
 
 /* Left column */
-.column.left {
-  width: 100%;
+.website-column.left {
+  width: 25%;
   z-index: 5;
   justify-content: center;
 }
 
 /* Column with main content*/
-.column.right {
-  width: 100%;
+.website-column.right {
+  width: 75%;
 }
 
 /* Puts columns in a row */
-.row:after {
+.website-row:after {
   content: "";
   display: table;
   clear: both;
 }
 
 @media only screen and (max-width: 768px) {
-  .row {
+  .website-row {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
   
-  .column.left, .column.right {
+  .website-column.left, .website-column.right {
     width: 100%;
   }
 }
@@ -94,8 +93,7 @@ a:hover {
 
 /* INDEX MAIN PAGE */
 /* hardware accelatator class */	
-	.trans3d
-	{
+	.trans3d {
 		-webkit-transform-style: preserve-3d;
 		-webkit-transform: translate3d(0, 0, 0);
 		-moz-transform-style: preserve-3d;
@@ -111,8 +109,7 @@ a:hover {
 		backface-visibility:hidden;*/
 	}
 	
-	#contentContainer
-	{
+	#contentContainer {
 		position:absolute;
 		margin-left:-500px;
 		margin-top:-500px;
@@ -128,9 +125,7 @@ a:hover {
   }
 }
 
-
-	#carouselContainer
-	{
+	#carouselContainer {
 		position:absolute;
 		margin-left:-500px;
 		margin-top:-500px;
@@ -140,8 +135,7 @@ a:hover {
 		height:1000px;
 	}
 	
-	.carouselItem
-	{
+	.carouselItem {
 		width:320px;
 		height:130px;
 		position:absolute;
@@ -152,8 +146,7 @@ a:hover {
 		visibility:hidden;
 	}
 	
-	.carouselItemInner
-	{
+	.carouselItemInner {
 		width:330px;
 		height:140px;
 		position:absolute;
@@ -168,10 +161,6 @@ a:hover {
 	}
 /* END */
 
-
-/* ERROR PAGE */
-
-/* END */
 
 /* PORTFOLIO LETTING GO */
 /* SLIDER */

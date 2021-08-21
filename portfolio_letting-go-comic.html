@@ -2,35 +2,104 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Test Comic 2</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Letting Go</title>
+<!-- CSS LINK -->
+  <link rel="stylesheet" href="/css/style.css">
+<!-- JAVASCRIPT LINK -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        jQuery(document).ready(function ($) {
 
+            $('#checkbox').change(function(){
+                setInterval(function () {
+        moveRight();
+    }, 5000);
+            });
+  
+            var slideCount = $('#slider ul li').length;
+            var slideWidth = $('#slider ul li').width();
+            var slideHeight = $('#slider ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+	
+            $('#slider').css({ width: slideWidth, height: slideHeight });
+            $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            
+            /*function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };*/
+
+            function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 0, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+            $('a.control_prev').click(function () {
+        moveLeft();
+    });
+            $('a.control_next').click(function () {
+        moveRight();
+    });
+        });
+    </script>
 </head>
 <body>
 
 <body>
-  <div class="row">
-    <div class="column left">
+  <div class="website-row">
+    <div class="website-column left">
       <h1>Letting Go</h1>
       <p>Click on the arrow to turn the page! If you're on tablet or phone, simple scroll down.</p>
     </div>
-    <div class="column right">
-      <div id="slider">
-        <a href="#" class="control_next">>></a>
-        <!--<a href="#" class="control_prev"><</a>-->
-          <ul>
-            <li><img src="https://cdnb.artstation.com/p/assets/images/images/034/549/105/large/alina-sandu-alinasandu-illustration-10.jpg?1612572914" width=100%></img></li>
-      <li><img src="https://www.dropbox.com/s/tozwmgbya5l5b3w/digital-thumbnail-03-010.jpg?dl=0" width=100%></img></li>
-  <li><img src="https://images.unsplash.com/photo-1606255793378-5b898082c6ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80" width=100%></img></li>
-            <li><img src="https://images.unsplash.com/photo-1628681826088-506d5dbbeb99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" width=100%></img></li>
-            <li><img src="https://images.unsplash.com/photo-1628537886580-1a35e8c11e05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80" width=100%></img></li>
+    <div class="website-column right">
+        <div id="slider">
+            <a href="#" class="control_next">>></a>
+            <!--<a href="#" class="control_prev"><</a>-->
+            <ul>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-01.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-02.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-03.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-04.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-05.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-06.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-07.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-08.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-09.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-10.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-11.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-12.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-13.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-14.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-15.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-16.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-17.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-18.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-19.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-20.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-21.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-22.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-23.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-24.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-25.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-26.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-27.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-28.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-29.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-30.png" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portoflio_letting-go_page-31.png" width=100%></li>
           </ul>  
       </div>
     </div>
   </div>
 </body>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-
 </body>
 </html>

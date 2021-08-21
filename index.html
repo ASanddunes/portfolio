@@ -3,15 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Alina Sandu</title>
+<!-- CSS SCRIPT LINK -->
   <link rel="stylesheet" href="/css/style.css">
-    <!-- partial -->
-    <script src="/scripts/index_script.js"></script>
+<!-- JAVAS SCRIPT LINKS -->
     <script src='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/js/libs.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script>
+        // set and cache variables
+		var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
+		var mouseX = 0;
+		var mouseY = 0;
+		var mouseZ = 0;
+		var addX = 0;
+		
+		
+		// fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
+		// no need to create my own :)
+		var fps_counter = {
+			
+			tick: function ()  {
+				// this has to clone the array every tick so that
+				// separate instances won't share state 
+				this.times = this.times.concat(+new Date());
+				var seconds, times = this.times;
+        
+				if (times.length > this.span + 1) {
+					times.shift(); // ditch the oldest time
+					seconds = (times[times.length - 1] - times[0]) / 1000;
+					return Math.round(this.span / seconds);
+				} 
+				else return null;
+			},
+ 
+			times: [],
+			span: 20
+		};
+		var counter = Object.create(fps_counter);
+		
+		
+		
+		$(document).ready( init )
+		
+		function init() {
+			w = $(window);
+			container = $( '#contentContainer' );
+			carousel = $( '#carouselContainer' );
+			item = $( '.carouselItem' );
+			itemLength = $( '.carouselItem' ).length;
+			fps = $('#fps');
+			rY = 360 / itemLength;
+			radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
+			
+			// set container 3d props
+			TweenMax.set(container, {perspective:600})
+			TweenMax.set(carousel, {z:-(radius)})
+			
+			// create carousel item props
+			
+			for ( var i = 0; i < itemLength; i++ ) {
+				var $item = item.eq(i);
+				var $block = $item.find('.carouselItemInner');
+				
+        //thanks @chrisgannon!        
+        TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
+				
+				animateIn( $item, $block )						
+			}
+			
+			// set mouse x and y props and looper ticker
+			window.addEventListener( "mousemove", onMouseMove, false );
+			ticker = setInterval( looper, 1000/60 );			
+		}
+		
+		function animateIn( $item, $block ) {
+			var $nrX = 360 * getRandomInt(2);
+			var $nrY = 360 * getRandomInt(2);
+				
+			var $nx = -(2000) + getRandomInt( 4000 )
+			var $ny = -(2000) + getRandomInt( 4000 )
+			var $nz = -4000 +  getRandomInt( 4000 )
+				
+			var $s = 1.5 + (getRandomInt( 10 ) * .1)
+			var $d = 1 - (getRandomInt( 8 ) * .1)
+			
+			TweenMax.set( $item, { autoAlpha:1, delay:$d } )	
+			TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
+			TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
+			TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
+		}
+		
+		function onMouseMove(event) {
+			mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
+			mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
+			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+		}
+		
+		// loops and sets the carousel 3d properties
+		function looper() {
+			addX += mouseX
+			TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+			TweenMax.set( carousel, {z:mouseZ } )
+			fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )	
+		}
+		
+		function getRandomInt( $n ) {
+			return Math.floor((Math.random()*$n)+1);	
+		}
+    </script>
 </head>
 
 
+<!-- COPYRIGHT NOTE -->
 <!-- partial:index.partial.html -->
 <!--original pen 3d motion from: @johnblazek 
 Copyright (c) 2021 by John Blazek (https://codepen.io/johnblazek/pen/nceyw)
@@ -21,25 +124,24 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
+<!-- END NOTE -->
 
-
+<!-- HERO TEXT -->
 <body>
-  <div class="row">
-    <div class="column left">
+  <div class="website-row">
+    <div class="website-column left">
         <h1>Sand Dunes</h1>
         <h3>ROOKIE ILLUSTRTOR <br> WANNABE COMIC ARTIST</h3>
         <p>Yeah, you may age like fine wine, but I age like fine cheese.</p>
     </div>
-  </div>
-    
-<!-- 3D CAROUSEL  -->
-    <div id="contentContainer" class="trans3d"> 
+      <!-- 3D CAROUSEL  -->
+      <div id="contentContainer" class="trans3d"> 
 	<section id="carouselContainer" class="trans3d">
         
 		<figure id="item1" class="carouselItem trans3d">
             <div class="carouselItemInner trans3d">
-                <a href="/pages/portfolio_fake-sephora.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop.png" width=330px;></a>
-                <a href="/pages/portfolio_fake-sephora.html">Fake Sephora</a>
+                <a href="./portfolio_fake-sephora.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop.png" width=330px;></a>
+                <a href="./portfolio_fake-sephora.html">Fake Sephora</a>
             </div>
         </figure>
     
@@ -73,69 +175,74 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     
 		<figure id="item6" class="carouselItem trans3d">
             <div class="carouselItemInner trans3d">
-                <a href=#><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop.png" width=330px;></a>
-                <a href="">Letting Go</a>
+                <a href="./portfolio_letting-go-comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop.png" width=330px;></a>
+                <a href="./portfolio_letting-go-comic.html">Letting Go</a>
             </div>
         </figure>
     
 	</section>
 	</div>
+  </div>
     
+
 <!-- EACH PORTFOLIO LAID OUT -->    
+
     <!-- Fake Sephora -->
-    <div class="row">
-        <div class="column left">
-            <a href="portfolio_fake-sephora.html">Fake Sephora</a>
+    <!--<div class="website-row">
+        <div class="website-column left">
+            <a href="./portfolio_fake-sephora.html">Fake Sephora</a>
         </div>
-        <div class="column right">
-            <a href="portfolio_fake-sephora.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop.png" width=100%></a>
+        <div class="website-column right">
+            <a href="./portfolio_fake-sephora.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop.png" width=100%></a>
         </div>
-    </div>
+    </div>-->
     <!-- Impromptu Fatherhood -->
-    <div class="row">
-        <div class="column left">
+    <!--<div class="website-row">
+        <div class="website-column left">
             <a href="">Impromptu Fatherhood</a>
         </div>
-        <div class ="column right">
+        <div class ="website-column right">
             <a href=""><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop.png" width=100%></a>
         </div> 
-    </div>
+    </div>-->
     <!-- Season in the Sun -->
-    <div class="row">
-        <div class="column left">
+    <!--<div class="website-row">
+        <div class="website-column left">
             <a href="">Season in the Sun</a>
         </div>
-        <div class="column right">
+        <div class="website-column right">
             <a href=""><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop.png" width=100%></a>
         </div>
-    </div>
+    </div>-->
     <!-- Forbidden Vectors -->
-    <div class="row">
-        <div class="column left">
+    <!--<div class="website-row">
+        <div class="website-column left">
             <a href="">Forbidden Vectors</a>
         </div>
-        <div class="column right">
+        <div class="website-column right">
             <a href=""><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_full-01.png" width=100%></a>
         </div>
-    </div>
+    </div>-->
     <!-- Hockey in After Effects -->
-    <div class="row">
-        <div class="column left">
-            <a href="">Hockey in After Effects</a>
+    <!--<div class="website-row">
+        <div class="website-column left">
+            <a href=""><h2>Hockey in After Effects</h2></a>
         </div>
-        <div class="column right">
+        <div class="website-column right">
             <a href=""><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop.png" width=100%></a>
         </div>   
-    </div>
+    </div>-->
     <!-- Letting Go -->
-    <div class="row">
-        <div class="column left">
-            <a href="">Lettting Go</a>
+    <!--<div class="website-row">
+        <div class="website-column left">
+            <a href="./portfolio_letting-go-comic.html"><h2>Lettting Go</h2></a>
         </div>
-        <div class="column right">
-            <a href=""><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop.png" width=100%></a>
+        <div class="website-column right">
+            <a href="./portfolio_letting-go-comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop.png" width=100%></a>
         </div>
-    </div>
+    </div>-->
 </body>
-    
+
+<!-- FOOTER -->
+
 </html>

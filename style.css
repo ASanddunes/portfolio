@@ -25,14 +25,15 @@ body {
 
 /* Left column */
 .column.left {
-  width: 100%;
+  width: 25%;
   z-index: 5;
   justify-content: center;
 }
 
 /* Column with main content*/
 .column.right {
-  width: 100%;
+  width: 75%;
+  justify-content: center;
 }
 
 /* Puts columns in a row */

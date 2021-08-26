@@ -1,12 +1,54 @@
 /* FOR ALL PAGES */
+
+/* NAVIGATION BAR*/
+.allpage-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-content {
+  width: 90%;
+  padding: 40px 40px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  padding: 15px;
+    cursor: pointer;
+    font-family: "Kabel",sans-serif;
+    src:url(/Kabel/Kabel_Regular.ttf);
+    color: #FFFFFF;
+}
+
+.navigation a:hover {
+    color: rgba(181, 71, 60);
+}
+
+.navigation-logo {
+  max-width: 150px;
+}
+/* END */
+
+
+/* BODY */
 body {
   background-image: url("/img/paul-volkmer-qVotvbsuM_c-unsplash.jpeg");
   background-repeat: repeat;
   background-position: top center;
   background-size: cover;
   height: 100%;
-  font-family: "Kabel ITC", monospace;
-  color: #FFFFFF;
+  font-family: "Kabel",sans-serif;
+    src:url(/Kabel/Kabel_Regular.ttf);
+    color: #FFFFFF;
   text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
   filter: dropshadow(color=#000000, offx=1, offy=1);
 }
@@ -76,7 +118,7 @@ h3 {
 
 p {
   font-size: 16px;
-  letter-spcing: 1.0px;
+  letter-spacing: 1.0px;
   margin-left: 35px;
 }
 
@@ -161,6 +203,32 @@ a:hover {
 	}
 /* END */
 
+/* INDEX LAID OUT PORTFOLIO */
+.index-portfolio-no-carousel {
+    margin-top:500px;
+}
+/* END */
+
+/* FOOTER CSS */
+.brand-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footercontent {
+  margin: 40px 20px 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+span.footerlisting {
+  list-style: none;
+    width:30%;
+  line-height: 25px;
+  margin: 0px 20px 0px 20px;
+}
+/* END */
 
 /* PORTFOLIO LETTING GO */
 /* SPECIAL COLUMNS*/

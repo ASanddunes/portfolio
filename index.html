@@ -40,8 +40,6 @@
         };
         var counter = Object.create(fps_counter);
 
-
-
         $(document).ready(init)
 
         function init() {
@@ -50,32 +48,22 @@
             carousel = $(".Carousel-Container");
             item = $(".Carousel-Item");
             itemLength = $(".Carousel-Item").length;
-            fps = $('#fps');
             rY = 360 / itemLength;
             radius = Math.round((250) / Math.tan(Math.PI / itemLength));
 
             // set container 3d props
-            TweenMax.set(container, {
-                perspective: 600
-            })
-            TweenMax.set(carousel, {
-                z: -(radius)
-            })
+            TweenMax.set(container, {perspective: 600})
+            TweenMax.set(carousel, {z: -(radius)})
 
             // create carousel item props
-
             for (var i = 0; i < itemLength; i++) {
                 var $item = item.eq(i);
                 var $block = $item.find(".Carousel-Item-Inner");
-
+                
                 //thanks @chrisgannon!        
-                TweenMax.set($item, {
-                    rotationY: rY * i,
-                    z: radius,
-                    transformOrigin: "50% 50% " + -radius + "px"
-                });
+                TweenMax.set($item, {rotationY: rY * i, z: radius, transformOrigin: "50% 50% " + -radius + "px"});
 
-                animateIn($item, $block)
+                animateIn( $item, $block)
             }
 
             // set mouse x and y props and looper ticker
@@ -94,32 +82,10 @@
             var $s = 1.5 + (getRandomInt(10) * .1)
             var $d = 1 - (getRandomInt(8) * .1)
 
-            TweenMax.set($item, {
-                autoAlpha: 1,
-                delay: $d
-            })
-            TweenMax.set($block, {
-                z: $nz,
-                rotationY: $nrY,
-                rotationX: $nrX,
-                x: $nx,
-                y: $ny,
-                autoAlpha: 0
-            })
-            TweenMax.to($block, $s, {
-                delay: $d,
-                rotationY: 0,
-                rotationX: 0,
-                z: 0,
-                ease: Expo.easeInOut
-            })
-            TweenMax.to($block, $s - .5, {
-                delay: $d,
-                x: 0,
-                y: 0,
-                autoAlpha: 1,
-                ease: Expo.easeInOut
-            })
+            TweenMax.set($item, { autoAlpha: 1, delay: $d })
+            TweenMax.set($block, { z: $nz, rotationY: $nrY, rotationX: $nrX, x: $nx, y: $ny, autoAlpha: 0 })
+            TweenMax.to($block, $s, { delay: $d, rotationY: 0, rotationX: 0, z: 0, ease: Expo.easeInOut })
+            TweenMax.to($block, $s - .5, { delay: $d, x: 0, y: 0, autoAlpha: 1, ease: Expo.easeInOut })
         }
 
         function onMouseMove(event) {

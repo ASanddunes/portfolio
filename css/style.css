@@ -275,9 +275,8 @@ a:hover {
 
 /* FOOTER CSS */
 .website-column-footer {
-    padding: 30px;
-    margin-top: 30px;
-    width: 37%;
+    width:30%;
+    display: flex;  
 }
 
 .brand-footer {
@@ -292,12 +291,24 @@ a:hover {
   flex-wrap: wrap;
 }
 
-span.footerlisting {
-  list-style: none;
-    width:30%;
-  line-height: 25px;
-  margin: 0px 20px 0px 20px;
+.footer-container {
+    display: flex;
+    justify-content: center;
 }
+
+.footer-content {
+  width: 90%;
+  padding: 100px 40px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bio {
+    width=30%;
+}
+
 /* END */
 
 /* PORTFOLIO LETTING GO */

@@ -214,8 +214,19 @@ a:hover {
 		backface-visibility:hidden;*/
 	}
 	
-.Content-Container {
+#Content-Container {
 		position: absolute;
+		margin-left:-500px;
+		margin-top:-500px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
+	}
+
+#Carousel-Container
+	{
+		position:absolute;
 		margin-left:-500px;
 		margin-top:-500px;
 		left:50%;

@@ -11,106 +11,113 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script>
         // set and cache variables
-        var w, container, carousel, item, radius, itemLength, rY, ticker, fps;
-        var mouseX = 0;
-        var mouseY = 0;
-        var mouseZ = 0;
-        var addX = 0;
-
-
-        // fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
-        // no need to create my own :)
-        var fps_counter = {
-
-            tick: function() {
-                // this has to clone the array every tick so that
-                // separate instances won't share state 
-                this.times = this.times.concat(+new Date());
-                var seconds, times = this.times;
-
-                if (times.length > this.span + 1) {
-                    times.shift(); // ditch the oldest time
-                    seconds = (times[times.length - 1] - times[0]) / 1000;
-                    return Math.round(this.span / seconds);
-                } else return null;
-            },
-
-            times: [],
-            span: 20
-        };
-        var counter = Object.create(fps_counter);
-
-        $(document).ready(init)
-
-        function init() {
-            w = $(window);
-            container = $(".Content-Container");
-            carousel = $(".Carousel-Container");
-            item = $(".Carousel-Item");
-            itemLength = $(".Carousel-Item").length;
-            rY = 360 / itemLength;
-            radius = Math.round((250) / Math.tan(Math.PI / itemLength));
-
-            // set container 3d props
-            TweenMax.set(container, {perspective: 600})
-            TweenMax.set(carousel, {z: -(radius)})
-
-            // create carousel item props
-            for (var i = 0; i < itemLength; i++) {
-                var $item = item.eq(i);
-                var $block = $item.find(".Carousel-Item-Inner");
-                
-                //thanks @chrisgannon!        
-                TweenMax.set($item, {rotationY: rY * i, z: radius, transformOrigin: "50% 50% " + -radius + "px"});
-
-                animateIn( $item, $block)
-            }
-
-            // set mouse x and y props and looper ticker
-            window.addEventListener("mousemove", onMouseMove, false);
-            ticker = setInterval(looper, 1000 / 60);
-        }
-
-        function animateIn($item, $block) {
-            var $nrX = 360 * getRandomInt(2);
-            var $nrY = 360 * getRandomInt(2);
-
-            var $nx = -(2000) + getRandomInt(4000)
-            var $ny = -(2000) + getRandomInt(4000)
-            var $nz = -4000 + getRandomInt(4000)
-
-            var $s = 1.5 + (getRandomInt(10) * .1)
-            var $d = 1 - (getRandomInt(8) * .1)
-
-            TweenMax.set($item, { autoAlpha: 1, delay: $d })
-            TweenMax.set($block, { z: $nz, rotationY: $nrY, rotationX: $nrX, x: $nx, y: $ny, autoAlpha: 0 })
-            TweenMax.to($block, $s, { delay: $d, rotationY: 0, rotationX: 0, z: 0, ease: Expo.easeInOut })
-            TweenMax.to($block, $s - .5, { delay: $d, x: 0, y: 0, autoAlpha: 1, ease: Expo.easeInOut })
-        }
-
-        function onMouseMove(event) {
-            mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
-            mouseY = -(-(window.innerHeight * .5) + event.pageY) * .01;
-            mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY) - 200);
-        }
-
-        // loops and sets the carousel 3d properties
-        function looper() {
-            addX += mouseX
-            TweenMax.to(carousel, 1, {
-                rotationY: addX,
-                rotationX: mouseY,
-                ease: Quint.easeOut
-            })
-            TweenMax.set(carousel, {
-                z: mouseZ
-            })
-            fps.text('Framerate: ' + counter.tick() + '/60 FPS')
-        }
-
-        function getRandomInt($n) {
-            return Math.floor((Math.random() * $n) + 1);
-        }
+		var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
+		var mouseX = 0;
+		var mouseY = 0;
+		var mouseZ = 0;
+		var addX = 0;
+		
+		
+		// fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
+		// no need to create my own :)
+		var fps_counter = {
+			
+			tick: function () 
+			{
+				// this has to clone the array every tick so that
+				// separate instances won't share state 
+				this.times = this.times.concat(+new Date());
+				var seconds, times = this.times;
+        
+				if (times.length > this.span + 1) 
+				{
+					times.shift(); // ditch the oldest time
+					seconds = (times[times.length - 1] - times[0]) / 1000;
+					return Math.round(this.span / seconds);
+				} 
+				else return null;
+			},
+ 
+			times: [],
+			span: 20
+		};
+		var counter = Object.create(fps_counter);
+		
+		
+		
+		$(document).ready( init )
+		
+		function init()
+		{
+			w = $(window);
+			container = $( '#Content-Container' );
+			carousel = $( '#Carousel-Container' );
+			item = $( '.Carousel-Item' );
+			itemLength = $( '.Carousel-Item' ).length;
+			fps = $('#fps');
+			rY = 360 / itemLength;
+			radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
+			
+			// set container 3d props
+			TweenMax.set(container, {perspective:600})
+			TweenMax.set(carousel, {z:-(radius)})
+			
+			// create carousel item props
+			
+			for ( var i = 0; i < itemLength; i++ )
+			{
+				var $item = item.eq(i);
+				var $block = $item.find('.Carousel-Item-Inner');
+				
+        //thanks @chrisgannon!        
+        TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
+				
+				animateIn( $item, $block )						
+			}
+			
+			// set mouse x and y props and looper ticker
+			window.addEventListener( "mousemove", onMouseMove, false );
+			ticker = setInterval( looper, 1000/60 );			
+		}
+		
+		function animateIn( $item, $block )
+		{
+			var $nrX = 360 * getRandomInt(2);
+			var $nrY = 360 * getRandomInt(2);
+				
+			var $nx = -(2000) + getRandomInt( 4000 )
+			var $ny = -(2000) + getRandomInt( 4000 )
+			var $nz = -4000 +  getRandomInt( 4000 )
+				
+			var $s = 1.5 + (getRandomInt( 10 ) * .1)
+			var $d = 1 - (getRandomInt( 8 ) * .1)
+			
+			TweenMax.set( $item, { autoAlpha:1, delay:$d } )	
+			TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
+			TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
+			TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
+		}
+		
+		function onMouseMove(event)
+		{
+			mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
+			mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
+			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+		}
+		
+		// loops and sets the carousel 3d properties
+		function looper()
+		{
+			addX += mouseX
+			TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+			TweenMax.set( carousel, {z:mouseZ } )
+			fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )	
+		}
+		
+		function getRandomInt( $n )
+		{
+			return Math.floor((Math.random()*$n)+1);	
+		}
     </script>
 </head>
 
@@ -139,72 +146,68 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
         </div>
         <!-- END OF HERO TEXT-->
 
-        <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
-        <!-- COPYRIGHT NOTE -->
-        <!-- partial:index.partial.html -->
-        <!--original pen 3d motion from: @johnblazek 
-Copyright (c) 2021 by John Blazek (https://codepen.io/johnblazek/pen/nceyw)
+        <div class="website-column right">
+            <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
+            <!-- COPYRIGHT NOTE -->
+            <!-- partial:index.partial.html -->
+            <!--original pen 3d motion from: @johnblazek 
+            Copyright (c) 2021 by John Blazek (https://codepen.io/johnblazek/pen/nceyw)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
-        <!-- END NOTE -->
-        <div class="Content-Container" class="trans3d">
-            <section class="CarouselContainer" class="trans3d">
-
-                <figure class="item1" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_fake-sephora_illustration.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=330></a>
-                        <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
-                    </div>
-                </figure>
-
-                <figure class="item2" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_firebird_concept-art.html"><img src="/img/portfolio/firebird/portfolio_firebird_final-picture-crop-03.jpg" width=330></a>
-                        <a href="./portfolio_firebird_concept-art.html">The Firebird</a>
-                    </div>
-                </figure>
-
-                <figure class="item3" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=330></a>
-                        <a href="./portfolio_forbidden-vectors_illustration.html">Forbidden Vectors</a>
-                    </div>
-                </figure>
-
-                <figure class="item4" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=330></a>
-                        <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">Hockey In After Effects</a>
-                    </div>
-                </figure>
-
-                <figure class="item5" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_impromptu-fatherhood_illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=330></a>
-                        <a href="./portfolio_impromptu-fatherhood_illustration.html">Impromptu Fatherhood</a>
-                    </div>
-                </figure>
-
-                <figure class="item6" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="/portfolio_letting-go_comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop-04.png" width=330></a>
-                        <a href="/portfolio_letting-go_comic.html">Letting Go</a>
-                    </div>
-                </figure>
-
-                <figure class="item7" class="Carousel-Item trans3d">
-                    <div class="Carousel-Item-Inner trans3d">
-                        <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=330></a>
-                        <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">Season in the Sun</a>
-                    </div>
-                </figure>
-            </section>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
+            <!-- END NOTE -->
+            <div id="Content-Container" class="trans3d"> 
+            <section id="Carousel-Container" class="trans3d">
+		<figure id="item1" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_fake-sephora_illustration.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=330></a>
+                <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
+            </div>
+        </figure>
+		<figure id="item2" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_firebird_concept-art.html"><img src="/img/portfolio/firebird/portfolio_firebird_final-picture-crop-03.jpg" width=330></a>
+                <a href="./portfolio_firebird_concept-art.html">The Firebird</a>
+            </div>
+        </figure>
+		<figure id="item3" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=330></a>
+                <a href="./portfolio_forbidden-vectors_illustration.html">Forbidden Vectors</a>
+            </div>
+        </figure>
+		<figure id="item4" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=330></a>
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">Hockey In After Effects</a>
+            </div>
+        </figure>
+		<figure id="item5" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_impromptu-fatherhood_illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=330></a>
+                <a href="./portfolio_impromptu-fatherhood_illustration.html">Impromptu Fatherhood</a>
+            </div>
+        </figure>
+		<figure id="item6" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="/portfolio_letting-go_comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop-04.png" width=330></a>
+                <a href="/portfolio_letting-go_comic.html">Letting Go</a>
+            </div>
+        </figure>
+		<figure id="item7" class="Carousel-Item trans3d">
+            <div class="Carousel-Item-Inner trans3d">
+                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=330></a>
+                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">Season in the Sun</a>
+            </div>
+        </figure>
+	</section>
+        </div>
         </div>
     </div>
+        
 
 
     <!-- EACH PORTFOLIO LAID OUT. 

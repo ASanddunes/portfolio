@@ -46,10 +46,10 @@
 
         function init() {
             w = $(window);
-            container = $('#contentContainer');
-            carousel = $('#carouselContainer');
-            item = $('.carouselItem');
-            itemLength = $('.carouselItem').length;
+            container = $(".Content-Container");
+            carousel = $(".Carousel-Container");
+            item = $(".Carousel-Item");
+            itemLength = $(".Carousel-Item").length;
             fps = $('#fps');
             rY = 360 / itemLength;
             radius = Math.round((250) / Math.tan(Math.PI / itemLength));
@@ -66,7 +66,7 @@
 
             for (var i = 0; i < itemLength; i++) {
                 var $item = item.eq(i);
-                var $block = $item.find('.carouselItemInner');
+                var $block = $item.find(".Carousel-Item-Inner");
 
                 //thanks @chrisgannon!        
                 TweenMax.set($item, {
@@ -152,10 +152,10 @@
 INCLUDE LINKS: HOME, ABOUT + RESUME-->
 <nav class="allpage-navigation">
     <div class="navigation-content">
-        <a href="./index.html"><img src="/img/alinasandu-logo_white.png" width=50px></a>
+        <a href="./index.html"><img src="/img/alinasandu-logo_white.png" width=50></a>
         <nav>
             <ul class="navigation">
-                <li><a href="#">Insert Not-So Tragic Backstory</a></li>
+                <li><a href="/about-me-and-resume.html">Insert Not-So Tragic Backstory</a></li>
             </ul>
         </nav>
     </div>
@@ -185,58 +185,57 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
         <!-- END NOTE -->
-        <div id="contentContainer" class="trans3d">
-            <section id="carouselContainer" class="trans3d">
+        <div class="Content-Container" class="trans3d">
+            <section class="CarouselContainer" class="trans3d">
 
-                <figure id="item1" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_fake-sephora_illustration.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=330px></a>
+                <figure class="item1" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_fake-sephora_illustration.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=330></a>
                         <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
                     </div>
                 </figure>
 
-                <figure id="item2" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_firebird_concept-art.html"><img src="/img/portfolio/firebird/portfolio_firebird_final-picture-crop-03.jpg" width=330px></a>
+                <figure class="item2" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_firebird_concept-art.html"><img src="/img/portfolio/firebird/portfolio_firebird_final-picture-crop-03.jpg" width=330></a>
                         <a href="./portfolio_firebird_concept-art.html">The Firebird</a>
                     </div>
                 </figure>
 
-                <figure id="item3" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=330px></a>
+                <figure class="item3" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=330></a>
                         <a href="./portfolio_forbidden-vectors_illustration.html">Forbidden Vectors</a>
                     </div>
                 </figure>
 
-                <figure id="item4" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=330px></a>
+                <figure class="item4" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=330></a>
                         <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">Hockey In After Effects</a>
                     </div>
                 </figure>
 
-                <figure id="item5" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_impromptu-fatherhood_illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=330px></a>
+                <figure class="item5" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_impromptu-fatherhood_illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=330></a>
                         <a href="./portfolio_impromptu-fatherhood_illustration.html">Impromptu Fatherhood</a>
                     </div>
                 </figure>
 
-                <figure id="item6" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="/portfolio_letting-go_comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop-04.png" width=330px></a>
+                <figure class="item6" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="/portfolio_letting-go_comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop-04.png" width=330></a>
                         <a href="/portfolio_letting-go_comic.html">Letting Go</a>
                     </div>
                 </figure>
 
-                <figure id="item7" class="carouselItem trans3d">
-                    <div class="carouselItemInner trans3d">
-                        <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=330px></a>
+                <figure class="item7" class="Carousel-Item trans3d">
+                    <div class="Carousel-Item-Inner trans3d">
+                        <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=330></a>
                         <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">Season in the Sun</a>
                     </div>
                 </figure>
-
             </section>
         </div>
     </div>
@@ -249,48 +248,39 @@ NEED TO MAKE DIV HAVE SPACING TO SEPARATE IT FROM THE CAROUSEL. ALSO FURTHER DEC
         <!-- Fake Sephora -->
         <div class="website-row">
             <div class="website-column left">
-                <a href="./portfolio_fake-sephora.html">Fake Sephora</a>
+                <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
             </div>
             <div class="website-column right">
-                <a href="./portfolio_fake-sephora.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=500px></a>
-            </div>
-        </div>
-        <!-- Impromptu Fatherhood -->
-        <div class="website-row">
-            <div class="website-column left">
-                <a href="">Impromptu Fatherhood</a>
-            </div>
-            <div class="website-column right">
-                <a href=""><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=500px></a>
-            </div>
-        </div>
-        <!-- Season in the Sun -->
-        <div class="website-row">
-            <div class="website-column left">
-                <a href="">Season in the Sun</a>
-            </div>
-            <div class="website-column right">
-                <a href=""><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=500px></a>
+                <a href="./portfolio_fake-sephora_illustration.html"><img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_crop-03.png" width=500px></a>
             </div>
         </div>
         <!-- Forbidden Vectors -->
         <div class="website-row">
             <div class="website-column left">
-                <a href="">Forbidden Vectors</a>
+                <a href="./portfolio_forbidden-vectors_illustration.html">Forbidden Vectors</a>
             </div>
             <div class="website-column right">
-                <a href=""><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=500px></a>
+                <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_crop-02.png" width=500px></a>
             </div>
         </div>
         <!-- Hockey in After Effects -->
         <div class="website-row">
             <div class="website-column left">
-                <a href="">
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
                     <h2>Hockey in After Effects</h2>
                 </a>
             </div>
             <div class="website-column right">
-                <a href=""><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=500px></a>
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_crop-03.png" width=500px></a>
+            </div>
+        </div>
+        <!-- Impromptu Fatherhood -->
+        <div class="website-row">
+            <div class="website-column left">
+                <a href="./portfolio_impromptu-fatherhood_illustration.html">Impromptu Fatherhood</a>
+            </div>
+            <div class="website-column right">
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_crop-03.png" width=500px></a>
             </div>
         </div>
         <!-- Letting Go -->
@@ -304,29 +294,39 @@ NEED TO MAKE DIV HAVE SPACING TO SEPARATE IT FROM THE CAROUSEL. ALSO FURTHER DEC
                 <a href="./portfolio_letting-go-comic.html"><img src="/img/portfolio/letting-go/portoflio_letting-go_page-00_crop-04.png" width=500px></a>
             </div>
         </div>
+        <!-- Season in the Sun -->
+        <div class="website-row">
+            <div class="website-column left">
+                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">Season in the Sun</a>
+            </div>
+            <div class="website-column right">
+                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_crop-03.png" width=500px></a>
+            </div>
+        </div>   
     </div>
 </body>
 
 <!-- FOOTER GOES HERE. 
 INCLUDE: ABOUT SUMMARY, SOCIAL MEDIA LINKS, RESUME DOWNLOAD LINK, ETC. -->
 <footer>
-    <div class="brand-footer">
-        <div class="footercontent">
-            <a href="./index.html"><img src="/img/alinasandu-logo_white.png" width=50px></a>
+    <div class="allpage-navigation">
+        <div class="website-column left">
+            <a href="./index.html"><img src="/img/alinasandu-logo_white.png" width=50></a>
         </div>
-        <div class="footercontent">
-            <span class="footerlisting">
-                <h2>Insert Not-So-Tragic Backstory</h2>
-                <p>I love to laugh and dancing in the rain— <br> just kidding. <br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything. <br> *Insert Resume Link*</p>
-            </span>
-            <span class="footerlisting">
+        <div class="website-column-footer">
+            <h2>Insert Not-So-Tragic Backstory</h2>
+            <p>I love to laugh and dancing in the rain— <br> just kidding. <br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything. <br> *Insert Resume Link*</p>
+        </div>
+        <div class="website-column-footer">
+            <ul>
                 <h2>Social Media List</h2>
                 <li class="social-media-item"><a href="https://www.behance.net/alinasanddune">My Behance is here.</a></li>
                 <li class="social-media-item"><a href="http://linkedin.com/in/alinasanddune/">My LinkedIn is here.</a></li>
                 <li class="social-media-item"><a href="http://instagram.com/alinasanddunes">My Instagram is here.</a></li>
                 <li class="social-media-item"><a href="https://www.artstation.com/alinasandu">My Artstation is here.</a></li>
                 <li class="social-media-item"><a href="http://alinasanddunes.tumblr.com/">My Tumblr is here.</a></li>
-            </span>
+            </ul>
         </div>
     </div>
-</footer></html>
+</footer>
+</html>

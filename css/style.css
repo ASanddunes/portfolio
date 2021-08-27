@@ -1,3 +1,18 @@
++@import url(css/reset.css);
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {max-width: 100%; height: auto;}
+
 /* FOR ALL PAGES */
 
 /* NAVIGATION BAR*/
@@ -125,7 +140,7 @@ h1 {
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
     filter: dropshadow(color=#000000, offx=1, offy=1);
-    font-size: 40px;
+    font-size: 2.5em;
     letter-spacing: 1.0px;
     margin-left: 30px;
 }
@@ -134,57 +149,57 @@ h2 {
     font-family: "Kabel",sans-serif;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
-  text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
-  filter: dropshadow(color=#000000, offx=1, offy=1);
-  font-size: 16px;
-  letter-spacing: 1.0px;
-  margin-left: 35px;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    font-size: 1em;
+    letter-spacing: 1.0px;
+    margin-left: 35px;
 }
 
 h3 {
     font-family: "Kabel",sans-serif;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
-  text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
-  filter: dropshadow(color=#000000, offx=1, offy=1);
-  font-size: 14px;
-  letter-spacing: 1.0px;
-  margin-top: 5px;
-  margin-left: 35px;
-  text-decoration: none;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    font-size: 0.875em;
+    letter-spacing: 1.0px;
+    margin-top: 5px;
+    margin-left: 35px;
+    text-decoration: none;
 }
 
 p {
     font-family: "Kabel",sans-serif;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
-  text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
-  filter: dropshadow(color=#000000, offx=1, offy=1);
-  font-size: 16px;
-  letter-spacing: 1.0px;
-  margin-left: 35px;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    font-size: 1em;
+    letter-spacing: 1.0px;
+    margin-left: 35px;
 }
 
 a {
     font-family: "Kabel",sans-serif;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
-  text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
-  filter: dropshadow(color=#000000, offx=1, offy=1);
-  color: rgba(255, 255, 255, .75);
-  text-decoration: none;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
 }
 
 a:hover {
-  color: rgba(181, 71, 60);
+    color: rgba(181, 71, 60);
 }
 /* END */
 
 
 /* INDEX MAIN PAGE */
 /* hardware accelatator class */	
-	.trans3d {
-		-webkit-transform-style: preserve-3d;
+.trans3d {
+        -webkit-transform-style: preserve-3d;
 		-webkit-transform: translate3d(0, 0, 0);
 		-moz-transform-style: preserve-3d;
 		-moz-transform: translate3d(0, 0, 0);
@@ -199,8 +214,8 @@ a:hover {
 		backface-visibility:hidden;*/
 	}
 	
-	#contentContainer {
-		position:absolute;
+.Content-Container {
+		position: absolute;
 		margin-left:-500px;
 		margin-top:-500px;
 		left:50%;
@@ -209,23 +224,7 @@ a:hover {
 		height:1000px;
 	}
 
-@media only screen and (max-width: 1090px) {
-  #contentContainer {
-    display: none;
-  }
-}
-
-	#carouselContainer {
-		position:absolute;
-		margin-left:-500px;
-		margin-top:-500px;
-		left:50%;
-		top:50%;
-		width:1000px;
-		height:1000px;
-	}
-	
-	.carouselItem {
+.Carousel-Item {
 		width:320px;
 		height:130px;
 		position:absolute;
@@ -236,19 +235,25 @@ a:hover {
 		visibility:hidden;
 	}
 	
-	.carouselItemInner {
+.Carousel-Item-Inner {
 		width:330px;
 		height:140px;
 		position:absolute;
 		background-color:rgba(255, 255, 255, .0);
 		color:black;
-		font-size:30px;
+		font-size: 2em;
 		left:50%;
 		top:50%;
 		margin-left:-160px;
 		margin-top:-160px;
 		text-align:center;
 	}
+
+@media only screen and (max-width: 1090px) {
+  .Content-Container {
+    display: none;
+  }
+}
 /* END */
 
 /* INDEX LAID OUT PORTFOLIO */
@@ -258,6 +263,12 @@ a:hover {
 /* END */
 
 /* FOOTER CSS */
+.website-column-footer {
+    padding: 30px;
+    margin-top: 30px;
+    width: 37%;
+}
+
 .brand-footer {
   display: flex;
   justify-content: center;
@@ -339,8 +350,8 @@ span.footerlisting {
   line-height: 300px;
 }
 
-a.control_prev,
-a.control_next {
+.control_prev,
+.control_next {
   position: absolute;
   top: 40%;
   z-index: 999;
@@ -357,17 +368,17 @@ a.control_next {
   cursor: pointer;
 }
 
-a.control_prev:hover,
-a.control_next:hover {
+.control_prev:hover,
+.control_next:hover {
   opacity: 0;
   -webkit-transition: all 0.2s ease;
 }
 
-/*a.control_prev {
+/*.control_prev {
   border-radius: 0 2px 2px 0;
 }*/
 
-a.control_next {
+.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }

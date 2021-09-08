@@ -148,13 +148,14 @@ html {
 
 /* TYPOGRAPHY */
 h1 {
-    font-family: "Kabel",sans-serif;
-    src:url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Royal Acid",sans-serif;
+    src:url(/Royal%2520Acidbath/Royalacid.ttf);
     color: #FFFFFF;
+    font-weight: normal;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color= #000000, offx=1, offy=1);
-    font-size: 2.3em;
-    letter-spacing: 1.0px;
+    font-size: 4em;
+    letter-spacing: 2.0px;
 }
 
 h2 {
@@ -443,45 +444,45 @@ a:hover {
 }
 
 
-/* PORTFOLIO LETTING GO */
+/* COMIC READERS */
 /* SPECIAL COLUMNS*/
-.letting-go-text {
+.comic-reader_text {
     width:100%;
     text-align: center;
 }
 
-.letting-go-desktop {
+.comic-reader_desktop {
     width: 100%;
     justify-content: center;
-    margin: 30px;
+
 }
 
-.letting-go-phone {
+.comic-reader_phone {
     width: 100%;
     justify-content: center;
 }
 
 /* SPECIAL COLUMNS - MEDIA QUERY */
 @media only screen and (max-width: 1090px) {
-    .letting-go-desktop {
+    .comic-reader_desktop {
         display: none;
     }
-    .letting-go-desktop-text {
+    .comic-reader_desktop-text {
         display: none;
     }
 }
 
 @media only screen and (min-width: 1091px) {
-    .letting-go-phone {
+    .comic-reader_phone {
         display: none;
     }
-    .letting-go-phone-text {
+    .comic-reader_phone-text {
         display: none;
     }
 }
 
-/* SLIDER */
-#slider {
+/* THE FAIRY DOOR */
+#fairy-door_slider {
   position: relative;
   overflow: hidden;
   margin-left: 240px;
@@ -489,7 +490,7 @@ a:hover {
   /*border-radius: 4px;*/
 }
 
-#slider ul {
+#fairy-door_slider ul {
   position: relative;
   margin: 0;
   padding: 0;
@@ -497,7 +498,38 @@ a:hover {
   list-style: none;
 }
 
-#slider ul li {
+#fairy-door_slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  /*margin: 0;
+  padding: 0;*/
+  width: 1049px;
+  height: 700px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+/* LETTING GO */
+/* SLIDER */
+#letting-go_slider {
+  position: relative;
+  overflow: hidden;
+  margin-left: 240px;
+    /*margin: 0px auto 0 auto;*/
+  /*border-radius: 4px;*/
+}
+
+#letting-go_slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  list-style: none;
+}
+
+#letting-go_slider ul li {
   position: relative;
   display: block;
   float: left;

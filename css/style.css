@@ -270,11 +270,31 @@ a:hover {
 		text-align:center;
 	}
 
+.index-hero-text {
+    width: 90%;
+    padding: 40px 40px 40px 40px;
+    margin: auto 0px auto 0px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 1090px) {
     #Content-Container {
         display: none;
     }
+    
+    .website-column.left {
+        display: none;
+    }
 }
+
+@media only screen and (min-width: 1091px) {
+    .index-hero-text {
+        display: none;
+    }
+}
+
 /* END */
 
 /* INDEX LAID OUT PORTFOLIO */
@@ -308,7 +328,9 @@ a:hover {
     .portfolio-grid {
         display: column;
         grid-template-columns: auto;
-    }    
+    }
+    
+    
 }
 /* END */
 

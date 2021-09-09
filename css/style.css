@@ -147,10 +147,9 @@ html {
 }
 
 /* TYPOGRAPHY */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 h1 {
-    font-family: "Kabel", monospace;
+    font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     font-weight: bolder;
@@ -161,7 +160,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Kabel",monospace;
+    font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -171,7 +170,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Kabel",monospace;
+    font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -182,7 +181,7 @@ h3 {
 }
 
 p {
-    font-family: "Raleway",monospace;
+    font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -192,7 +191,7 @@ p {
 }
 
 a {
-    font-family: "Kabel",monospace;
+    font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);

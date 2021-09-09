@@ -271,9 +271,9 @@ a:hover {
 	}
 
 @media only screen and (max-width: 1090px) {
-  .Content-Container {
-    display: none;
-  }
+    #Content-Container {
+        display: none;
+    }
 }
 /* END */
 
@@ -307,6 +307,7 @@ a:hover {
 @media only screen and (max-width: 1090px) {
     .portfolio-grid {
         display: column;
+        grid-template-columns: auto;
     }    
 }
 /* END */
@@ -459,13 +460,12 @@ a:hover {
 
 .comic-reader_desktop {
     width: 100%;
-    justify-content: center;
-
+    margin: auto;
 }
 
 .comic-reader_phone {
     width: 100%;
-    justify-content: center;
+    margin: auto;
 }
 
 /* SPECIAL COLUMNS - MEDIA QUERY */
@@ -489,11 +489,10 @@ a:hover {
 
 /* THE FAIRY DOOR */
 #fairy-door_slider {
-  position: relative;
-  overflow: hidden;
-  margin-left: 240px;
-    /*margin: 0px auto 0 auto;*/
-  /*border-radius: 4px;*/
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto 0 auto;
+    /*border-radius: 4px;*/
 }
 
 #fairy-door_slider ul {
@@ -520,10 +519,9 @@ a:hover {
 /* LETTING GO */
 /* SLIDER */
 #letting-go_slider {
-  position: relative;
-  overflow: hidden;
-  margin-left: 240px;
-    /*margin: 0px auto 0 auto;*/
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto 0 auto;*/
   /*border-radius: 4px;*/
 }
 

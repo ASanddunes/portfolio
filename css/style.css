@@ -147,6 +147,8 @@ html {
 }
 
 /* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 h1 {
     font-family: "Kabel", monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
@@ -180,7 +182,7 @@ h3 {
 }
 
 p {
-    font-family: "Kabel",monospace;
+    font-family: "Raleway",monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -322,6 +324,7 @@ a:hover {
 
 .portfolio-thumbnail {
     border-radius: 0px;
+    width: 330px;
 }
 
 @media only screen and (max-width: 1090px) {
@@ -330,7 +333,9 @@ a:hover {
         grid-template-columns: auto;
     }
     
-    
+    portfolio-thumbnail {
+        width: 100%;
+    }
 }
 /* END */
 

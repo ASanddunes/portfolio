@@ -148,18 +148,18 @@ html {
 
 /* TYPOGRAPHY */
 h1 {
-    font-family: "Royal Acid",sans-serif;
-    src:url(/Royal%2520Acidbath/Royalacid.ttf);
+    font-family: "Kabel", monospace;
+    src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
-    font-weight: normal;
+    font-weight: bolder;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color= #000000, offx=1, offy=1);
-    font-size: 4em;
+    font-size: 3.5em;
     letter-spacing: 2.0px;
 }
 
 h2 {
-    font-family: "Kabel",sans-serif;
+    font-family: "Kabel",monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -169,7 +169,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Kabel",sans-serif;
+    font-family: "Kabel",monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -180,7 +180,7 @@ h3 {
 }
 
 p {
-    font-family: "Kabel",sans-serif;
+    font-family: "Kabel",monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -190,7 +190,7 @@ p {
 }
 
 a {
-    font-family: "Kabel",sans-serif;
+    font-family: "Kabel",monospace;
     src:url(/Kabel/Kabel_Regular.ttf);
     color: #FFFFFF;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -301,7 +301,7 @@ a:hover {
 }
 
 .portfolio-thumbnail {
-    border-radius: 30px;
+    border-radius: 0px;
 }
 
 @media only screen and (max-width: 1090px) {
@@ -441,6 +441,12 @@ a:hover {
     @include transform(skewX(10deg) skewY(-10deg));
   }
 }
+}
+
+
+/* FAKE SEPHORA ROWS */
+.sephora-bonus-column {
+    width: 25%;
 }
 
 

@@ -117,15 +117,17 @@ html {
 }
 
 .vertical-portfolio-piece-column {
+    display: flex;
     width: 50%;
     padding: 40px 40px 40px 40px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .desktop-portfolio-column.left {
+    display: flex;
     width: 40%;
     padding: 0px 40px 40px 40px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .desktop-portfolio-column.right {

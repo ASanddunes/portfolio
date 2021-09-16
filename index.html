@@ -2,6 +2,11 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
+    
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+    
     <title>THIS IS A WIP</title>
     <!-- CSS SCRIPT LINK -->
     <link rel="stylesheet" href="/css/style.css">
@@ -39,7 +44,7 @@
 				else return null;
 			},
 			times: [],
-			span: 20
+			span: 200
 		};
 		var counter = Object.create(fps_counter);
 		
@@ -70,9 +75,9 @@
 				animateIn( $item, $block )						
 			}
 			
-			// set mouse x and y props and looper ticker
+			// set mouse x and y props and looper ticker typicallly 1000/60
 			window.addEventListener( "mousemove", onMouseMove, false );
-			ticker = setInterval( looper, 1000/60 );			
+			ticker = setInterval( looper, 1500/60 );			
 		}
 		function animateIn( $item, $block ) {
 			var $nrX = 360 * getRandomInt(2);
@@ -112,7 +117,7 @@
 INCLUDE LINKS: HOME, ABOUT + RESUME-->
 <nav class="allpage-navigation">
     <div class="navigation-content">
-        <a href="./index.html"><img src="/img/icon/alinasandu-logo_white.png" width=50></a>
+        <a href="./index.html"><img class="navigation-logo" src="/img/icon/alinasandu-logo_white.svg"></a>
         <nav>
             <ul class="navigation">
                 <li><a href="/about-me-and-resume.html">Insert Not-So Tragic Backstory</a></li>
@@ -125,15 +130,17 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
 <body>
     <!-- HERO TEXT -->
     <div class="website-row">
-        <div class="website-column left">
-            <h1>Alina Sandu</h1>
-            <h3>ROOKIE ILLUSTRTOR <br> WANNABE COMIC ARTIST</h3>
-            <p>Yeah, you may age like fine wine, but I age like fine cheese.</p>
-            <h2>CONTROLS: Wave and move your mouse to bend the carousel to your will.</h2>
+        <div class="desktop-index-column left">
+            <div class="desktop-index-text-glue">
+                <h1 class="title">Alina Sandu</h1>
+                <h2 class="subtitle">Rookie Illustrator <br> Wannabe Comic Artist</h2 >
+                <p>Yeah, you may age like fine wine, but I age like fine cheese. <br><br> (…Wait, what do you mean that's a bad thing?)</p>
+                <h3>Wave and move your mouse to bend the carousel to your will.</h3>
+            </div>
         </div>
     <!-- END OF HERO TEXT-->
     <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
-        <div class="website-column right">
+        <div class="desktop-index-column right">
             <!-- COPYRIGHT NOTE -->
             <!--original pen 3d motion from: @johnblazek 
             Copyright (c) 2021 by John Blazek (https://codepen.io/johnblazek/pen/nceyw)
@@ -145,90 +152,93 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
                 <section id="Carousel-Container" class="trans3d">
                     <!-- Bad Batter -->
                     
-                    <!-- The Fairy Door -->
+                    <!-- Fake Sephora -->
                     <figure id="item1" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_the-fairy-door_comic.html">
-                                <img src="/img/portfolio/the-fairy-door/portfolio_thefairydoor_icon.png" width=330>
-                            </a>
-                            <a href="./portfolio_the-fairy-door_comic.html">
-                                The Fairy Door
-                            </a>
-                        </div>
-                    </figure>
-                    <!-- Fake Sephora -->
-                    <figure id="item2" class="Carousel-Item trans3d">
-                        <div class="Carousel-Item-Inner trans3d">
                             <a href="./portfolio_fake-sephora_illustration.html">
-                                <img src="/img/portfolio/fake-sephora/portfolio_fake-sephora_icon.png" width=330>
+                                <img class= "portfolio-thumbnail" src="/img/portfolio/fake-sephora/portfolio_fake-sephora_icon.png">
                             </a>
-                            <a href="./portfolio_fake-sephora_illustration.html">
-                                Fake Sephora
-                            </a>
+                            <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
+                            <p class="portfolio-piece-description">Social Media Illustration</p>
                         </div>
                     </figure>
                     <!-- The Firebird -->
                     
                     <!-- Forbidden Vectors -->
-                    <figure id="item3" class="Carousel-Item trans3d">
+                    <figure id="item2" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_forbidden-vectors_illustration.html"><img src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_icon.png" width=330></a>
+                            <a href="./portfolio_forbidden-vectors_illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/forbidden-vectors/portfolio_forbidden-vectors_icon.png"></a>
                             <a href="./portfolio_forbidden-vectors_illustration.html">Forbidden Vectors</a>
+                            <p class="portfolio-piece-description">Vector Illustrations</p>
                         </div>
                     </figure>
                     <!-- Hockey in After Effects -->
-                    <figure id="item4" class="Carousel-Item trans3d">
+                    <figure id="item3" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_icon.png" width=330></a>
+                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/hockey-in-after-effects/portfolio_hockey-in-after-effects_icon.png"></a>
                             <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">Hockey In After Effects</a>
+                            <p class="portfolio-piece-description">Motion Illustration</p>
                         </div>
                     </figure>
                     <!-- Impromptu Fatherhood -->
-                    <figure id="item5" class="Carousel-Item trans3d">
+                    <figure id="item4" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_impromptu-fatherhood_illustration.html"><img src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_icon.png" width=330></a>
+                            <a href="./portfolio_impromptu-fatherhood_illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/impromptu-fatherhood/portfolio_impromptu-fatherhood_icon.png"></a>
                             <a href="./portfolio_impromptu-fatherhood_illustration.html">Impromptu Fatherhood</a>
+                            <p class="portfolio-piece-description">Editorial Illustration</p>
                         </div>
                     </figure>
-                    <!-- Letting Go -->
+                    
 
                     <!-- Season in the Sun -->
-                    <figure id="item6" class="Carousel-Item trans3d">
+                    <figure id="item5" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_icon.png" width=330></a>
+                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img class= "portfolio-thumbnail" src="/img/portfolio/season-in-the-sun/portfolio_season-in-the-sun_icon.png"></a>
                             <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">Season in the Sun</a>
+                            <p class="portfolio-piece-description">Poster Illustration</p>
                         </div>
                     </figure>
+                            
+                    <!-- COMICS | Letting Go -->
+                    <figure id="item6" class="Carousel-Item trans3d">
+                        <div class="Carousel-Item-Inner trans3d">
+                            <a href="./portfolio_letting-go_comic.html">
+                                <img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/portoflio_letting-go_page-00_icon.png">
+                            </a>
+                            <a href="./portfolio_letting-go_comic.html">
+                                Letting Go
+                            </a>
+                            <p class="portfolio-piece-description">Comic (Under Construction)</p>
+                        </div>
+                    </figure>
+                    
+                    <!-- COMICS | The Fairy Door -->
+                    
                 </section>
             </div>
         </div>
     </div>
     
     <div class="index-hero-text">
-        <h1>Alina Sandu</h1>
-        <h3>ROOKIE ILLUSTRTOR <br> WANNABE COMIC ARTIST</h3>
-        <p>Yeah, you may age like fine wine, but I age like fine cheese.</p>
-        <p>Keep scrolling to see the goods.</p>
-        <br>
-        <br>
-        <p>You can trust me…</p>
+        <div class="desktop-index-text-glue">
+            <h1>Alina Sandu</h1>
+            <h3>ROOKIE ILLUSTRTOR <br> WANNABE COMIC ARTIST</h3>
+            <p>Yeah, you may age like fine wine, but I age like fine cheese. <br><br> (…Wait, what do you mean that's a bad thing?)</p>
+            <p>Keep scrolling to see the goods.</p>
+            <br>
+            <br>
+            <p>You can trust me…</p>
+        </div>
     </div>
 
 <!-- EACH PORTFOLIO LAID OUT. 
 NEED TO MAKE DIV HAVE SPACING TO SEPARATE IT FROM THE CAROUSEL. ALSO FURTHER DECORATE EACH SECTION.-->
-    <div class="portfolio-grid-title"><h2>MY TRACK RECORD SO FAR</h2></div>
-    <div class="portfolio-grid">
+    <div class="index-portfolio-grid-title"><h2>MY TRACK RECORD SO FAR</h2></div>
+    <div class="index-portfolio-grid">
         <!-- Bad Batter -->
 
         <!-- The Fairy Door -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_the-fairy-door_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/the-fairy-door/portfolio_thefairydoor_icon.png"></a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_the-fairy-door_comic.html">The Fairy Door</a>
-            </div>
-        </div>
+        
         <!-- Fake Sephora -->
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
@@ -281,8 +291,6 @@ NEED TO MAKE DIV HAVE SPACING TO SEPARATE IT FROM THE CAROUSEL. ALSO FURTHER DEC
                 </a>
             </div>
         </div>
-        <!-- Letting Go -->
-
         <!-- Season in the Sun -->
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
@@ -296,6 +304,16 @@ NEED TO MAKE DIV HAVE SPACING TO SEPARATE IT FROM THE CAROUSEL. ALSO FURTHER DEC
                 </a>
             </div>
         </div>
+        <!-- Letting Go -->
+        <div class="portfolio-grid-piece">
+            <div class="portfolio-grid-piece-content">
+                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/portoflio_letting-go_page-00_icon.png"></a>
+            </div>
+            <div class="portfolio-grid-piece-content">
+                <a href="./portfolio_letting-go_comic.html">Letting Go</a>
+                <p class="portfolio-piece-description">Comic (Under Construction)</p>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -306,21 +324,12 @@ INCLUDE: ABOUT SUMMARY, SOCIAL MEDIA LINKS, RESUME DOWNLOAD LINK, ETC. -->
     
     <div class="footer-content">
         <div class="brand-footer">
-            <a href="./index.html"><img src="/img/icon/alinasandu-logo_white.png" width=100></a>
+            <a href="./index.html"><img class="navigation-logo" src="/img/icon/alinasandu-logo_white.svg" width=100></a>
         </div>
         <ul class="footer-content">
             <li>
                 <a href="about-me-and-resume.html"><h2>Insert Not-So-Tragic Backstory</h2></a>
-                <p>I love to laugh and dancing in the rain— <br> just kidding. <br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything.</p>
-            </li>
-            <li class="social-media-item">
-                <p>
-                    <a href="http://linkedin.com/in/alinasanddune/">LinkedIn</a>, 
-                    <a href="https://www.behance.net/alinasanddune">Behance</a>, 
-                    <a href="https://www.artstation.com/alinasandu">Artstation</a>, 
-                    <a href="http://instagram.com/alinasanddunes">Instagram</a>, 
-                    <a href="http://alinasanddunes.tumblr.com/">Tumblr</a>
-                </p>
+                <p>I love to laugh and dancing in the rain— <br> just kidding. <br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything.<br><a href="http://linkedin.com/in/alinasanddune/">LinkedIn</a>, <a href="https://www.behance.net/alinasanddune">Behance</a>, <a href="https://www.artstation.com/alinasandu">Artstation</a>, <a href="http://instagram.com/alinasanddunes">Instagram</a>, <a href="http://alinasanddunes.tumblr.com/">Tumblr</a></p>
             </li>
         </ul>
     </div>

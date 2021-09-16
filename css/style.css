@@ -15,30 +15,31 @@ img {max-width: 100%; height: auto;}
 
 /* FOR ALL PAGES */
 html {
-    background-image: url(/img/background-tiles/background-tile_default.gif);
+    background-image: url(/img/background-tiles/background-tile_default-02.jpg);
     background-size: 20%;
     background-repeat: repeat;
 }
 
 /* NAVIGATION BAR*/
 .allpage-navigation {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    position: sticky;
 }
 
 .navigation-content {
-  width: 90%;
-  padding: 40px 40px 20px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    width: 90%;
+    padding: 40px 40px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .navigation {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navigation a {
@@ -54,11 +55,52 @@ html {
 }
 
 .navigation-logo {
-  max-width: 150px;
+    width: 50px;
 }
 /* END */
 
 /* BODY SECTION */
+.website-row {
+  display: flex;
+  clear:both;
+}
+
+/* Puts columns in a row */
+.website-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.desktop-index-column {
+  /*float: left;*/
+  padding: 30px;
+  margin: 30px;
+}
+
+/* Index column with hero text */
+.desktop-index-column.left {
+    display: flex;
+    width: 30%;
+    z-index: 5;
+    justify-content: center;
+    padding: 40px 40px 40px 40px;
+    margin-left: 35px;
+}
+
+/* Index column with carousel */
+.desktop-index-column.right {
+  width: 70%;
+}
+
+.index-hero-text {
+    display: flex;
+    width: 90%;
+    padding: 40px 40px 40px 40px;
+    margin: auto 0px auto 0px;
+    flex-wrap: wrap;
+}
+
 .website-content {
     display: flex;
     justify-content: center;
@@ -80,12 +122,63 @@ html {
     align-items: center;
 }
 
+.desktop-portfolio-column.left {
+    width: 40%;
+    padding: 0px 40px 40px 40px;
+    align-items: center;
+}
+
+.desktop-portfolio-column.right {
+    width: 60%;
+    padding: 50px 40px 40px 40px;
+}
+
+.portfolio-piece {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1091px) {
+    .index-hero-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .desktop-index-column.left, .desktop-index-column.right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-index-text-glue {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .desktop-index-column.left {
+        display: column;
+        width: 100%;
+    }
+    
+    
+    .website-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+  
+    .desktop-portfolio-column.left, .desktop-portfolio-column.right {
+        width: 100%;
+  }
+}
+
 /* END */
 
 /* FOOTER CSS */
 .footer-container {
     display: flex;
     justify-content: center;
+    margin: 180px 0px 40px 0px;
 }
 
 .brand-footer {
@@ -95,7 +188,7 @@ html {
 
 .footer-content {
     width: 90%;
-    padding: 100px 20px 40px 20px;
+    padding: 0px 20px 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,97 +196,78 @@ html {
 }
 /* END */
 
-.website-row {
-  display: flex;
-  clear:both;
-}
-
-.website-column {
-  /*float: left;*/
-  padding: 30px;
-  margin: 30px;
-}
-
-/* Left column */
-.website-column.left {
-  width: 25%;
-  z-index: 5;
-  justify-content: center;
-    margin-left: 35px;
-}
-
-/* Column with main content*/
-.website-column.right {
-  width: 75%;
-}
-
-/* Puts columns in a row */
-.website-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media only screen and (max-width: 768px) {
-  .website-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-  
-  .website-column.left, .website-column.right {
-    width: 100%;
-  }
-}
 
 /* TYPOGRAPHY */
+
+.title {
+    font-family: "Kabel", "Raleway";
+    src:url(/Kabel/Kabel_Regular.ttf);
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: 900;
+    font-size: 3.5em;
+    letter-spacing: 0.06em;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color= #000000, offx=1, offy=1);
+}
+
+.subtitle {
+    font-family: "Kabel", "Raleway";
+    src:url(/Kabel/Kabel_Regular.ttf);
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: 100;
+    font-size: 1.0em;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color= #000000, offx=1, offy=1);
+}
 
 h1 {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
-    color: #FFFFFF;
-    font-weight: bolder;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 2.0em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color= #000000, offx=1, offy=1);
-    font-size: 3.5em;
-    letter-spacing: 2.0px;
 }
 
 h2 {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 1.5em;
+    font-weight: 600;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
-    filter: dropshadow(color=#000000, offx=1, offy=1);
-    font-size: 1em;
-    letter-spacing: 1.0px;
 }
 
 h3 {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
-    color: #FFFFFF;
+    color: rgba(225, 225, 225, 1.0);
+    font-size: 1.0em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
-    font-size: 0.875em;
-    letter-spacing: 1.0px;
     text-decoration: none;
 }
 
 p {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 1em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
-    font-size: 1em;
-    letter-spacing: 1.0px;
 }
 
 a {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1.0);
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
     color: rgba(255, 255, 255, .75);
@@ -201,8 +275,18 @@ a {
 }
 
 a:hover {
-    color: rgba(181, 71, 60);
+    color: rgba(181, 71, 60, 1.0);
     cursor: pointer;
+}
+
+.portfolio-piece-description {
+    font-size: 0.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    text-align: center;
+    padding: 0px 0px 20px 0px;
 }
 /* END */
 
@@ -258,12 +342,12 @@ a:hover {
 	}
 	
 .Carousel-Item-Inner {
-		width:330px;
+		width:350px;
 		height:140px;
 		position:absolute;
 		background-color:rgba(255, 255, 255, .0);
 		color:black;
-		font-size: 2em;
+		font-size: 1.5em;
 		left:50%;
 		top:50%;
 		margin-left:-160px;
@@ -271,37 +355,29 @@ a:hover {
 		text-align:center;
 	}
 
-.index-hero-text {
-    width: 90%;
-    padding: 40px 40px 40px 40px;
-    margin: auto 0px auto 0px;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 @media only screen and (max-width: 1090px) {
     #Content-Container {
         display: none;
     }
-    
-    .website-column.left {
-        display: none;
-    }
 }
-
-@media only screen and (min-width: 1091px) {
-    .index-hero-text {
-        display: none;
-    }
-}
-
 /* END */
 
 /* INDEX LAID OUT PORTFOLIO */
+.index-portfolio-grid-title {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.index-portfolio-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding 10px;
+}
+
 .portfolio-grid-title {
     text-align: center;
-    margin-top: 400px;
+    margin-top: 100px;
 }
 
 .portfolio-grid {
@@ -326,13 +402,36 @@ a:hover {
     width: 330px;
 }
 
+/* Hides laid out index portfolio from desktop view */
+@media only screen and (min-width: 1091px) {
+    .index-portfolio-grid-title {
+        display: none;
+    }
+    .index-portfolio-grid {
+        display: none;
+    }
+}
+
+/* Makes each portfolio grid row be two in iPad view */
 @media only screen and (max-width: 1090px) {
+    .portfolio-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Makes portfolio grid in a column for phone users */
+@media only screen and (max-width: 812px) {
+    .index-portfolio-grid {
+        display: column;
+        grid-template-columns: auto;
+    }
+    
     .portfolio-grid {
         display: column;
         grid-template-columns: auto;
     }
     
-    portfolio-thumbnail {
+    .portfolio-thumbnail {
         width: 100%;
     }
 }
@@ -491,6 +590,7 @@ a:hover {
 
 .comic-reader_phone {
     width: 100%;
+    padding: 20px;
     margin: auto;
 }
 
@@ -582,7 +682,7 @@ a:hover {
   width: auto;
   height: auto;
   /*background: #2a2a2a;*/
-  color: #fff;
+  color: rgba(255, 255, 255, 1.0);
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;

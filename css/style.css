@@ -16,7 +16,7 @@ img {max-width: 100%; height: auto;}
 /* FOR ALL PAGES */
 html {
     background-image: url(/img/background-tiles/background-tile_default-02.jpg);
-    background-size: 20%;
+    background-size: 30%;
     background-repeat: repeat;
 }
 
@@ -137,6 +137,7 @@ html {
 
 .portfolio-piece {
     width: 100%;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 1091px) {

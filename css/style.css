@@ -28,8 +28,8 @@ html {
 }
 
 .navigation-content {
-    width: 90%;
-    padding: 40px 40px 20px 20px;
+    width: 100%;
+    padding: 40px 60px 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,18 +126,25 @@ html {
 .desktop-portfolio-column.left {
     display: flex;
     width: 40%;
-    padding: 0px 40px 40px 40px;
+    margin: 0px 40px 40px 60px;
     flex-wrap: wrap;
 }
 
 .desktop-portfolio-column.right {
+    display: flex;
     width: 60%;
-    padding: 50px 40px 40px 40px;
+    margin: 30px 60px 40px 40px;
 }
 
-.portfolio-piece {
+.portfolio-piece-vertical {
+    display: block;
+    width: 63%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.porttfolio-piece-horizontal {
     width: 100%;
-    border-radius: 10px;
 }
 
 @media only screen and (min-width: 1091px) {
@@ -150,6 +157,9 @@ html {
     .desktop-index-column.left, .desktop-index-column.right {
         display: none;
     }
+    .portfolio-piece-vertical {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -157,22 +167,21 @@ html {
         width: 90%;
         margin: auto;
     }
-    
     .desktop-index-column.left {
         display: column;
         width: 100%;
     }
-    
-    
     .website-row {
         display: flex;
         flex-direction: column;
         justify-content: center;
 }
-  
     .desktop-portfolio-column.left, .desktop-portfolio-column.right {
         width: 100%;
   }
+    .portfolio-piece-vertical {
+        width: 100%;
+    }
 }
 
 /* END */
@@ -181,7 +190,7 @@ html {
 .footer-container {
     display: flex;
     justify-content: center;
-    margin: 180px 0px 40px 0px;
+    margin: 180px 60px 40px 60px;
 }
 
 .brand-footer {
@@ -190,8 +199,8 @@ html {
 }
 
 .footer-content {
-    width: 90%;
-    padding: 0px 20px 20px 0px;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -207,7 +216,7 @@ html {
     src:url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-weight: 900;
-    font-size: 3.5em;
+    font-size: 2.5em;
     letter-spacing: 0.06em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color= #000000, offx=1, offy=1);
@@ -218,7 +227,7 @@ html {
     src:url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-weight: 100;
-    font-size: 1.0em;
+    font-size: 0.9em;
     letter-spacing: normal;
     text-transform: uppercase;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -240,7 +249,7 @@ h2 {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
 }
@@ -262,7 +271,7 @@ p {
     font-family: "Kabel", "Raleway";
     src:url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
-    font-size: 1em;
+    font-size: 0.9em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
@@ -573,12 +582,6 @@ a:hover {
 }
 
 
-/* FAKE SEPHORA ROWS */
-.sephora-bonus-column {
-    width: 25%;
-}
-
-
 /* COMIC READERS */
 /* SPECIAL COLUMNS*/
 .comic-reader_text {
@@ -699,9 +702,9 @@ a:hover {
   -webkit-transition: all 0.2s ease;
 }
 
-/*.control_prev {
+.control_prev {
   border-radius: 0 2px 2px 0;
-}*/
+}
 
 .control_next {
   right: 0;

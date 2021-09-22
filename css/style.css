@@ -160,6 +160,9 @@ html {
     .portfolio-piece-vertical {
         width: 100%;
     }
+    .desktop-portfolio-column.left, .desktop-portfolio-column.right {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -595,9 +598,11 @@ a:hover {
 }
 
 .comic-reader_phone {
+    display: block;
     width: 100%;
     padding: 20px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* SPECIAL COLUMNS - MEDIA QUERY */

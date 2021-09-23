@@ -24,9 +24,6 @@ html {
 .allpage-navigation {
     display: flex;
     justify-content: center;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
 }
 
 .navigation-content {
@@ -113,9 +110,6 @@ html {
     width: 40%;
     margin: 0px 40px 40px 60px;
     flex-wrap: wrap;
-    position: -webkit-sticky; /*For Safari*/
-    position: sticky;
-    top: 0;
 }
 
 .desktop-portfolio-column.right {
@@ -126,7 +120,7 @@ html {
 
 .portfolio-piece-vertical {
     display: block;
-    width: 63%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -140,19 +134,40 @@ html {
     .index-hero-text {
         display: none;
     }
+    
+    .desktop-portfolio-column.right {
+        display: block;
+        width: 700px;
+        height: 700px;
+        overflow: scroll;
+    }
 }
 
 /* ONLY ON IPAD */
-@media only screen 
-    and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     .desktop-index-column.left, .desktop-index-column.right {
         display: none;
     }
+    
     .portfolio-piece-vertical {
         width: 100%;
     }
-    .desktop-portfolio-column.left, .desktop-portfolio-column.right {
+    
+    .website-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .desktop-portfolio-column.left {
         width: 100%;
+    }
+    
+    .desktop-portfolio-column.right {
+        display: flex;
+        width: 100%;
+        overflow: visible;
+        margin: 30px 60px 40px 40px;
     }
 }
 
@@ -170,10 +185,16 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-}
-    .desktop-portfolio-column.left, .desktop-portfolio-column.right {
+    }
+    
+    .desktop-portfolio-column.left {
         width: 100%;
-  }
+    }
+    
+    .desktop-portfolio-column.right {
+        width: 100%;
+    }
+    
     .portfolio-piece-vertical {
         width: 100%;
     }

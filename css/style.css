@@ -24,7 +24,9 @@ html {
 .allpage-navigation {
     display: flex;
     justify-content: center;
+    position: -webkit-sticky; /* Safari */
     position: sticky;
+    top: 0;
 }
 
 .navigation-content {
@@ -106,28 +108,14 @@ html {
     justify-content: center;
 }
 
-.horizontal-portfolio-piece-column {
-    width: 90%;
-    padding: 40px 40px 40px 40px;
-    margin: 0px 0px 32px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.vertical-portfolio-piece-column {
-    display: flex;
-    width: 50%;
-    padding: 40px 40px 40px 40px;
-    flex-wrap: wrap;
-}
-
 .desktop-portfolio-column.left {
     display: flex;
     width: 40%;
     margin: 0px 40px 40px 60px;
     flex-wrap: wrap;
+    position: -webkit-sticky; /*For Safari*/
+    position: sticky;
+    top: 0;
 }
 
 .desktop-portfolio-column.right {

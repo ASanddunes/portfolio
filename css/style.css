@@ -80,11 +80,10 @@ html {
 /* Index column with hero text */
 .desktop-index-column.left {
     display: flex;
-    width: 30%;
-    z-index: 5;
+    width: 35%;
+    z-index: 999;
     justify-content: center;
-    padding: 40px 40px 40px 40px;
-    margin-left: 35px;
+    margin-left: 0px 40px 40px 60px;
 }
 
 /* Index column with carousel */
@@ -118,6 +117,23 @@ html {
     margin: 30px 60px 40px 40px;
 }
 
+.desktop-portfolio-aside {
+    width: 35%;
+    height: 45vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+    left: 6vh;
+    background: rgba(255, 68, 0, 0);
+    margin: 0px 40px 40px 60px;
+}
+
+.desktop-portfolio-gallery {
+    display: flex;
+    width: 65%;
+    margin: 30px 60px 40px 40px;
+}
+
 .portfolio-piece-vertical {
     display: block;
     width: 70%;
@@ -128,79 +144,6 @@ html {
 .porttfolio-piece-horizontal {
     width: 100%;
 }
-
-/* ONLY ON DESKTOP */
-@media only screen and (min-width: 1281px) {
-    .index-hero-text {
-        display: none;
-    }
-    
-    .desktop-portfolio-column.right {
-        display: block;
-        width: 700px;
-        height: 700px;
-        overflow: scroll;
-    }
-}
-
-/* ONLY ON IPAD */
-@media only screen and (max-width: 1280px) {
-    .desktop-index-column.left, .desktop-index-column.right {
-        display: none;
-    }
-    
-    .portfolio-piece-vertical {
-        width: 100%;
-    }
-    
-    .website-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .desktop-portfolio-column.left {
-        width: 100%;
-    }
-    
-    .desktop-portfolio-column.right {
-        display: flex;
-        width: 100%;
-        overflow: visible;
-        margin: 30px 60px 40px 40px;
-    }
-}
-
-/* ONLY ON PHONE */
-@media only screen and (max-width: 480px) {
-    .desktop-index-text-glue {
-        width: 90%;
-        margin: auto;
-    }
-    .desktop-index-column.left {
-        display: column;
-        width: 100%;
-    }
-    .website-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .desktop-portfolio-column.left {
-        width: 100%;
-    }
-    
-    .desktop-portfolio-column.right {
-        width: 100%;
-    }
-    
-    .portfolio-piece-vertical {
-        width: 100%;
-    }
-}
-
-/* END */
 
 /* FOOTER CSS */
 .footer-container {
@@ -219,8 +162,11 @@ html {
     padding: 0px 0px 20px 0px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+}
+
+.footer-social-media-icon {
+    padding-right: 2em;
 }
 /* END */
 
@@ -382,13 +328,6 @@ a:hover {
 		margin-top:-160px;
 		text-align:center;
 	}
-
-
-@media only screen and (max-width: 1090px) {
-    #Content-Container {
-        display: none;
-    }
-}
 /* END */
 
 /* INDEX LAID OUT PORTFOLIO */
@@ -430,172 +369,6 @@ a:hover {
     width: 330px;
 }
 
-/* Hides laid out index portfolio from desktop view */
-@media only screen and (min-width: 1281px) {
-    .index-portfolio-grid-title {
-        display: none;
-    }
-    .index-portfolio-grid {
-        display: none;
-    }
-}
-
-/* Makes each portfolio grid row be two in iPad view */
-@media only screen and (max-width: 1280px) {
-    .portfolio-grid {
-        grid-template-columns: auto auto;
-    }
-}
-
-/* Makes portfolio grid in a column for phone users */
-@media only screen and (max-width: 600px) {
-    .index-portfolio-grid {
-        display: column;
-        grid-template-columns: auto;
-    }
-    
-    .portfolio-grid {
-        display: column;
-        grid-template-columns: auto;
-    }
-    
-    .portfolio-thumbnail {
-        width: 100%;
-    }
-}
-/* END */
-
-/* 404 PAGE */
-.Fail-Page-Content {
-    background-size: contain;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.glitch {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 600;
-    color:white;
-    font-size:100px;
-    position:relative;
-    margin:0 auto;
-    text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        0px 0px 15px rgba(255,255,255,0),
-        0px 0px 20px rgba(255,255,255,0);
-    animation:noise-anim-2 3s infinite linear alternate-reverse, shift 4s ease-in-out infinite alternate, blur 8s ease-in-out infinite alternate;
-    @include transform(skewX(0deg));
-}
-
-@include keyframes(blur){
-    0%,40%, 50%, 60%, 90%, 95%, 100%{
-        text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        2px 1px 15px rgba(100,240,255,0),
-        0px 0px 20px rgba(255,255,255,0);
-    }
-    45%, 75% {
-    text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,1),
-        0px 0px 10px rgba(255,255,255,1),
-        2px 1px 15px rgba(100,240,255,1),
-        0px 0px 20px rgba(255,255,255,1);
-    }
-    
-    97.5% {
-    text-shadow:
-        0px -5px 10px rgba(255,255,255,0),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        2px 1px 4px rgba(255,100,100,1),
-        0px 0px 20px rgba(255,255,255,0);
-    }
-}
-
-.glitch:after{
-    content:attr(data-text);
-    position:absolute;
-    left:3px;
-    text-shadow: -1px 0 red;
-    top:0;
-    color: transparent;
-    background: transparent;
-    overflow:hidden;
-    clip:rect(0,900px,0,0); 
-    animation:noise-anim-2 3s infinite linear alternate-reverse, shift 4s ease-in-out infinite alternate;
-    @include transform(skewX(0deg));
-    z-index: -2;
-    opacity: .7;
-}
-
-.glitch:before{
-    content:attr(data-text);
-    position:absolute;
-    left:1px;
-    text-shadow: -3px 0 cyan; 
-    top:0;
-    color: transparent;
-    background: transparent;
-    overflow: hidden;
-    clip:rect(0,900px,0,0); 
-    animation:noise-anim-2 3s infinite linear alternate-reverse, shift 4s ease-in-out infinite alternate;
-    @include transform(skewX(0deg));
-    z-index: -1;
-    opacity: .8;
-}
-
-@keyframes noise-anim{
-    $steps:20;
-    @for $i from 0 through $steps{
-        #{percentage($i*(1/$steps))}{
-            clip:rect(random(100)+px,9999px,random(100)+px,0);
-        }
-    }
-}
-
-@keyframes noise-anim-2{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(100)+px,9999px,random(100)+px,0);
-    }
-  }
-}
-
-@include keyframes(shift){
-  0%,40%, 44%, 58%, 61%, 65%,69%,73%,100%{
-    @include transform(skewX(0deg))
-  }
-  41%{
-    @include transform(skewX(10deg));
-  }
-  42%{
-    @include transform(skewX(-10deg));
-  }
-  59%{
-    @include transform(skewX(40deg) skewY(10deg));
-  }
-  60%{
-    @include transform(skewX(-40deg) skewY(-10deg));
-  }
-  63%{
-    @include transform(skewX(10deg) skewY(-5deg));
-  }
-  70%{
-    @include transform(skewX(-50deg) skewY(-20deg));
-  }
-  71%{
-    @include transform(skewX(10deg) skewY(-10deg));
-  }
-}
-}
 
 
 /* COMIC READERS */
@@ -618,33 +391,11 @@ a:hover {
     margin-right: auto;
 }
 
-/* SPECIAL COLUMNS - MEDIA QUERY */
-@media only screen and (max-width: 1090px) {
-    .comic-reader_desktop {
-        display: none;
-    }
-    .comic-reader_desktop-text {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 1091px) {
-    .comic-reader_phone {
-        display: none;
-    }
-    .comic-reader_phone-text {
-        display: none;
-    }
-}
-
-@media only screen and (max-width:)
-
 /* THE FAIRY DOOR */
 #fairy-door_slider {
     position: relative;
     overflow: hidden;
     margin: 0px auto 0 auto;
-    /*border-radius: 4px;*/
 }
 
 #fairy-door_slider ul {
@@ -673,70 +424,177 @@ a:hover {
 #letting-go_slider {
     position: relative;
     overflow: hidden;
-    margin: 0px auto 0 auto;*/
-  /*border-radius: 4px;*/
+    margin: 10px auto 0px auto;
+    border-radius: 4px;
 }
 
 #letting-go_slider ul {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 400px;
+  height: 200px;
   list-style: none;
 }
 
+/* Comic Size: 1110px x 700px */
 #letting-go_slider ul li {
   position: relative;
   display: block;
   float: left;
-  /*margin: 0;
-  padding: 0;*/
+  margin: 0;
+  padding: 0;
   width: 1110px;
   height: 700px;
-  background: #ccc;
-  text-align: center;
-  line-height: 300px;
+  /*background: #ccc;*/
 }
 
-.control_prev,
-.control_next {
+a.control_prev, a.control_next {
   position: absolute;
-  top: 40%;
+  top: 45%;
   z-index: 999;
   display: block;
-  padding: 4% 3%;
+  padding: 1% 1%;
   width: auto;
   height: auto;
   /*background: #2a2a2a;*/
   color: rgba(255, 255, 255, 1.0);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
   opacity: 0.8;
   cursor: pointer;
 }
 
-.control_prev:hover,
-.control_next:hover {
-  opacity: 0;
+a.control_prev:hover, a.control_next:hover {
+  opacity: 0.6;
   -webkit-transition: all 0.2s ease;
 }
 
-.control_prev {
+a.control_prev {
   border-radius: 0 2px 2px 0;
 }
 
-.control_next {
+a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
-
-<<<<<<< HEAD
 /* END */
-=======
 
 
 
-/* Carousel styles */
->>>>>>> 36104dc78edccc8013b51345dfdcd84502ed18f9
+
+/* ALL MEDIA QUERY */
+/* ONLY ON DESKTOP */
+@media only screen and (min-width: 1281px) {
+    .index-hero-text {
+        display: none;
+    }
+    
+    .index-portfolio-grid-title {
+        display: none;
+    }
+    
+    .index-portfolio-grid {
+        display: none;
+    }
+    
+    .desktop-portfolio-column.right {
+        display: block;
+        width: 700px;
+        height: 700px;
+        overflow: scroll;
+    }
+    
+    .comic-reader_phone {
+        display: none;
+    }
+    .comic-reader_phone-text {
+        display: none;
+    }
+}
+
+/* ONLY ON IPAD */
+@media only screen and (max-width: 1280px) {
+    #Content-Container {
+        display: none;
+    }
+    
+    .desktop-index-column.left, .desktop-index-column.right {
+        display: none;
+    }
+    
+    .portfolio-piece-vertical {
+        width: 100%;
+    }
+    
+    .website-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .desktop-portfolio-column.left {
+        width: 100%;
+    }
+    
+    .desktop-portfolio-column.right {
+        display: flex;
+        width: 100%;
+        overflow: visible;
+        margin: 30px 60px 40px 40px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: auto auto;
+    }
+    
+    .comic-reader_desktop {
+        display: none;
+    }
+    .comic-reader_desktop-text {
+        display: none;
+    }
+}
+
+
+/* ONLY ON PHONE */
+/* Makes portfolio grid in a column for phone users */
+@media only screen and (max-width: 600px) {
+    .index-portfolio-grid {
+        display: column;
+        grid-template-columns: auto;
+    }
+    
+    .portfolio-grid {
+        display: column;
+        grid-template-columns: auto;
+    }
+    
+    .portfolio-thumbnail {
+        width: 100%;
+    }
+
+    .desktop-index-text-glue {
+        width: 90%;
+        margin: auto;
+    }
+    .desktop-index-column.left {
+        display: column;
+        width: 100%;
+    }
+    .website-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .desktop-portfolio-column.left {
+        width: 100%;
+    }
+    
+    .desktop-portfolio-column.right {
+        width: 100%;
+    }
+    
+    .portfolio-piece-vertical {
+        width: 100%;
+    }
+}
 /* END */

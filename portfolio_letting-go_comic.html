@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     
     <meta name="HandheldFriendly" content="true" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
-    
-  <title>Letting Go</title>
-<!-- CSS SCRIPT LINK -->
-  <link rel="stylesheet" href="/css/style.css">
+    <title>Letting Go</title>
+    <!-- CSS SCRIPT LINK -->
+    <link rel="stylesheet" href="/css/style.css">
     <style>
       /*html {background-image: url(/img/background-tiles/background-tile_letting-go.gif); background-size: 20%;}*/
     </style>
-<!-- JAVASCRIPT LINK -->
+    <!-- SUMMONS IN RALEWAY AS BACK UP FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- SUMMONS FREE ICONS -->
+    <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT LINK -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script>
         jQuery(document).ready(function ($) {
@@ -36,11 +41,11 @@
             function moveLeft() {
         $('#letting-go_slider ul').animate({
             left: + slideWidth
-        }, 200, function () {
-            $('#letting-go_slider ul li:last-child').prependTo('#slider ul');
+        }, 0, function () {
+            $('#letting-go_slider ul li:last-child').prependTo('#letting-go_slider ul');
             $('#letting-go_slider ul').css('left', '');
         });
-    };
+            };
 
             function moveRight() {
         $('#letting-go_slider ul').animate({
@@ -57,18 +62,19 @@
             $('a.control_next').click(function () {
         moveRight();
     });
+            
         });
     </script>
 </head>
 
-<!--NAVIGATION GOES HERE. 
-INCLUDE LINKS: HOME, ABOUT + RESUME-->
+<!--NAVIGATION GOES HERE.-->
 <nav class="allpage-navigation">
     <div class="navigation-content">
         <a href="./index.html"><img class="navigation-logo" src="/img/icon/alinasandu-logo_white.svg"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="/about-me-and-resume.html">Insert Not-So Tragic Backstory</a></li>
+                <li><a href="#portfolio-grid">Track Record</a></li>
+                <li><a href="#footer-bio">My Not-So Tragic Backstory</a></li>
             </ul>
         </nav>
     </div>
@@ -79,10 +85,9 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
 <body>
     <div class="comic-reader_desktop">
         <div id="letting-go_slider">
-            <a href="#" class="control_next"> R </a>
-            <a href="#" class="control_prev"> L </a>
             <ul>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_00.jpg" width=100%></li>
+                <li><img src="/img/portfolio/letting-go/portfolio_letting-go_02.jpg" width=100%></li>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_03.jpg" width=100%></li>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_04.jpg" width=100%></li>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_05.jpg" width=100%></li>
@@ -101,7 +106,10 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_18.jpg" width=100%></li>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_19.jpg" width=100%></li>
                 <li><img src="/img/portfolio/letting-go/portfolio_letting-go_20.jpg" width=100%></li>
-          </ul>  
+                <li><img src="/img/portfolio/letting-go/portfolio_letting-go_21.jpg" width=100%></li>
+          </ul> 
+            <a href="#" class="control_next"><i class="fas fa-angle-double-right fa-2x"></i></a>
+            <a href="#" class="control_prev"><i class="fas fa-angle-double-left fa-2x"></i></a>
         </div>
     </div>
     <div class="comic-reader_desktop-text">
@@ -126,11 +134,8 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
     </div>
     
         <!-- SHOW REST OF PORTFOLIO-->
-    <div class="portfolio-grid-title"><h2>BACK TO THE WORKS</h2></div>
+    <div class="portfolio-grid-title"><h2 id="portfolio-grid">BACK TO THE WORKS</h2></div>
     <div class="portfolio-grid">
-        <!-- Bad Batter -->
-
-        <!-- The Fairy Door -->
         
         <!-- Fake Sephora -->
         <div class="portfolio-grid-piece">
@@ -143,8 +148,6 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
                 <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
             </div>
         </div>
-        <!-- The Firebird -->
-
         <!-- Forbidden Vector -->
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
@@ -156,6 +159,16 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
                 <a href="./portfolio_forbidden-vectors_illustration.html">
                     Forbidden Vectors
                 </a>
+            </div>
+        </div>
+        <!-- Letting Go -->
+        <div class="portfolio-grid-piece">
+            <div class="portfolio-grid-piece-content">
+                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/portoflio_letting-go_page-00_icon.png"></a>
+            </div>
+            <div class="portfolio-grid-piece-content">
+                <a href="./portfolio_letting-go_comic.html">Letting Go</a>
+                <p class="portfolio-piece-description">Comic (Under Construction)</p>
             </div>
         </div>
         <!-- Hockey in After Effects -->
@@ -197,41 +210,30 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
                 </a>
             </div>
         </div>
-        <!-- Letting Go -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/portoflio_letting-go_page-00_icon.png"></a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html">Letting Go</a>
-                <p class="portfolio-piece-description">Comic (Under Construction)</p>
-            </div>
-        </div>
     </div>
     <!-- END -->
+    </body>
     
 
-<!-- FOOTER GOES HERE. 
-INCLUDE: ABOUT SUMMARY, SOCIAL MEDIA LINKS, RESUME DOWNLOAD LINK, ETC. -->
+<!-- FOOTER GOES HERE. -->
 <footer class="footer-container">
-    
     <div class="footer-content">
         <div class="brand-footer">
             <a href="./index.html"><img class="navigation-logo" src="/img/icon/alinasandu-logo_white.svg"></a>
         </div>
         <ul class="footer-content">
             <li>
-                <a href="about-me-and-resume.html"><h2>Insert Not-So-Tragic Backstory</h2></a>
-                <p>I love to laugh and dancing in the rain— <br> just kidding. <br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything. <br> *Insert Resume Link*</p>
+                <a href="about-me-and-resume.html"><h2 id="footer-bio">Insert Not-So-Tragic Backstory</h2></a>
+                <p>I love to laugh and dancing in the rain— <br><br> Just kidding! <br><br> Please don’t let my quiet, serious appearance deceive you. I’m actually a storyteller with a head full of ideas who need to get them out before I explode. And if you ever need me, you can easily find me ready to draw anything and everything on anything and everything.</p>
             </li>
             <li class="social-media-item">
                 <p>
-                    <a href="http://linkedin.com/in/alinasanddune/">LinkedIn</a>, 
-                    <a href="https://www.behance.net/alinasanddune">Behance</a>, 
-                    <a href="https://www.artstation.com/alinasandu">Artstation</a>, 
-                    <a href="http://instagram.com/alinasanddunes">Instagram</a>, 
-                    <a href="http://alinasanddunes.tumblr.com/">Tumblr</a>
-                </p>
+                    <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-3x"></i></a>
+                    <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-3x"></i></a>
+                    <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-3x"></i></a>
+                    <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-3x"></i></a>
+                    <a class="footer-social-media-icon" href="http://alinasanddunes.tumblr.com/"><i class="fab fa-tumblr fa-3x"></i></a>
+                </p>     
             </li>
         </ul>
     </div>

@@ -136,7 +136,7 @@ html {
 
 .portfolio-piece-vertical {
     display: block;
-    width: 70%;
+    width: 58%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -339,7 +339,6 @@ a:hover {
 .index-portfolio-grid {
     display: grid;
     grid-template-columns: auto auto;
-    padding 10px;
 }
 
 .portfolio-grid-title {
@@ -350,7 +349,6 @@ a:hover {
 .portfolio-grid {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding 10px;
 }
 
 .portfolio-grid-piece {

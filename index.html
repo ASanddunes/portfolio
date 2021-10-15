@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true" />
@@ -14,105 +15,140 @@
     <!-- SUMMONS IN RALEWAY AS BACK UP FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <!-- SUMMONS FREE ICONS -->
     <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
     <!-- JAVAS SCRIPT LINKS -->
-    <script src='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/js/libs.min.js'></script>
+    <script src='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/js/libs.min.js'>
+    </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script>
         // set and cache variables
-		var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
-		var mouseX = 0;
-		var mouseY = 0;
-		var mouseZ = 0;
-		var addX = 0;
-		
-		// fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
-		// no need to create my own :)
-		var fps_counter = {
-			tick: function () 
-			{
-				// this has to clone the array every tick so that
-				// separate instances won't share state 
-				this.times = this.times.concat(+new Date());
-				var seconds, times = this.times;
-				if (times.length > this.span + 1) 
-				{
-					times.shift(); // ditch the oldest time
-					seconds = (times[times.length - 1] - times[0]) / 1000;
-					return Math.round(this.span / seconds);
-				} 
-				else return null;
-			},
-			times: [],
-			span: 200
-		};
-		var counter = Object.create(fps_counter);
-		
-		$(document).ready( init )
-		
-		function init()
-		{
-			w = $(window);
-			container = $( '#Content-Container' );
-			carousel = $( '#Carousel-Container' );
-			item = $( '.Carousel-Item' );
-			itemLength = $( '.Carousel-Item' ).length;
-			fps = $('#fps');
-			rY = 360 / itemLength;
-			radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
-			// set container 3d props
-			TweenMax.set(container, {perspective:600})
-			TweenMax.set(carousel, {z:-(radius)})
-			// create carousel item props
-			for ( var i = 0; i < itemLength; i++ )
-			{
-				var $item = item.eq(i);
-				var $block = $item.find('.Carousel-Item-Inner');
-				
-        //thanks @chrisgannon!        
-        TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
-				
-				animateIn( $item, $block )						
-			}
-			
-			// set mouse x and y props and looper ticker typicallly 1000/60
-			window.addEventListener( "mousemove", onMouseMove, false );
-			ticker = setInterval( looper, 1500/60 );			
-		}
-		function animateIn( $item, $block ) {
-			var $nrX = 360 * getRandomInt(2);
-			var $nrY = 360 * getRandomInt(2);
-			var $nx = -(2000) + getRandomInt( 4000 )
-			var $ny = -(2000) + getRandomInt( 4000 )
-			var $nz = -4000 +  getRandomInt( 4000 )
-			var $s = 1.5 + (getRandomInt( 10 ) * .1)
-			var $d = 1 - (getRandomInt( 8 ) * .1)
-			TweenMax.set( $item, { autoAlpha:1, delay:$d } )	
-			TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
-			TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
-			TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
-		}
-		
-		function onMouseMove(event) {
-			mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
-			mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
-			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
-		}
+        var w, container, carousel, item, radius, itemLength, rY, ticker, fps;
+        var mouseX = 0;
+        var mouseY = 0;
+        var mouseZ = 0;
+        var addX = 0;
 
-		// loops and sets the carousel 3d properties
-		function looper() {
-			addX += mouseX
-			TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
-			TweenMax.set( carousel, {z:mouseZ } )
-			fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )	
-		}
-		
-		function getRandomInt( $n ) {
-			return Math.floor((Math.random()*$n)+1);	
-		}
+        // fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
+        // no need to create my own :)
+        var fps_counter = {
+            tick: function () {
+                // this has to clone the array every tick so that
+                // separate instances won't share state 
+                this.times = this.times.concat(+new Date());
+                var seconds, times = this.times;
+                if (times.length > this.span + 1) {
+                    times.shift(); // ditch the oldest time
+                    seconds = (times[times.length - 1] - times[0]) / 1000;
+                    return Math.round(this.span / seconds);
+                } else return null;
+            },
+            times: [],
+            span: 200
+        };
+        var counter = Object.create(fps_counter);
+
+        $(document).ready(init)
+
+        function init() {
+            w = $(window);
+            container = $('#Content-Container');
+            carousel = $('#Carousel-Container');
+            item = $('.Carousel-Item');
+            itemLength = $('.Carousel-Item').length;
+            fps = $('#fps');
+            rY = 360 / itemLength;
+            radius = Math.round((250) / Math.tan(Math.PI / itemLength));
+            // set container 3d props
+            TweenMax.set(container, {
+                perspective: 600
+            })
+            TweenMax.set(carousel, {
+                z: -(radius)
+            })
+            // create carousel item props
+            for (var i = 0; i < itemLength; i++) {
+                var $item = item.eq(i);
+                var $block = $item.find('.Carousel-Item-Inner');
+
+                //thanks @chrisgannon!        
+                TweenMax.set($item, {
+                    rotationY: rY * i,
+                    z: radius,
+                    transformOrigin: "50% 50% " + -radius + "px"
+                });
+
+                animateIn($item, $block)
+            }
+
+            // set mouse x and y props and looper ticker typicallly 1000/60
+            window.addEventListener("mousemove", onMouseMove, false);
+            ticker = setInterval(looper, 1500 / 60);
+        }
+
+        function animateIn($item, $block) {
+            var $nrX = 360 * getRandomInt(2);
+            var $nrY = 360 * getRandomInt(2);
+            var $nx = -(2000) + getRandomInt(4000)
+            var $ny = -(2000) + getRandomInt(4000)
+            var $nz = -4000 + getRandomInt(4000)
+            var $s = 1.5 + (getRandomInt(10) * .1)
+            var $d = 1 - (getRandomInt(8) * .1)
+            TweenMax.set($item, {
+                autoAlpha: 1,
+                delay: $d
+            })
+            TweenMax.set($block, {
+                z: $nz,
+                rotationY: $nrY,
+                rotationX: $nrX,
+                x: $nx,
+                y: $ny,
+                autoAlpha: 0
+            })
+            TweenMax.to($block, $s, {
+                delay: $d,
+                rotationY: 0,
+                rotationX: 0,
+                z: 0,
+                ease: Expo.easeInOut
+            })
+            TweenMax.to($block, $s - .5, {
+                delay: $d,
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: Expo.easeInOut
+            })
+        }
+
+        function onMouseMove(event) {
+            mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
+            mouseY = -(-(window.innerHeight * .5) + event.pageY) * .01;
+            mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY) - 200);
+        }
+
+        // loops and sets the carousel 3d properties
+        function looper() {
+            addX += mouseX
+            TweenMax.to(carousel, 1, {
+                rotationY: addX,
+                rotationX: mouseY,
+                ease: Quint.easeOut
+            })
+            TweenMax.set(carousel, {
+                z: mouseZ
+            })
+            fps.text('Framerate: ' + counter.tick() + '/60 FPS')
+        }
+
+        function getRandomInt($n) {
+            return Math.floor((Math.random() * $n) + 1);
+        }
     </script>
 </head>
 
@@ -127,21 +163,21 @@
         </nav>
     </div>
 </nav>
-<!-- END -->    
-    
+<!-- END -->
+
 <body>
     <!-- HERO TEXT -->
     <div class="website-row">
         <div class="desktop-index-column left">
             <div class="desktop-index-text-glue">
                 <h1 class="title">Alina Sandu</h1>
-                <h2 class="subtitle">Illustrator (+ Comic Artist)</h2 >
+                <h2 class="subtitle">Illustrator (+ Comic Artist)</h2>
                 <p>I'm hooked on authentic retro in all its dated glory.</p>
                 <h3>Wave and move your mouse to bend the carousel to your will.</h3>
             </div>
         </div>
-    <!-- END OF HERO TEXT-->
-    <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
+        <!-- END OF HERO TEXT-->
+        <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
         <div class="desktop-index-column right">
             <!-- COPYRIGHT NOTE -->
             <!--original pen 3d motion from: @johnblazek 
@@ -150,56 +186,81 @@
             The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
             THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
             <!-- END NOTE -->
-            <div id="Content-Container" class="trans3d"> 
+            <div id="Content-Container" class="trans3d">
                 <section id="Carousel-Container" class="trans3d">
                     <!-- Bad Batter -->
-                    
+
                     <!-- Fake Sephora -->
                     <figure id="item1" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
                             <a href="./portfolio_fake-sephora_illustration.html">
-                                <img class= "portfolio-thumbnail" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--square-crop--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
+                                <img class="portfolio-thumbnail"
+                                    src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--square-crop--icon.jpg"
+                                    alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
                             </a>
-                            <a href="./portfolio_fake-sephora_illustration.html"><h2>Fake Sephora</h2></a>
+                            <a href="./portfolio_fake-sephora_illustration.html">
+                                <h2>Fake Sephora</h2>
+                            </a>
                         </div>
                     </figure>
                     <!-- The Firebird -->
-                    
+
                     <!-- Forbidden Vectors -->
                     <figure id="item2" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_forbidden-vectors_illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series"></a>
-                            <a href="./portfolio_forbidden-vectors_illustration.html"><h2>Forbidden Vectors</h2></a>
+                            <a href="./portfolio_forbidden-vectors_illustration.html"><img class="portfolio-thumbnail"
+                                    src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png"
+                                    alt="An icon representing the Forbidden Vectors illustration series"></a>
+                            <a href="./portfolio_forbidden-vectors_illustration.html">
+                                <h2>Forbidden Vectors</h2>
+                            </a>
                         </div>
                     </figure>
                     <!-- Hockey in After Effects -->
                     <figure id="item3" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration"></a>
-                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><h2>Hockey In After Effects</h2></a>
+                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img
+                                    class="portfolio-thumbnail"
+                                    src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png"
+                                    alt="An icon representing Hockey in After Effects motion illustration"></a>
+                            <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
+                                <h2>Hockey In After Effects</h2>
+                            </a>
                         </div>
                     </figure>
                     <!-- Impromptu Fatherhood -->
                     <figure id="item4" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_impromptu-fatherhood_illustration.html"><img class= "portfolio-thumbnail" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration"></a>
-                            <a href="./portfolio_impromptu-fatherhood_illustration.html"><h2>Impromptu Fatherhood</h2></a>
+                            <a href="./portfolio_impromptu-fatherhood_illustration.html"><img
+                                    class="portfolio-thumbnail"
+                                    src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg"
+                                    alt="An icon representing Impromptu Fatherhood Editorial Illustration"></a>
+                            <a href="./portfolio_impromptu-fatherhood_illustration.html">
+                                <h2>Impromptu Fatherhood</h2>
+                            </a>
                         </div>
                     </figure>
-                    
+
                     <!-- Season in the Sun -->
                     <figure id="item5" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
-                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img class="portfolio-thumbnail" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.png" alt="An icon representing Season in the Sun a series of fictitious music festival posters"></a>
-                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><h2>Season in the Sun</h2></a>
+                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img
+                                    class="portfolio-thumbnail"
+                                    src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.png"
+                                    alt="An icon representing Season in the Sun a series of fictitious music festival posters"></a>
+                            <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
+                                <h2>Season in the Sun</h2>
+                            </a>
                         </div>
                     </figure>
-                            
+
                     <!-- COMICS | Letting Go -->
                     <figure id="item6" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
                             <a href="./portfolio_letting-go_comic.html">
-                                <img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo">
+                                <img class="portfolio-thumbnail"
+                                    src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg"
+                                    alt="An icon representing Letting Go a comic demo">
                             </a>
                             <a href="./portfolio_letting-go_comic.html">
                                 <h2>Letting Go</h2>
@@ -207,14 +268,14 @@
                             <p class="portfolio-piece-description">Comic (Under Construction)</p>
                         </div>
                     </figure>
-                    
+
                     <!-- COMICS | The Fairy Door -->
-                    
+
                 </section>
             </div>
         </div>
     </div>
-    
+
     <div class="tablet-index-column">
         <div class="desktop-index-text-glue">
             <h1>Alina Sandu</h1>
@@ -223,18 +284,22 @@
         </div>
     </div>
 
-<!-- ENTIRE PORTFOLIO LAID OUT IN GRID FORMAT. THIS APPEARS ON TABLET AND SMALLER. -->
-    <div class="index-portfolio-grid-title"><h2>My Track Record So Far</h2></div>
+    <!-- ENTIRE PORTFOLIO LAID OUT IN GRID FORMAT. THIS APPEARS ON TABLET AND SMALLER. -->
+    <div class="index-portfolio-grid-title">
+        <h2>My Track Record So Far</h2>
+    </div>
     <div class="index-portfolio-grid">
         <!-- Bad Batter -->
 
         <!-- The Fairy Door -->
-        
+
         <!-- Fake Sephora -->
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_fake-sephora_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
+                    <img class="portfolio-thumbnail"
+                        src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg"
+                        alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
                 </a>
             </div>
             <div class="portfolio-grid-piece-content">
@@ -247,7 +312,9 @@
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_forbidden-vectors_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series">
+                    <img class="portfolio-thumbnail"
+                        src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png"
+                        alt="An icon representing the Forbidden Vectors illustration series">
                 </a>
             </div>
             <div class="portfolio-grid-piece-content">
@@ -259,7 +326,9 @@
         <!-- Letting Go -->
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo"></a>
+                <a href="./portfolio_letting-go_comic.html"><img class="portfolio-thumbnail"
+                        src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg"
+                        alt="An icon representing Letting Go a comic demo"></a>
             </div>
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_letting-go_comic.html">Letting Go</a>
@@ -270,7 +339,9 @@
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration">
+                    <img class="portfolio-thumbnail"
+                        src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png"
+                        alt="An icon representing Hockey in After Effects motion illustration">
                 </a>
             </div>
             <div class="portfolio-grid-piece-content">
@@ -283,7 +354,9 @@
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration">
+                    <img class="portfolio-thumbnail"
+                        src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg"
+                        alt="An icon representing Impromptu Fatherhood Editorial Illustration">
                 </a>
             </div>
             <div class="portfolio-grid-piece-content">
@@ -296,7 +369,9 @@
         <div class="portfolio-grid-piece">
             <div class="portfolio-grid-piece-content">
                 <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.png" alt="An icon representing Season in the Sun a series of fictitious music festival posters">
+                    <img class="portfolio-thumbnail"
+                        src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.png"
+                        alt="An icon representing Season in the Sun a series of fictitious music festival posters">
                 </a>
             </div>
             <div class="portfolio-grid-piece-content">
@@ -308,27 +383,39 @@
     </div>
 </body>
 
-    
+
 <!-- FOOTER GOES HERE. -->
 <footer class="footer-container">
     <div class="footer-content">
         <ul class="footer-content">
-            <li><a href="./index.html"><img class="navigation-logo" src="/img/icon/alinasandu-logo_white.svg"></a></li>
+            <li class="footer-logo"><a href="./index.html"><img class="navigation-logo"
+                        src="/img/icon/alinasandu-logo_white.svg"></a></li>
             <li>
-                <a href="about-me-and-resume.html"><h2 id="footer-bio">Backstory</h2></a>
-                <p>Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
+                <a href="about-me-and-resume.html">
+                    <h2 id="footer-bio">Backstory</h2>
+                </a>
+                <p>Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as
+                    long as she can remember. Just ask her parents, the walls will never be the same. Outside of
+                    illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked
+                    going to her piano lessons every Saturday. Make of that what you will.</p>
             </li>
             <li class="social-media-item">
                 <p>
-                    <a class="footer-social-media-icon" href="mailto: foralinas@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
-                    <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
-                    <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
-                    <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a>
-                </p>     
+                    <a class="footer-social-media-icon" href="mailto: foralinas@outlook.com"><i
+                            class="fas fa-envelope fa-2x"></i></a>
+                    <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i
+                            class="fab fa-linkedin fa-2x"></i></a>
+                    <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i
+                            class="fab fa-behance-square fa-2x"></i></a>
+                    <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i
+                            class="fab fa-artstation fa-2x"></i></a>
+                    <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i
+                            class="fab fa-instagram fa-2x"></i></a>
+                </p>
             </li>
         </ul>
     </div>
 </footer>
 <!-- END -->
+
 </html>

@@ -18,10 +18,16 @@ img {
 
 /* FOR ALL PAGES */
 html {
-    background-image: url(/img/background-tiles/background-tile_default-02.jpg);
+    background-image: url(/img/background-tiles/background-tile.jpg);
     background-size: 150px;
     background-repeat: repeat;
     scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* NAVIGATION BAR*/
@@ -169,25 +175,18 @@ html {
 /* FOOTER CSS */
 .footer-container {
     display: flex;
-    justify-content: center;
-    margin: 180px 60px 60px 30px;
+    margin-top: 300px;
+    padding: 60px;
 }
 
 .footer-content {
-    width: 100%;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .footer-social-media-icon {
     padding-right: 2em;
-}
-
-.footer-logo {
-    text-align: center;
 }
 
 /* END */
@@ -223,7 +222,7 @@ h1 {
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-size: 2.0em;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.04em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
@@ -234,7 +233,7 @@ h2 {
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
 }
 
@@ -242,8 +241,8 @@ h3 {
     font-family: "Kabel", "Raleway";
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(225, 225, 225, 1.0);
-    font-size: 1.0em;
-    font-weight: 900;
+    font-size: 1.2em;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -254,9 +253,9 @@ h3 {
 p {
     font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
-    font-size: 0.9em;
+    font-size: 1.0em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
-    line-height: 1.6;
+    line-height: 1.4;
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
@@ -610,7 +609,12 @@ a.control_next {
 
 /* ONLY ON PHONE */
 /* Makes portfolio grid in a column for phone users */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
+    .index-portfolio-grid-title {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
     .index-portfolio-grid {
         display: column;
         grid-template-columns: auto;
@@ -653,6 +657,20 @@ a.control_next {
     .portfolio-piece-vertical {
         width: 100%;
     }
+    
+    .footer-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 20px;
+    }
+    
+    .footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* END */

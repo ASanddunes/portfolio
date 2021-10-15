@@ -63,7 +63,7 @@ ul {
     color: rgba(181, 71, 60);
 }
 
-.navigation-logo {
+.nav-logo {
     width: 50px;
 }
 
@@ -123,14 +123,14 @@ ul {
 
 .desktop-portfolio-column.left {
     display: flex;
-    width: 40%;
+    width: 30%;
     margin: 0px 40px 40px 60px;
     flex-wrap: wrap;
 }
 
 .desktop-portfolio-column.right {
     display: flex;
-    width: 60%;
+    width: 70%;
     margin: 30px 60px 40px 40px;
 }
 
@@ -162,25 +162,20 @@ ul {
     width: 100%;
 }
 
-.error-page-column {
-    display: flex;
-    width: 50%;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-    text-align: center;
+/* FOOTER CSS */
+.footer-logo {
+    width: 50px;
 }
 
-/* FOOTER CSS */
 .footer-container {
     display: flex;
-    margin-top: 300px;
+    margin-top: 100px;
     padding: 60px;
 }
 
 .footer-content {
-    width: 50%;
+    /*display: flex;*/
+    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -254,8 +249,9 @@ p {
     font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     font-size: 1.0em;
-    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     line-height: 1.4;
+    text-align: justify;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
@@ -271,6 +267,10 @@ a {
 a:hover {
     color: rgba(181, 71, 60, 1.0);
     cursor: pointer;
+}
+
+.footer-bio-text {
+    width: 60ch;
 }
 
 .portfolio-piece-description {
@@ -609,7 +609,12 @@ a.control_next {
 
 /* ONLY ON PHONE */
 /* Makes portfolio grid in a column for phone users */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
+    .footer-logo {
+        width: 100px;
+        margin-bottom: 1.0em;
+    }
+    
     .index-portfolio-grid-title {
         text-align: center;
         margin-top: 50px;
@@ -659,18 +664,18 @@ a.control_next {
     }
     
     .footer-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    padding: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        padding: 20px;
     }
     
     .footer-content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: justify;
 }
-
 /* END */

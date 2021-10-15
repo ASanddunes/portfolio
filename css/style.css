@@ -16,8 +16,9 @@ img {max-width: 100%; height: auto;}
 /* FOR ALL PAGES */
 html {
     background-image: url(/img/background-tiles/background-tile_default-02.jpg);
-    background-size: 30%;
+    background-size: 150px;
     background-repeat: repeat;
+    scroll-behavior: smooth;
 }
 
 /* NAVIGATION BAR*/
@@ -91,11 +92,17 @@ html {
   width: 70%;
 }
 
-.index-hero-text {
+.tablet-index-column {
     display: flex;
-    width: 90%;
-    padding: 40px 40px 40px 40px;
-    margin: auto 0px auto 0px;
+    width: 80%;
+    margin: 40px auto 20px auto;
+    flex-wrap: wrap;
+}
+
+.tablet-portfolio-column {
+    display: flex;
+    width: 80%;
+    margin: 40px auto 20px auto;
     flex-wrap: wrap;
 }
 
@@ -145,21 +152,25 @@ html {
     width: 100%;
 }
 
+.error-page-column {
+    display: flex;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
 /* FOOTER CSS */
 .footer-container {
     display: flex;
     justify-content: center;
-    margin: 180px 60px 40px 60px;
-}
-
-.brand-footer {
-    display: flex;
-    justify-content: center;
+    margin: 180px 60px 60px 30px;
 }
 
 .footer-content {
     width: 100%;
-    padding: 0px 0px 20px 0px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -230,17 +241,16 @@ h3 {
 }
 
 p {
-    font-family: "Kabel", "Raleway";
-    src:url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     font-size: 0.9em;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    line-height: 1.6;
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
 a {
-    font-family: "Kabel", "Raleway";
-    src:url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
@@ -363,7 +373,7 @@ a:hover {
 }
 
 .portfolio-thumbnail {
-    border-radius: 0px;
+    border-radius: 10px;
     width: 330px;
 }
 
@@ -387,6 +397,15 @@ a:hover {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.tablet-letting-go-background {
+    background-image: url(/img/portfolio/letting-go/!portfolio_letting-go_phone/alina-sandu--portfolio--letting-go--comic--digital-comic--webcomic--demo--original-story--lesbian--romantic-tragedy--80s--eighties--phone--page-000.jpg); 
+    background-repeat: repeat;
+}
+
+.tablet-fairy-door-background {
+    background-color: white;
 }
 
 /* THE FAIRY DOOR */
@@ -480,8 +499,8 @@ a.control_next {
 
 /* ALL MEDIA QUERY */
 /* ONLY ON DESKTOP */
-@media only screen and (min-width: 1281px) {
-    .index-hero-text {
+@media only screen and (min-width: 769px) {
+    .tablet-index-column {
         display: none;
     }
     
@@ -500,22 +519,40 @@ a.control_next {
         overflow: scroll;
     }
     
+    .tablet-portfolio-column {
+        display: none;
+    }
+    
     .comic-reader_phone {
         display: none;
     }
     .comic-reader_phone-text {
         display: none;
     }
+    
+    .tablet-letting-go-background {
+        display: none;
+    }
 }
 
 /* ONLY ON IPAD */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 768px) {
     #Content-Container {
+        display: none;
+    }
+    
+    .desktop-portfolio-aside {
         display: none;
     }
     
     .desktop-index-column.left, .desktop-index-column.right {
         display: none;
+    }
+    
+    .desktop-portfolio-gallery {
+        display: flex;
+        width: 90%;
+        margin: auto;
     }
     
     .portfolio-piece-vertical {
@@ -533,13 +570,14 @@ a.control_next {
     }
     
     .desktop-portfolio-column.right {
-        display: flex;
+        display: f lex;
         width: 100%;
         overflow: visible;
         margin: 30px 60px 40px 40px;
     }
     
     .portfolio-grid {
+        width: 100%;
         grid-template-columns: auto auto;
     }
     
@@ -554,10 +592,16 @@ a.control_next {
 
 /* ONLY ON PHONE */
 /* Makes portfolio grid in a column for phone users */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
     .index-portfolio-grid {
         display: column;
         grid-template-columns: auto;
+    }
+    
+    .desktop-portfolio-gallery {
+        display: flex;
+        width: 100%;
+        margin: auto;
     }
     
     .portfolio-grid {
@@ -568,11 +612,7 @@ a.control_next {
     .portfolio-thumbnail {
         width: 100%;
     }
-
-    .desktop-index-text-glue {
-        width: 90%;
-        margin: auto;
-    }
+    
     .desktop-index-column.left {
         display: column;
         width: 100%;

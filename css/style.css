@@ -176,12 +176,18 @@ ul {
 .footer-content {
     /*display: flex;*/
     width: 100%;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     flex-wrap: wrap;
 }
 
 .footer-social-media-icon {
     padding-right: 2em;
+}
+
+.below-footer-text {
+    text-align: center;
+    margin-top:2em; 
+    margin-bottom:3em;
 }
 
 /* END */

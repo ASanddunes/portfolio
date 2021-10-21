@@ -540,6 +540,12 @@ a.control_next {
     .index-portfolio-grid-title {
         margin-top: 600px;
     }
+    
+    .index-portfolio-grid {
+        display: column;
+        grid-template-columns: auto auto auto;
+    }
+    
     .desktop-portfolio-column.right {
         display: block;
         width: 700px;

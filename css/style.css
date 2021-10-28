@@ -30,10 +30,14 @@ ul {
     padding: 0;
 }
 
-/* Dotted border */
-hr.dotted {
-    border-top: 5px dotted #bbb;
-    margin-bottom: 1em;
+.arrow-to-top-black {
+    color: rgba(0, 0, 0, .8);
+    text-shadow: none;
+}
+
+.arrow-to-top {
+    justify-content: center;
+    align-items: center;
 }
 
 /* NAVIGATION BAR*/
@@ -159,7 +163,7 @@ hr.dotted {
 
 .portfolio-piece-vertical {
     display: block;
-    width: 58%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -180,6 +184,7 @@ hr.dotted {
     background-image: url(/img/background-tiles/background-tile-footer.jpg);
     background-size: 150px;
     background-repeat: repeat;
+/*    height: 500px;*/
 }
 
 .footer-content {
@@ -200,12 +205,10 @@ hr.dotted {
     padding-top:3em;
     padding-bottom:3em;
 }
-
 /* END */
 
 
 /* TYPOGRAPHY */
-
 .title {
     font-family: "Kabel", "Raleway";
     src: url(/Kabel/Kabel_Regular.ttf);
@@ -368,12 +371,19 @@ a:hover {
     text-align: center;
 }
 
+.Carousel-Instruction-Text {
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 270px;
+    margin-right: 60px;
+}
 /* END */
 
 /* INDEX LAID OUT PORTFOLIO */
 .index-portfolio-grid-title {
     text-align: center;
     margin-top: 100px;
+    text-transform: uppercase;
 }
 
 .index-portfolio-grid {
@@ -384,6 +394,7 @@ a:hover {
 .portfolio-grid-title {
     text-align: center;
     margin-top: 100px;
+    text-transform: uppercase;
 }
 
 .portfolio-grid {
@@ -394,6 +405,7 @@ a:hover {
 .portfolio-grid-piece {
     padding: 30px 0px 30px 0px;
     font-size: 1em;
+/*    background-color: darkslategray;*/
 }
 
 .portfolio-grid-piece-content {
@@ -404,10 +416,8 @@ a:hover {
 
 .portfolio-thumbnail {
     border-radius: 10px;
-    width: 330px;
+    width: 450px;
 }
-
-
 
 /* COMIC READERS */
 /* SPECIAL COLUMNS*/
@@ -577,6 +587,10 @@ a.control_next {
     }
     
     #Content-Container {
+        display: none;
+    }
+    
+    .Carousel-Instruction-Text {
         display: none;
     }
 

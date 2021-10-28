@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
     <!-- MAKES PAGE PHONE FRIENDLY -->
     <meta name="HandheldFriendly" content="true" />
+<!--
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>
+-->
     <title>Season in the Sun</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS SCRIPT LINK -->
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-      /*{background-image: url(/img/background-tiles/background-tile_fake-sephora.gif); background-size: 20%;}*/
-    </style>
     <!-- SUMMONS IN RALEWAY AS BACK UP FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,12 @@
     <!-- SUMMONS FREE ICONS -->
     <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
 </head>
-
     
-<!-- NAVIGATION GOES HERE. -->
+<body>
+    <!-- NAVIGATION GOES HERE. -->
 <nav class="allpage-navigation">
     <div class="navigation-content">
-        <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg"></a>
+        <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
         <nav>
             <ul class="navigation">
                 <li><a href="#portfolio-grid">Portfolio</a></li>
@@ -35,11 +35,10 @@
 </nav>
 <!-- END -->  
     
-<body>
     <!-- TABLET AND PHONE VERSION OF TEXT -->
     <div class="tablet-portfolio-column">
         <div class="desktop-index-text-glue">
-            <h1 class="title">Season in the Sun</h1>
+            <h1 class="title">(Stop the) Season in the Sun</h1>
             <h2 class="subtitle">Poster Illustration Series</h2>
             <h2>A Not-So-Real Summer Music Festival</h2>
             <p>Season in the Sun is a summer music festival that celebrates the City Pop genre, which features synthesizers and catchy beats. The genre was popular in 1980s Japan as a way for youth to escape from their high stress work and school lives.</p>
@@ -50,18 +49,18 @@
     <div class="website-row">
         <div class="desktop-portfolio-aside">
             <div class="desktop-index-text-glue">
-                <h1 class="title">Season in the Sun</h1>
+                <h1 class="title">(Stop the) Season in the Sun</h1>
                 <h2 class="subtitle">Poster Illustrations</h2>
                 <p>Season in the Sun is a summer music festival that celebrates the City Pop genre, which features synthesizers and catchy beats. The genre was popular in 1980s Japan as a way for youth to escape from their high stress work and school lives.</p>
             </div>
         </div>
         <div class="desktop-portfolio-gallery">
             <div class="desktop-index-text-glue">
-                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--carlos-toshiki--poster-01.jpg">
+                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--carlos-toshiki--poster-01.jpg" alt="1st music festival poster Season in the Sun that stars theoretical act Carlos Toshiki.">
                 <p class="portfolio-piece-descrpition"></p>
-                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--nakamori-akina--poster-02.png">
+                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--nakamori-akina--poster-02.png" alt="2st music festival poster Season in the Sun that stars theoretical act Akina Nakamori.">
                 <p class="portfolio-piece-descrpition"></p>
-                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--moritaka-chisato--poster-03.jpg">
+                <img class="portfolio-piece-horizontal" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--poster-illustrations--poster-art--music-festival--city-pop--eighties--moritaka-chisato--poster-03.jpg" alt="3rd music festival poster Season in the Sun that stars theoretical act Chisato Moritaka.">
                 <p class="portfolio-piece-descrpition"></p>
             </div>
         </div>
@@ -152,14 +151,12 @@
         </div>
     </div>
     <!-- GRID GALLERY ENDS HERE -->
-    <div class="portfolio-grid-title"><a href="#top"><h2>Start from the top</h2></a></div>
+    <div class="portfolio-grid-title"><a class="arrow-to-top" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a></div>
     
-</body>  
-
-<!-- FOOTER GOES HERE. -->
+    <!-- FOOTER GOES HERE. -->
 <footer class="footer-container" style="margin-top:400px;">
     <ul class="footer-content">
-        <li class="footer-logo"><a href="./index.html"><img class="footer-logo" src="/img/icon/alinasandu-logo_black.svg"></a></li>
+        <li class="footer-logo"><a href="./index.html"><img class="footer-logo" src="/img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon."></a></li>
         <li>
             <a href=""><h2 id="footer-bio" class="footer-bio-text">Backstory</h2></a>
             <p class="footer-bio-text">Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
@@ -177,11 +174,11 @@
                 <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i
                             class="fab fa-instagram fa-2x"></i></a>
             </p>
-        </li>
-        </ul>
+        </li>        
+    </ul>
+    <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a>
 </footer>
-    <div class="below-footer-text"><a href="#top"><h2>Start from the top</h2></a></div>
-    
 <!-- END -->
     
+</body>    
 </html>

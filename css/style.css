@@ -24,6 +24,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow: hidden;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -90,7 +94,7 @@ ul {
 
 /* Settings meant for the hamburger menu */
 #menuToggle {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 50px;
   right: 50px;
@@ -100,7 +104,7 @@ ul {
 }
 
 #menuToggle input {
-  display: block;
+  display: inline-block;
   width: 40px;
   height: 32px;
   position: absolute;
@@ -177,7 +181,7 @@ ul {
 
 #menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 1em;
 }
 
 /*And let's fade it in from the left*/

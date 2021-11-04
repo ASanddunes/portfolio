@@ -782,6 +782,10 @@ a.control_next {
     .tablet-fairy-door-background {
         display: none;
     }
+    
+    .social-media {
+        display:none;
+    }
 }
 
 /* Awkward In-Between */
@@ -904,6 +908,10 @@ a.control_next {
     .subtitle-comic-reader {
         display: none;
     }
+    
+    .social-media {
+        display:none;
+    }
 }
 
 @media only screen and (max-width: 1220px) {
@@ -994,6 +1002,27 @@ a.control_next {
         flex-wrap: wrap;
         text-align: justify;
         margin-left: 5px;
+    }
+    
+    .social-media-nophone {
+        display:none;
+    }
+    
+    .social-media {
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .arrow-to-top-black {
+        margin-top: 100px; 
+        align-items:center; 
+        align-self:center;
+        justify-content: flex-end;
+        align-content:center;
     }
     
     .index-portfolio-grid-title {

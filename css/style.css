@@ -184,7 +184,7 @@ ul {
     background-image: url(/img/background-tiles/background-tile-footer.jpg);
     background-size: 150px;
     background-repeat: repeat;
-/*    height: 500px;*/
+    height: 770px;
 }
 
 .footer-content {
@@ -213,7 +213,7 @@ ul {
     font-family: "Kabel", "Raleway";
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
-    font-weight: 900;
+    font-weight: bold;
     font-size: 2.5em;
 /*    letter-spacing: 0.06em;*/
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
@@ -221,8 +221,7 @@ ul {
 }
 
 .subtitle {
-    font-family: "Kabel", "Raleway";
-    src: url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     font-weight: 100;
     font-size: 1.0em;
@@ -230,11 +229,12 @@ ul {
     text-transform: uppercase;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
+    margin-top: -0.5em;
+    margin-bottom: 2.5em;
 }
 
 h1 {
-    font-family: "Kabel", "Raleway";
-    src: url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     font-size: 2.0em;
     font-weight: 500;
@@ -244,25 +244,26 @@ h1 {
 }
 
 h2 {
-    font-family: "Kabel", "Raleway";
-    src: url(/Kabel/Kabel_Regular.ttf);
+    font-family: "Raleway";
     color: rgba(255, 255, 255, 1.0);
     font-size: 1.5em;
     font-weight: 500;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
 }
 
 h3 {
-    font-family: "Kabel", "Raleway";
-    src: url(/Kabel/Kabel_Regular.ttf);
-    color: rgba(225, 225, 225, 1.0);
+    font-family: "Raleway";
+    color: rgba(225, 225, 225, 0.9);
     font-size: 1.15em;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+/*    letter-spacing: 0.04em;*/
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
     text-decoration: none;
+    margin-top: 2.0em;
+    margin-bottom: 0.5em;
 }
 
 p {
@@ -273,6 +274,7 @@ p {
     text-align: justify;
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
+    margin-top: -0.5em;
 }
 
 a {
@@ -284,9 +286,23 @@ a {
     text-decoration: none;
 }
 
+a:link {
+/*    color:RGBA(67, 171, 201, 1.0);*/
+}
+
 a:hover {
-    color: rgba(181, 71, 60, 1.0);
+    color: RGBA(67, 171, 201, 1.0);
     cursor: pointer;
+    text-decoration: underline;
+}
+
+a:visited {
+/*    color: RGBA(67, 171, 201, 0.5);*/
+}
+
+a:active {
+    color: RGBA(192, 47, 29, 1.0);
+    text-decoration: underline;
 }
 
 .footer-bio-text {
@@ -303,6 +319,55 @@ a:hover {
     filter: dropshadow(color=#000000, offx=1, offy=1);
     text-align: center;
     padding: 0px 0px 20px 0px;
+    margin-top: 5px;
+}
+
+.portfolio-grid-subtitle {
+    font-size: 0.7em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    margin-top: 5px;
+}
+
+.fun-fact-text {
+    font-family: "Raleway";
+    color: rgba(225, 225, 225, 0.9);
+}
+
+.comic-reader_desktop-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.title-comic-reader {
+    font-family: "Kabel", "Raleway";
+    src: url(/Kabel/Kabel_Regular.ttf);
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    margin-top: 1.0em;
+}
+
+.subtitle-comic-reader {
+    font-family: "Raleway";
+    color: rgba(255, 255, 255, 1.0);
+    font-weight: 100;
+    font-size: 1.0em;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    margin-top: -0.5em;
+    margin-bottom: 1.0em;
 }
 
 /* END */
@@ -448,11 +513,16 @@ a:hover {
     background-color: white;
 }
 
+.tablet-fairy-door-background {
+    background-color: white;
+}
+
 /* THE FAIRY DOOR */
 #fairy-door_slider {
     position: relative;
     overflow: hidden;
-    margin: 0px auto 0 auto;
+    margin: 10px auto 0px auto;
+    border-radius: 4px;
 }
 
 #fairy-door_slider ul {
@@ -469,8 +539,8 @@ a:hover {
     float: left;
     /*margin: 0;
   padding: 0;*/
-    width: 1049px;
-    height: 700px;
+    width: 1400px;
+    height: 404px;
     background: #ccc;
     text-align: center;
     line-height: 300px;
@@ -578,6 +648,10 @@ a.control_next {
     .tablet-letting-go-background {
         display: none;
     }
+    
+    .tablet-fairy-door-background {
+        display: none;
+    }
 }
 
 /* ONLY ON IPAD */
@@ -640,6 +714,14 @@ a.control_next {
     }
 
     .comic-reader_desktop-text {
+        display: none;
+    }
+    
+    .title-comic-reader {
+        display: none;
+    }
+    
+    .subtitle-comic-reader {
         display: none;
     }
 }

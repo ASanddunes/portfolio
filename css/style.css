@@ -660,6 +660,10 @@ a.control_next {
         width: auto;
     }
     
+    .footer-container {
+        height: 1366px;
+}
+    
     #Content-Container {
         display: none;
     }
@@ -685,6 +689,10 @@ a.control_next {
 
     .portfolio-piece-vertical {
         width: 100%;
+    }
+    
+    .portfolio-thumbnail {
+        width: 330px;
     }
 
     .website-row {
@@ -788,6 +796,7 @@ a.control_next {
         justify-content: center;
         margin-top: 200px;
         padding: 20px;
+        height: 812px;
     }
     
     .footer-content {

@@ -8,23 +8,29 @@
 <!--    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephora au naturel</title>
+    
     <!-- META DESCRIPTION  -->
-    <meta name="description" content="Sephora au naturel is a social media ad illustration by Alina Sandu.">
+    <meta name="description" content="Wouldn't it be nice if this was a real Sephora ad? A social media ad illustration by Alina Sandu.">
+    
     <!-- FAVICON LINKS -->
     <link rel="icon" href="/img/icon/alinasandu-logo_favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/alinasandu-logo_favicon">
+    
     <!-- CSS SCRIPT LINK -->
     <link rel="stylesheet" href="/css/style.css">
+    
     <!-- SUMMONS IN RALEWAY AS BACK UP FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
     <!-- SUMMONS FREE ICONS -->
     <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
 </head>
  
     <body>   
 <!--NAVIGATION GOES HERE.-->
+<!--
 <nav class="allpage-navigation">
     <div class="navigation-content">
         <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
@@ -36,6 +42,28 @@
         </nav>
     </div>
 </nav>
+-->
+        
+        <!--  Hamburger Menu (Hopefully this works)  -->
+    <nav class="allpage-navigation-phone">
+        <div class="navigation-content">
+            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
+            <div id="menuToggle">
+        <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
+            <input type="checkbox" />
+        <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+            <span></span>
+            <span></span>
+            <span></span>
+        <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+            <ul id="menu">
+                <li><a href="#portfolio-grid"><p class="hamburger-menu-text">Portfolio</p></a></li>
+                <li><a href="#footer-bio"><p class="hamburger-menu-text">Backstory</p></a></li>
+            </ul>
+        </div>
+        </div>
+        
+    </nav>
 <!-- END -->    
 
 <!-- CONTENT -->

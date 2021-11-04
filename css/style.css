@@ -40,10 +40,21 @@ ul {
     align-items: center;
 }
 
+/* 404 PAGE*/
+.error-screen-column {
+    display: flex;
+    margin: 40px auto 20px auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
 /* NAVIGATION BAR*/
 .allpage-navigation {
     display: flex;
     justify-content: center;
+    z-index: 1000;
 }
 
 .navigation-content {
@@ -77,6 +88,102 @@ ul {
     width: 50px;
 }
 
+/* Settings meant for the hamburger menu */
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark. */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*But let's hide the middle one.*/
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*Make this absolute positioned at the top left of the screen*/
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+    background-image: url(/img/background-tiles/background-tile-footer.jpg);
+    background-size: 150px;
+    background-repeat: repeat;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*And let's fade it in from the left*/
+#menuToggle input:checked ~ ul {
+  transform: none;
+  opacity: 1;
+}
 /* END */
 
 /* BODY SECTION */
@@ -180,11 +287,12 @@ ul {
 .footer-container {
     display: flex;
     margin-top: 100px;
+    width: ;
+    height: 85vh;
     padding: 60px;
     background-image: url(/img/background-tiles/background-tile-footer.jpg);
     background-size: 150px;
     background-repeat: repeat;
-    height: 770px;
 }
 
 .footer-content {
@@ -205,6 +313,11 @@ ul {
     padding-top:3em;
     padding-bottom:3em;
 }
+
+.social-media {
+    flex-direction: row;
+}
+
 /* END */
 
 
@@ -303,6 +416,11 @@ a:visited {
 a:active {
     color: RGBA(192, 47, 29, 1.0);
     text-decoration: underline;
+}
+
+.hamburger-menu-text {
+    color: rgba(0, 0, 0, .8);
+    text-shadow: none;
 }
 
 .footer-bio-text {
@@ -504,6 +622,12 @@ a:active {
     margin-right: auto;
 }
 
+.comic-tablet-width {
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
 .tablet-letting-go-background {
     background-image: url(/img/portfolio/letting-go/!portfolio_letting-go_phone/alina-sandu--portfolio--letting-go--comic--digital-comic--webcomic--demo--original-story--lesbian--romantic-tragedy--80s--eighties--phone--page-000.jpg);
     background-repeat: repeat;
@@ -612,7 +736,13 @@ a.control_next {
 
 /* ALL MEDIA QUERY */
 /* ONLY ON DESKTOP */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
+/*
+    .allpage-navigation-phone {
+        display: none;
+    }
+*/
+    
     .tablet-index-column {
         display: none;
     }
@@ -654,15 +784,56 @@ a.control_next {
     }
 }
 
+/* Awkward In-Between */
+/*
+@media only screen and (max-width: 1370px) {
+    .portfolio-thumbnail {
+        width: 400px;
+    }
+}
+*/
+
+/*
+@media only screen and (max-width: 920px) {
+    .allpage-navigation-phone {
+        display: none;
+    }
+    
+    #Content-Container {
+        display: none;
+    }
+    
+    .Carousel-Instruction-Text {
+        display: none;
+    }
+    
+    .website-row {
+        display: none;
+    }
+    
+    .portfolio-thumbnail {
+        width: 400px;
+    }
+}
+*/
+
 /* ONLY ON IPAD */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
+    .allpage-navigation {
+        display: none;
+    }
+    
+    #menu {
+        width: 720px;
+    }
+    
     .footer-bio-text {
         width: auto;
     }
     
     .footer-container {
-        height: 1366px;
-}
+        height: 100vh;
+    }
     
     #Content-Container {
         display: none;
@@ -706,7 +877,7 @@ a.control_next {
     }
 
     .desktop-portfolio-column.right {
-        display: f lex;
+        display: flex;
         width: 100%;
         overflow: visible;
         margin: 30px 60px 40px 40px;
@@ -735,12 +906,85 @@ a.control_next {
 }
 
 
-/* ONLY ON PHONE */
-/* Makes portfolio grid in a column for phone users */
-@media only screen and (max-width: 500px) {
+/* Awkward Inbetween */
+@media only screen and (max-width: 677px) {
+    #menu {
+        width: 625px;
+    }
+    
+        .index-portfolio-grid {
+        display: column;
+        grid-template-columns: auto;
+    }
+    
+    .portfolio-thumbnail {
+        width: 90%;
+    }
+    
     .footer-logo {
         width: 100px;
         margin-bottom: 1.0em;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 200px;
+        padding: 30px;
+        height: 100vh;
+    }
+    
+    .footer-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: justify;
+        margin-left: 5px;
+    }
+}
+
+/* ONLY ON PHONE */
+/* Makes portfolio grid in a column for phone users */
+
+/* Phone */
+@media only screen and (max-width: 320px) {
+    .allpage-navigation {
+        display: none;
+    }
+    
+    .allpage-navigation-phone {
+
+    }
+    
+    #menu {
+        width: 270px;
+    }
+    
+    .footer-logo {
+        width: 100px;
+        margin-bottom: 1.0em;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 200px;
+        padding: 30px;
+        height: 120vh;
+    }
+    
+    .footer-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: justify;
+        margin-left: 5px;
     }
     
     .index-portfolio-grid-title {
@@ -790,22 +1034,5 @@ a.control_next {
     .portfolio-piece-vertical {
         width: 100%;
     }
-    
-    .footer-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 200px;
-        padding: 20px;
-        height: 812px;
-    }
-    
-    .footer-content {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        text-align: justify;
-        margin-left: 5px;
 }
-/* END */
+

@@ -10,14 +10,17 @@
 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forbidden Vectors</title>
+    
+    <!-- META DESCRIPTION  -->
+    <meta name="description" content="The sheep is a metaphor. Actually, everything is a metaphor. A vector series by Alina Sandu.">
+    
     <!-- FAVICON LINKS -->
     <link rel="icon" href="/img/icon/alinasandu-logo_favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/alinasandu-logo_favicon">
+    
     <!-- CSS SCRIPT LINK -->
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-      /*{background-image: url(/img/background-tiles/background-tile_fake-sephora.gif); background-size: 20%;}*/
-    </style>
+    
     <!-- SUMMONS IN RALEWAY AS BACK UP FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +32,7 @@
 <body>
     <!--NAVIGATION GOES HERE. 
 INCLUDE LINKS: HOME, ABOUT + RESUME-->
+<!--
 <nav class="allpage-navigation">
     <div class="navigation-content">
         <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
@@ -40,6 +44,28 @@ INCLUDE LINKS: HOME, ABOUT + RESUME-->
         </nav>
     </div>
 </nav>
+-->
+    <!--  Hamburger Menu (Hopefully this works)  -->
+    <nav class="allpage-navigation-phone">
+        <div class="navigation-content">
+            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
+            <div id="menuToggle">
+        <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
+            <input type="checkbox" />
+        <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+            <span></span>
+            <span></span>
+            <span></span>
+        <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+            <ul id="menu">
+                <li><a href="#portfolio-grid"><p class="hamburger-menu-text">Portfolio</p></a></li>
+                <li><a href="#footer-bio"><p class="hamburger-menu-text">Backstory</p></a></li>
+            </ul>
+        </div>
+        </div>
+        
+    </nav>
+    
 <!-- END -->
     
     <!-- TABLET AND PHONE VERSION OF TEXT -->

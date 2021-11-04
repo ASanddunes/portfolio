@@ -516,7 +516,7 @@ a:active {
     left: 50%;
     top: 50%;
     width: 1000px;
-    height: 1000px;
+    height: 105vh;
 }
 
 #Carousel-Container {
@@ -736,7 +736,7 @@ a.control_next {
 
 /* ALL MEDIA QUERY */
 /* ONLY ON DESKTOP */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1040px) {
 /*
     .allpage-navigation-phone {
         display: none;
@@ -818,13 +818,9 @@ a.control_next {
 */
 
 /* ONLY ON IPAD */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1039px) {
     .allpage-navigation {
         display: none;
-    }
-    
-    #menu {
-        width: 720px;
     }
     
     .footer-bio-text {
@@ -907,11 +903,7 @@ a.control_next {
 
 
 /* Awkward Inbetween */
-@media only screen and (max-width: 677px) {
-    #menu {
-        width: 625px;
-    }
-    
+@media only screen and (max-width: 677px) {    
         .index-portfolio-grid {
         display: column;
         grid-template-columns: auto;
@@ -957,10 +949,6 @@ a.control_next {
     
     .allpage-navigation-phone {
 
-    }
-    
-    #menu {
-        width: 270px;
     }
     
     .footer-logo {

@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 ul {
@@ -58,16 +58,17 @@ ul {
 .allpage-navigation {
     display: flex;
     justify-content: center;
-    z-index: 1000;
+    overflow: hidden;
 }
 
 .navigation-content {
-    width: 100%;
+    width: 100vw;
     padding: 40px 60px 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .navigation {
@@ -92,9 +93,9 @@ ul {
     width: 50px;
 }
 
-/* Settings meant for the hamburger menu */
+/* HAMBURGER MENU CSS */
 #menuToggle {
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 50px;
   right: 50px;
@@ -188,6 +189,11 @@ ul {
 #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
+}
+
+/* And let's slide it in from the left */
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
 /* END */
 

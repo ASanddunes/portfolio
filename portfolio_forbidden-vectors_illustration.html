@@ -40,186 +40,148 @@
 </head>   
     
 <body>
-    <!--NAVIGATION GOES HERE. 
-INCLUDE LINKS: HOME, ABOUT + RESUME-->
-<!--
-<nav class="allpage-navigation">
-    <div class="navigation-content">
-        <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="#portfolio-grid">Portfolio</a></li>
-                <li><a href="#footer-bio">Backstory</a></li>
+    
+    <!-- NAVIGATION -->
+        <header class="allpage-navigation">
+            <ul class="navigation-content">
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon"></a></li>
+                <li><a href="#footer-section">Backstory</a></li>
             </ul>
-        </nav>
-    </div>
-</nav>
--->
-    <!--  Hamburger Menu (Hopefully this works)  -->
-    <nav class="allpage-navigation-phone">
-        <div class="navigation-content">
-            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-            <div id="menuToggle">
-        <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
-            <input type="checkbox" />
-        <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
-            <span></span>
-            <span></span>
-            <span></span>
-        <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
-            <ul id="menu">
-                <li><a href="#portfolio-grid"><p class="hamburger-menu-text">Portfolio</p></a></li>
-                <li><a href="#footer-bio"><p class="hamburger-menu-text">Backstory</p></a></li>
-            </ul>
-        </div>
-        </div>
-        
-    </nav>
+        </header>
+        <!-- END -->
     
-<!-- END -->
+        <!-- BODY STARTS -->
     
-    <!-- TABLET AND PHONE VERSION OF TEXT -->
-    <div class="tablet-portfolio-column">
-        <div class="desktop-index-text-glue">
-            <h1 class="title">Forbidden Vectors</h1>
-            <h2 class="subtitle">Illustration Series</h2>
-            <p>Illustrations on censorship and corruption.</p>
-        </div>
-    </div>
     
-    <!-- DESKTOP STICKY TEXT COLUMN -->
-    <div class="website-row">
-        <div class="desktop-portfolio-aside">
+        <!-- TABLET AND PHONE VERSION OF TEXT -->
+        <div class="portfolio-project-tablet-column">
             <div class="desktop-index-text-glue">
                 <h1 class="title">Forbidden Vectors</h1>
                 <h2 class="subtitle">Illustration Series</h2>
                 <p>Illustrations on censorship and corruption.</p>
             </div>
         </div>
-        <div class="desktop-portfolio-gallery">
-            <div class="desktop-index-text-glue">
-                <img class="portfolio-piece-vertical" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--blackout--sheep.png" alt="Vector illustration piece number 1 Blackout depicting three sheep with one sheep being glitched out based on the phrase black sheep">
-                <p class="portfolio-piece-description">Blackout</p>
-                <img class="portfolio-piece-vertical" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--funny-but-true--clown.png" alt="Vector illustration piece number 2 Funny but true depicting a girl with three heads two of her heads showing her true feelings are glitched out leaving her masked face as the only clear one">
-                <p class="portfolio-piece-description">Funny, but true</p>
-                <img class="portfolio-piece-vertical" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--the-whorror-of-babylon--whore-of-babylon--selfie.png" alt="Vector illustration piece number 3 the Whorror of Babylon depicting a narcissistic girl surrounded by cameras playing on social media narcissism by invoking the idea of the Whore of Babylon">
-                <p class="portfolio-piece-description">The Whorror of Babylon</p>
-                <img class="portfolio-piece-vertical" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--the-cancel-vulture--cancel-culture--vulture--bunny.png" alt="Vector illustration piece number 4 the Cancel Vulture depicts a vulture feasting on the corpse of a rabbit its face is glitched out hiding its true nature">
-                <p class="portfolio-piece-description">The Cancel Vulture</p>
-            </div>
-        </div>
-    </div>
-    
-        <!-- SHOW REST OF PORTFOLIO-->
-    <div class="portfolio-grid-title"><h2 id="portfolio-grid">BACK TO THE WORKS</h2></div>
-    <div class="portfolio-grid">
-        <!-- Bad Batter -->
-
-        <!-- The Fairy Door -->
         
-        <!-- Fake Sephora -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_fake-sephora_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
-                </a>
+        <!-- DESKTOP STICKY TEXT COLUMN -->
+        <div class="allpage-row">
+            
+            <div class="portfolio-project-desktop-column">
+                <div class="allpage-glue">
+                    <h1 class="title">Forbidden Vectors</h1>
+                    <h2 class="subtitle">Illustration Series</h2>
+                    <p>Illustrations on censorship and corruption.</p>
+                </div>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
-            </div>
-        </div>
-        <!-- The Firebird -->
-
-        <!-- Forbidden Vector -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_forbidden-vectors_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_forbidden-vectors_illustration.html">
-                    Forbidden Vectors
-                </a>
-            </div>
-        </div>
-        <!-- Letting Go -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo"></a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html">Letting Go</a>
-                <p class="portfolio-piece-description">Comic (Under Construction)</p>
+        
+            <div class="portfolio-project-gallery">
+                <div class="desktop-index-text-glue">
+                    <img class="portfolio-project-portrait" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--blackout--sheep.png" alt="Vector illustration piece number 1 Blackout depicting three sheep with one sheep being glitched out based on the phrase black sheep">
+                    <p class="portfolio-piece-description">Blackout</p>
+                
+                    <img class="portfolio-project-portrait" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--funny-but-true--clown.png" alt="Vector illustration piece number 2 Funny but true depicting a girl with three heads two of her heads showing her true feelings are glitched out leaving her masked face as the only clear one">
+                    <p class="portfolio-piece-description">Funny, but true</p>
+                
+                    <img class="portfolio-project-portrait" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--the-whorror-of-babylon--whore-of-babylon--selfie.png" alt="Vector illustration piece number 3 the Whorror of Babylon depicting a narcissistic girl surrounded by cameras playing on social media narcissism by invoking the idea of the Whore of Babylon">
+                    <p class="portfolio-piece-description">The Whorror of Babylon</p>
+                
+                    <img class="portfolio-project-portrait" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--vector-art--the-cancel-vulture--cancel-culture--vulture--bunny.png" alt="Vector illustration piece number 4 the Cancel Vulture depicts a vulture feasting on the corpse of a rabbit its face is glitched out hiding its true nature">
+                    <p class="portfolio-piece-description">The Cancel Vulture</p>
+                </div>
             </div>
         </div>
-        <!-- Hockey in After Effects -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    Hockey In After Effects
-                </a>
-            </div>
-        </div>
-        <!-- Impromptu Fatherhood -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    Impromptu Fatherhood
-                </a>
-            </div>
-        </div>
-        <!-- Season in the Sun -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.jpg" alt="An icon representing Season in the Sun a series of fictitious music festival posters">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    Season in the Sun
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- GRID GALLERY ENDS HERE -->
-    <div class="portfolio-grid-title"><a class="arrow-to-top" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a></div>
     
-    <!-- FOOTER GOES HERE. -->
-<footer class="footer-container" style="margin-top:400px;">
-    <ul class="footer-content">
-        <li class="footer-logo"><a href="./index.html"><img class="footer-logo" src="/img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon."></a></li>
-        <li>
-            <a href=""><h2 id="footer-bio" class="footer-bio-text">Backstory</h2></a>
-            <p class="footer-bio-text">Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
-        </li>
-        <li>
-            <h2 class="footer-bio-text">Talk To Me</h2>
-            <p class="footer-bio-text">Please reach out to me at my email: hello@alinasandu.com! You can also see my work on social media (see the icons below)</p></li>
-        <li>
-            <p>
-                <a class="footer-social-media-icon" href="mailto: foralinas@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a>
-            </p>
-        </li>        
-    </ul>
-    <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a>
-</footer>
-<!-- END -->
+    
+        <!-- PORTFOLIO GRID GALLERY - WILL PUT THUMBNAILS OF ALL PIECES. -->
+        <div class="portfolio-grid-gallery-title" id="portfolio-section"><h1 class="portfolio-section-title">Portfolio</h1></div>
+    
+        <section class="portfolio-grid-gallery">        
+        
+            <!-- Fake Sephora -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_fake-sephora_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_fake-sephora_illustration.html"><p class="portfolio-grid-gallery-headings">Fake Sephora</p></a>
+                </div>
+            </div>
+            
+            <!-- Forbidden Vector -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_forbidden-vectors_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_forbidden-vectors_illustration.html"><p class="portfolio-grid-gallery-headings">Forbidden Vectors</p></a>
+                </div>
+            </div>
+            
+            <!-- Letting Go -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_letting-go_comic.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_letting-go_comic.html"><p class="portfolio-grid-gallery-headings">Letting Go (Comic)</p></a>
+                </div>
+            </div>
+            
+            <!-- Hockey in After Effects -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><p class="portfolio-grid-gallery-headings">Hockey In After Effects</p></a>
+                </div>
+            </div>
+            
+            <!-- Impromptu Fatherhood -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_impromptu-fatherhood_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_impromptu-fatherhood_illustration.html"><p class="portfolio-grid-gallery-headings">Impromptu Fatherhood</p></a>
+                </div>
+            </div>
+            
+            <!-- Season in the Sun -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.jpg" alt="An icon representing Season in the Sun a series of fictitious music festival posters">
+                    </a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><p class="portfolio-grid-gallery-headings">Season in the Sun</p></a>
+                </div>
+            </div>
+        
+        </section>
+        
+        <div class="portfolio-grid-gallery-arrow"><a class="arrow-to-top-white" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a></div>
+ 
+        <!-- BODY SECTION ENDS HERE -->
+        
+           
+        <!-- FOOTER GOES HERE. -->
+        <footer class="allpage-footer" id="footer-section">
+            <a href="#top"><img class="footer-logo" src="img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon"></a>
+            <h1 class="footer-section-title">Backstory</h1>
+            <p class="footer-bio-text">I'm an illustrator and comic artist born and raised in Richmond, BC. Once I get started on a project, I won't stop 'til I'm done. No really, I was one of those kids that actually liked going to Saturday piano lessons. I still play piano. When I'm not illustrating or playing piano, I like to read novels, learning useless info from the web, and remembering to eat my lunch.</p>
+            <div class="social-media-icon-group">
+                <a class="social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-2x"></i></a>
+                <a class="social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a class="social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
+                <a class="social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
+                <a class="social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="footer-arrow">
+                <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a>
+            </div>
+        </footer>
+        <!-- FOOTER END-->
     
 </body>  
 

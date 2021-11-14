@@ -170,73 +170,42 @@
 </head>
 
 <body> 
-    <!--NAVIGATION GOES HERE. -->
-<!--
-    <nav class="allpage-navigation">
-        <div class="navigation-content">
-            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#portfolio-grid">Portfolio</a></li>
-                    <li><a href="#footer-bio">Backstory</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
--->
-    
-    <nav class="allpage-navigation-phone">
-        <div class="navigation-content">
-            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-            <div id="menuToggle">
-        <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
-            <input type="checkbox" />
-        <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
-            <span></span>
-            <span></span>
-            <span></span>
-        <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
-            <ul id="menu">
-                <li><a href="#portfolio-grid"><p class="hamburger-menu-text">Portfolio</p></a></li>
-                <li><a href="#footer-bio"><p class="hamburger-menu-text">Backstory</p></a></li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-<!-- END -->
+    <!-- NAVIGATION -->
+    <header class="allpage-navigation">
+        <ul class="navigation-content">
+            <li><a href="#portfolio-section">Portfolio</a></li>
+            <li><a href="#"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon"></a></li>
+            <li><a href="#footer-section">Backstory</a></li>
+        </ul>
+    </header>
     
     <!-- HERO TEXT -->
-    
-    <div class="tablet-index-column">
+    <section class="hero-section-tablet">
+    <div class="hero-section-tablet-column">
         <div class="desktop-index-text-glue">
             <h1>Alina Sandu</h1>
             <h3>Illustrator (+ Comic Artist)</h3>
             <p>I'm hooked on authentic retro in all its dated glory.</p>
         </div>
     </div>
+    </section>
     
-    <div class="website-row">
-        <div class="desktop-portfolio-aside">
-            <div class="desktop-index-text-glue">
+    <section class="hero-section-desktop">    
+    <div class="allpage-row">
+        
+        <div class="hero-section-desktop-column">
+            <div class="allpage-glue">
                 <h1 class="title">Alina Sandu</h1>
                 <h2 class="subtitle">Illustrator (+ Comic Artist)</h2>
                 <p>I'm hooked on authentic retro in all its dated glory.</p>
             </div>
         </div>
-        <!-- END OF HERO TEXT-->
-        <!-- 3D CAROUSEL. NOTE: ORDER ALPHABETICALLY.  -->
-        <div class="desktop-portfolio-gallery">
-            <!-- COPYRIGHT NOTE -->
-            <!--original pen 3d motion from: @johnblazek 
-            Copyright (c) 2021 by John Blazek (https://codepen.io/johnblazek/pen/nceyw)
-            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
-            <!-- END NOTE -->
+        
+        <!-- 3D CAROUSEL -->
+        <div class="carousel-portfolio-gallery">
             <div id="Content-Container" class="trans3d">
                 <section id="Carousel-Container" class="trans3d">
-                    <!-- Bad Batter -->
-
+                    
                     <!-- Fake Sephora -->
                     <figure id="item1" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
@@ -250,8 +219,7 @@
                             </a>
                         </div>
                     </figure>
-                    <!-- The Firebird -->
-
+                    
                     <!-- Forbidden Vectors -->
                     <figure id="item2" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
@@ -263,6 +231,7 @@
                             </a>
                         </div>
                     </figure>
+                    
                     <!-- Hockey in After Effects -->
                     <figure id="item3" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
@@ -275,6 +244,7 @@
                             </a>
                         </div>
                     </figure>
+                    
                     <!-- Impromptu Fatherhood -->
                     <figure id="item4" class="Carousel-Item trans3d">
                         <div class="Carousel-Item-Inner trans3d">
@@ -313,175 +283,128 @@
                             <p class="portfolio-piece-description">Warning: Comic</p>
                         </div>
                     </figure>
-                    <!-- COMICS | The Fairy Door -->
+                    
                 </section>
             </div>
         </div>
+        
     </div>
+        
     <div class="Carousel-Instruction-Text">
         <h3>Wave your mouse to bend the portfolio to your will.</h3>
     </div>
+        </section>
     
-    <!-- ENTIRE PORTFOLIO LAID OUT IN GRID FORMAT. THIS APPEARS ON TABLET AND SMALLER. -->
-    <div class="index-portfolio-grid-title" id="portfolio-grid">
-        <h2>Portfolio</h2>
-    </div>
-    <div class="index-portfolio-grid">
-        <!-- Bad Batter -->
-
-        <!-- The Fairy Door -->
-
+    
+    <!-- PORTFOLIO GRID GALLERY - WILL PUT THUMBNAILS OF ALL PIECES. -->
+    <div class="portfolio-grid-gallery-title" id="portfolio-section"><h1 class="portfolio-section-title">Portfolio</h1></div>
+    
+    <section class="portfolio-grid-gallery">        
+        
         <!-- Fake Sephora -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
                 <a href="./portfolio_fake-sephora_illustration.html">
-                    <img class="portfolio-thumbnail"
+                    <img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg"
                         alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
                 </a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_fake-sephora_illustration.html"><p class="portfolio-grid-gallery-headings">Fake Sephora</p></a>
             </div>
         </div>
-        <!-- The Firebird -->
-
+        
         <!-- Forbidden Vector -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
                 <a href="./portfolio_forbidden-vectors_illustration.html">
-                    <img class="portfolio-thumbnail"
+                    <img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png"
                         alt="An icon representing the Forbidden Vectors illustration series">
                 </a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_forbidden-vectors_illustration.html">
-                    Forbidden Vectors
-                </a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_forbidden-vectors_illustration.html"><p class="portfolio-grid-gallery-headings">Forbidden Vectors</p></a>
             </div>
         </div>
+        
         <!-- Letting Go -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html"><img class="portfolio-thumbnail"
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_letting-go_comic.html"><img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg"
                         alt="An icon representing Letting Go a comic demo"></a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html">Letting Go (Comic)</a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_letting-go_comic.html"><p class="portfolio-grid-gallery-headings">Letting Go (Comic)</p></a>
             </div>
         </div>
+        
         <!-- Hockey in After Effects -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
                 <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    <img class="portfolio-thumbnail"
+                    <img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png"
                         alt="An icon representing Hockey in After Effects motion illustration">
                 </a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    Hockey In After Effects
-                </a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><p class="portfolio-grid-gallery-headings">Hockey In After Effects</p></a>
             </div>
         </div>
+       
         <!-- Impromptu Fatherhood -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
                 <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    <img class="portfolio-thumbnail"
+                    <img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg"
                         alt="An icon representing Impromptu Fatherhood Editorial Illustration">
                 </a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    Impromptu Fatherhood
-                </a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_impromptu-fatherhood_illustration.html"><p class="portfolio-grid-gallery-headings">Impromptu Fatherhood</p></a>
             </div>
         </div>
+        
         <!-- Season in the Sun -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
+        <div class="portfolio-grid-gallery-section">
+            <div class="portfolio-grid-gallery-section-inner">
                 <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    <img class="portfolio-thumbnail"
+                    <img class="portfolio-grid-gallery-img"
                         src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.jpg"
                         alt="An icon representing Season in the Sun a series of fictitious music festival posters">
                 </a>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    Season in the Sun
-                </a>
+            <div class="portfolio-grid-gallery-section-inner">
+                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><p class="portfolio-grid-gallery-headings">Season in the Sun</p></a>
             </div>
         </div>
-    </div>
-    <div class="portfolio-grid-title"><a class="arrow-to-top" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a></div>
+    
+    </section>
+    
+    <div class="portfolio-grid-gallery-arrow"><a class="arrow-to-top-white" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a></div>
     
     <!-- FOOTER GOES HERE. -->
-<footer class="footer-container" style="margin-top:400px;">
-<!--
-        <div class="footernew-content">
-            <a href="./index.html"><img style="width:50px;" src="/img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon."></a>
-            <nav>
-                <ul class="navigation">
-                    <li><a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a></li>
-                </ul>
-            </nav>
+    <footer class="allpage-footer" id="footer-section">
+        <a href="#top"><img class="footer-logo" src="img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon"></a>
+        <h1 class="footer-section-title">Backstory</h1>
+        <p class="footer-bio-text">I'm an illustrator and comic artist born and raised in Richmond, BC. Once I get started on a project, I won't stop 'til I'm done. No really, I was one of those kids that actually liked going to Saturday piano lessons. I still play piano. When I'm not illustrating or playing piano, I like to read novels, learning useless info from the web, and remembering to eat my lunch.</p>
+        <div class="social-media-icon-group">
+            <a class="social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-3x"></i></a>
+            <a class="social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a class="social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-3x"></i></a>
+            <a class="social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-3x"></i></a>
+            <a class="social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-3x"></i></a>
         </div>
-    <div>
-        <a href=""><h2 id="footer-bio" class="footer-bio-text">Backstory</h2></a>
-            <p class="footer-bio-text">Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
-        <h2 class="footer-bio-text">Talk To Me</h2>
-            <p class="footer-bio-text">Please reach out to me at my email: hello@alinasandu.com! You can also see my work on social media (see the icons below)</p>
-        <div>
-            <p><a class="footer-social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-2x"></i></a></p>
-            <p><a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a></p>
-            <p><a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a></p>
-            <p><a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a></p>
-            <p><a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a></p>
+        <div class="footer-arrow">
+            <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a>
         </div>
-    </div>
--->
-
-    <ul class="footer-content">
-        <li class="footer-logo" id="footer-bio"><a href="./index.html"><img class="footer-logo" src="/img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon."></a></li>
-        <li>
-            <h2 class="footer-bio-text">Backstory</h2>
-            <p class="footer-bio-text">Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
-        </li>
-        <li>
-            <h2 class="footer-bio-text">Talk To Me</h2>
-            <p class="footer-bio-text">Please reach out to me at my email: <b>hello@alinasandu.com</b>! You can also see my work on social media (see the icons below)</p>
-            <p class="social-media-nophone">
-                <a class="footer-social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a></p>
-        </li>
-        
-        <li class="social-media">
-            <p><a class="footer-social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-2x"></i></a></p>
-        </li> 
-        <li class="social-media">
-        <p><a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a></p>
-        </li>
-        <li class="social-media">
-        <p><a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a></p>
-        </li>
-        <li class="social-media">
-        <p><a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a></p>
-        </li>
-        <li class="social-media"><p><a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a></p></li>
-        
-        <li><a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a></li>
-    </ul>
+    </footer>
+    <!-- FOOTER END-->
     
-
-</footer>
 <!-- END -->
     
 </body>

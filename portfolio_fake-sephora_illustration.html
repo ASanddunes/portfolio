@@ -38,203 +38,169 @@
 </script>
 </head>
  
-    <body>   
-<!--NAVIGATION GOES HERE.-->
-<!--
-<nav class="allpage-navigation">
-    <div class="navigation-content">
-        <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="#portfolio-grid">Portfolio</a></li>
-                <li><a href="#footer-bio">Backstory</a></li>
-            </ul>
-        </nav>
-    </div>
-</nav>
--->
+    <body>
         
-        <!--  Hamburger Menu (Hopefully this works)  -->
-    <nav class="allpage-navigation-phone">
-        <div class="navigation-content">
-            <a href="./index.html"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon."></a>
-            <div id="menuToggle">
-        <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
-            <input type="checkbox" />
-        <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
-            <span></span>
-            <span></span>
-            <span></span>
-        <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
-            <ul id="menu">
-                <li><a href="#portfolio-grid"><p class="hamburger-menu-text">Portfolio</p></a></li>
-                <li><a href="#footer-bio"><p class="hamburger-menu-text">Backstory</p></a></li>
+        <!-- NAVIGATION -->
+        <header class="allpage-navigation">
+            <ul class="navigation-content">
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#"><img class="nav-logo" src="/img/icon/alinasandu-logo_white.svg" alt="Alina Sandu's logo icon"></a></li>
+                <li><a href="#footer-section">Backstory</a></li>
             </ul>
-        </div>
-        </div>
-        
-    </nav>
-<!-- END -->    
+        </header>
+        <!-- END -->    
 
-<!-- CONTENT -->
+        <!-- CONTENT -->
+        <section class="portfolio-project-section">
 
-    <!-- TABLET AND PHONE VERSION OF TEXT -->
-    <div class="tablet-portfolio-column">
-        <div class="desktop-index-text-glue">
-            <h1 class="title">Sephora au naturel</h1>
-            <h2 class="subtitle">Social Media Advertising Illustration</h2>
-            <p><b>If your skin loves feeling refreshed, we think you should give this perfect all-natural cosmetics a try 🌿</b></p>
-            <p>Ad introducing Sephora's fictional line of all organic plant-based cosmetics. One of Sephora's best known taglines is, "We all belong to something beautiful."<br></p>
-            <h3>Fun fact:</h3>
-            <p>You can also see this piece among the top 10 for CAPIC Rodeo 2020!</p>
-        </div>
-    </div>
-    
-    <!-- DESKTOP STICKY TEXT COLUMN -->
-    <div class="website-row">
-        <div class="desktop-portfolio-aside">
-            <div class="desktop-index-text-glue">
+        <!-- TABLET AND PHONE VERSION OF TEXT -->
+        <div class="portfolio-project-tablet-column">
+            <div class="allpage-glue">
                 <h1 class="title">Sephora au naturel</h1>
                 <h2 class="subtitle">Social Media Advertising Illustration</h2>
-                <p><b>“If your skin loves feeling refreshed, we think you should give this perfect all-natural cosmetics a try 🌿”</b></p>
+                <p><b>If your skin loves feeling refreshed, we think you should give this perfect all-natural cosmetics a try 🌿</b></p>
                 <p>Ad introducing Sephora's fictional line of all organic plant-based cosmetics. One of Sephora's best known taglines is, "We all belong to something beautiful."<br></p>
                 <h3>Fun fact:</h3>
-                <p class="fun-fact-text">You can also see this piece among the <u><a href="https://www.ideaschoolofdesign.com/home/2021/10/alina-sandu-idea-grad-2022-wins-top-10-in-capic-rodeo-13-student-illustration-contest-with-fake-sephora-illustrated-social-media-ad">top 10 for CAPIC Rodeo 2020</a></u>!</p>
+                <p>You can also see this piece among the top 10 for CAPIC Rodeo 2020!</p>
             </div>
         </div>
-        <div class="desktop-portfolio-gallery">
-            <div class="desktop-index-text-glue">
-                <img class= "portfolio-piece-vertical" src="img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--full-illustration.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in full size">
-                <p class="portfolio-piece-description" style="padding-bottom:40px">Profile crop.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--square-crop--icon.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in a square crop fit for icons and instagram alike">
-                <p class="portfolio-piece-description" style="padding-bottom:40px">Square crop.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--rectangle-crop--header.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in a rectangle crop that can also work as a header">
-                <p class="portfolio-piece-description" style="padding-bottom:40px">Landscape crop.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--bonus-asset.jpg" alt="Sephora a la naturel (previously named Fake Sephora) bonus asset which uses the details in the original illustration as a companion illustration piece"> 
-                <p class="portfolio-piece-description">Bonus asset.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--01.jpg" alt="Sephora a la naturel (previously named Fake Sephora) initial thumbnail complete with notes on idea colour palette and art inspirations">
-                <p class="portfolio-piece-description">Thumbnail 1.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--02.jpg" alt="Sephora a la naturel (previously named Fake Sephora) second thumbnail iteration where it focuses more on the action rather that more background than needed">
-                <p class="portfolio-piece-description">Thumbnail 2.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--03.jpg" alt="Sephora a la naturel (previously named Fake Sephora) third thumbnail iteration which positions the main figure differently">
-                <p class="portfolio-piece-description">Thumbnail 3.</p>
-                <img class= "portfolio-piece-vertical" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--sketch.jpg" alt="Sephora a la naturel (previously named Fake Sephora) initial sketch after finalizing composition">
-                <p class="portfolio-piece-description" style="padding-bottom:40px">Rough sketch.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- SHOW REST OF PORTFOLIO-->
-    <div class="portfolio-grid-title"><h2 id="portfolio-grid">BACK TO THE WORKS</h2></div>
-    <div class="portfolio-grid">
-        <!-- Bad Batter -->
-
-        <!-- The Fairy Door -->
         
-        <!-- Fake Sephora -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_fake-sephora_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)">
-                </a>
+        <!-- DESKTOP STICKY TEXT COLUMN -->
+        <div class="allpage-row">
+            
+            <div class="portfolio-project-desktop-column">
+                <div class="allpage-glue">
+                    <h1 class="title">Sephora au naturel</h1>
+                    <h2 class="subtitle">Social Media Advertising Illustration</h2>
+                    <p><b>“If your skin loves feeling refreshed, we think you should give this perfect all-natural cosmetics a try 🌿”</b></p>
+                    <p>Ad introducing Sephora's fictional line of all organic plant-based cosmetics. One of Sephora's best known taglines is, "We all belong to something beautiful."<br></p>
+                    <h3>Fun fact:</h3>
+                    <p class="fun-fact-text">You can also see this piece among the <u><a href="https://www.ideaschoolofdesign.com/home/2021/10/alina-sandu-idea-grad-2022-wins-top-10-in-capic-rodeo-13-student-illustration-contest-with-fake-sephora-illustrated-social-media-ad">top 10 for CAPIC Rodeo 2020</a></u>!</p>
+                </div>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_fake-sephora_illustration.html">Fake Sephora</a>
+            
+            <div class="portfolio-project-gallery">
+                <div class="allpage-glue">
+                    <img class= "portfolio-project-portrait" src="img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--full-illustration.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in full size">
+                    <p class="portfolio-piece-description" style="padding-bottom:40px">Profile crop.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--square-crop--icon.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in a square crop fit for icons and instagram alike">
+                    <p class="portfolio-piece-description" style="padding-bottom:40px">Square crop.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--rectangle-crop--header.jpg" alt="Sephora a la naturel (previously named Fake Sephora) illustration in a rectangle crop that can also work as a header">
+                    <p class="portfolio-piece-description" style="padding-bottom:40px">Landscape crop.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--bonus-asset.jpg" alt="Sephora a la naturel (previously named Fake Sephora) bonus asset which uses the details in the original illustration as a companion illustration piece"> 
+                    <p class="portfolio-piece-description">Bonus asset.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--01.jpg" alt="Sephora a la naturel (previously named Fake Sephora) initial thumbnail complete with notes on idea colour palette and art inspirations">
+                    <p class="portfolio-piece-description">Thumbnail 1.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--02.jpg" alt="Sephora a la naturel (previously named Fake Sephora) second thumbnail iteration where it focuses more on the action rather that more background than needed">
+                    <p class="portfolio-piece-description">Thumbnail 2.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--social-media-advertising--social-media--instagram--sephora--illustration--art-noveau--thumbnail--03.jpg" alt="Sephora a la naturel (previously named Fake Sephora) third thumbnail iteration which positions the main figure differently">
+                    <p class="portfolio-piece-description">Thumbnail 3.</p>
+                    
+                    <img class= "portfolio-project-portrait" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--sketch.jpg" alt="Sephora a la naturel (previously named Fake Sephora) initial sketch after finalizing composition">
+                    <p class="portfolio-piece-description" style="padding-bottom:40px">Rough sketch.</p>
+                </div>
             </div>
+            
         </div>
-        <!-- The Firebird -->
-
-        <!-- Forbidden Vector -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_forbidden-vectors_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series">
-                </a>
+            
+        </section>
+        
+        <!-- PORTFOLIO GRID GALLERY - WILL PUT THUMBNAILS OF ALL PIECES. -->
+        <div class="portfolio-grid-gallery-title" id="portfolio-section"><h1 class="portfolio-section-title">Portfolio</h1></div>
+    
+        <section class="portfolio-grid-gallery">        
+        
+            <!-- Fake Sephora -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_fake-sephora_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/fake-sephora/alina-sandu--portfolio--fake-sephora--sephora-a-la-naturel--icon.jpg" alt="An icon representing Sephora a la naturel (previously named Fake Sephora)"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_fake-sephora_illustration.html"><p class="portfolio-grid-gallery-headings">Fake Sephora</p></a>
+                </div>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_forbidden-vectors_illustration.html">
-                    Forbidden Vectors
-                </a>
+            
+            <!-- Forbidden Vector -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_forbidden-vectors_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/forbidden-vectors/alina-sandu--portfolio--forbidden-vectors--icon.png" alt="An icon representing the Forbidden Vectors illustration series"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_forbidden-vectors_illustration.html"><p class="portfolio-grid-gallery-headings">Forbidden Vectors</p></a>
+                </div>
             </div>
-        </div>
-        <!-- Letting Go -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html"><img class= "portfolio-thumbnail" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo"></a>
+            
+            <!-- Letting Go -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_letting-go_comic.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/letting-go/alina-sandu--portfolio--letting-go--icon.jpg" alt="An icon representing Letting Go a comic demo"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_letting-go_comic.html"><p class="portfolio-grid-gallery-headings">Letting Go (Comic)</p></a>
+                </div>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_letting-go_comic.html">Letting Go (Comic)</a>
+            
+            <!-- Hockey in After Effects -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_hockey-in-after-effects_motion-illustration.html"><p class="portfolio-grid-gallery-headings">Hockey In After Effects</p></a>
+                </div>
             </div>
-        </div>
-        <!-- Hockey in After Effects -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/hockey-in-after-effects/alina-sandu--portfolio--hockey-in-after-effects--icon.png" alt="An icon representing Hockey in After Effects motion illustration">
-                </a>
+            
+            <!-- Impromptu Fatherhood -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_impromptu-fatherhood_illustration.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration"></a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_impromptu-fatherhood_illustration.html"><p class="portfolio-grid-gallery-headings">Impromptu Fatherhood</p></a>
+                </div>
             </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_hockey-in-after-effects_motion-illustration.html">
-                    Hockey In After Effects
-                </a>
+            
+            <!-- Season in the Sun -->
+            <div class="portfolio-grid-gallery-section">
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><img class="portfolio-grid-gallery-img" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.jpg" alt="An icon representing Season in the Sun a series of fictitious music festival posters">
+                    </a>
+                </div>
+                <div class="portfolio-grid-gallery-section-inner">
+                    <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html"><p class="portfolio-grid-gallery-headings">Season in the Sun</p></a>
+                </div>
             </div>
-        </div>
-        <!-- Impromptu Fatherhood -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/impromptu-fatherhood/alina-sandu--portfolio--impromptu-fatherhood--icon.jpg" alt="An icon representing Impromptu Fatherhood Editorial Illustration">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_impromptu-fatherhood_illustration.html">
-                    Impromptu Fatherhood
-                </a>
-            </div>
-        </div>
-        <!-- Season in the Sun -->
-        <div class="portfolio-grid-piece">
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    <img class= "portfolio-thumbnail" src="/img/portfolio/season-in-the-sun/alina-sandu--portfolio--season-in-the-sun--icon.jpg" alt="An icon representing Season in the Sun a series of fictitious music festival posters">
-                </a>
-            </div>
-            <div class="portfolio-grid-piece-content">
-                <a href="./portfolio_season-in-the-sun_illustrated-music-festival-posters.html">
-                    Season in the Sun
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- GRID GALLERY ENDS HERE -->
-    <div class="portfolio-grid-title"><a class="arrow-to-top" href="#top"><i class="fas fa-arrow-up fa-4x"></i></a></div>
+        
+        </section>
+        
+        <div class="portfolio-grid-gallery-arrow"><a class="arrow-to-top-white" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a></div>
  
-<!-- BODY SECTION ENDS HERE -->
-    
-    
-<!-- FOOTER GOES HERE. -->
-<footer class="footer-container" style="margin-top:400px;">
-    <ul class="footer-content">
-        <li class="footer-logo"><a href="./index.html"><img class="footer-logo" src="/img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon."></a></li>
-        <li>
-            <a href=""><h2 id="footer-bio" class="footer-bio-text">Backstory</h2></a>
-            <p class="footer-bio-text">Alina is an illustrator and comic artist born and raised in Richmond, BC. She’s been drawing for as long as she can remember. Just ask her parents, the walls will never be the same. Outside of illustrating, Alina likes to play the piano. No really- She was one of the kids that actually liked going to her piano lessons every Saturday. Make of that what you will.</p>
-        </li>
-        <li>
-            <h2 class="footer-bio-text">Talk To Me</h2>
-            <p class="footer-bio-text">Please reach out to me at my email: hello@alinasandu.com! You can also see my work on social media (see the icons below)</p></li>
-        <li>
-            <p>
-                <a class="footer-social-media-icon" href="mailto: foralinas@outlook.com"><i class="fas fa-envelope fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
-                <a class="footer-social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a>
-            </p>
-        </li>        
-    </ul>
-    <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a>
-</footer>
-<!-- END -->
+        <!-- BODY SECTION ENDS HERE -->
+        
+           
+        <!-- FOOTER GOES HERE. -->
+        <footer class="allpage-footer" id="footer-section">
+            <a href="#top"><img class="footer-logo" src="img/icon/alinasandu-logo_black.svg" alt="Alina Sandu's logo icon"></a>
+            <h1 class="footer-section-title">Backstory</h1>
+            <p class="footer-bio-text">I'm an illustrator and comic artist born and raised in Richmond, BC. Once I get started on a project, I won't stop 'til I'm done. No really, I was one of those kids that actually liked going to Saturday piano lessons. I still play piano. When I'm not illustrating or playing piano, I like to read novels, learning useless info from the web, and remembering to eat my lunch.</p>
+            <div class="social-media-icon-group">
+                <a class="social-media-icon" href="mailto: hello@alinasandu.com"><i class="fas fa-envelope fa-2x"></i></a>
+                <a class="social-media-icon" href="http://linkedin.com/in/alinasanddune/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a class="social-media-icon" href="https://www.behance.net/alinasanddune"><i class="fab fa-behance-square fa-2x"></i></a>
+                <a class="social-media-icon" href="https://www.artstation.com/alinasandu"><i class="fab fa-artstation fa-2x"></i></a>
+                <a class="social-media-icon" href="http://instagram.com/alinasanddunes"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="footer-arrow">
+                <a class="arrow-to-top-black" href="#top"><i class="fas fa-arrow-up fa-3x"></i></a>
+            </div>
+        </footer>
+        <!-- FOOTER END-->
+        
 </body> 
 </html>

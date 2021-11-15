@@ -22,19 +22,13 @@ img {
 /* ALL PAGES */
 html {
     background-image: url(/img/background-tiles/background-tile.jpg);
-    background-size: 150px;
+    background-size: 15em;
     background-repeat: repeat;
     scroll-behavior: smooth;
 }
 
 body {
 /*    overflow: hidden;*/
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .arrow-to-top-black {
@@ -55,6 +49,12 @@ ul {
 
 .allpage-row {
     display: flex;
+    clear: both;
+}
+
+.allpage-row:after {
+    content: "";
+    display: table;
     clear: both;
 }
 
@@ -182,6 +182,12 @@ a:active {
     text-shadow: none;
 }
 
+.carousel-instruction-text {
+    text-align: right;
+    text-transform: uppercase;
+    padding: 12em 3em 1.25em 3em;
+}
+
 .portfolio-grid-gallery-headings {
     font-size: 1.5em;
     text-align: center;
@@ -252,7 +258,7 @@ a:active {
 /* 404 PAGE*/
 .error-screen-column {
     display: flex;
-    margin: 40px auto 20px auto;
+    margin: 2.5em auto 1.25em auto;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -267,11 +273,13 @@ a:active {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    padding: 20px 45px 20px 45px;
+    padding: 1.25em 3em 1.25em 3em;
 }
 
 .nav-logo {
-    width: 50px;
+    width: 3.25em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .navigation-content {
@@ -289,12 +297,6 @@ a:active {
     height: 85vh;
 }
 
-.hero-section-row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .hero-section-desktop-column {
     width: 35%;
     height: 45vh;
@@ -303,7 +305,7 @@ a:active {
     top: 5vh;
     left: 6vh;
     background: rgba(255, 68, 0, 0);
-    margin: 0px 40px 40px 60px;
+    margin: 0em 2.5em 2.5em 3.75em;
 }
 
 .hero-section-tablet-column {
@@ -311,7 +313,7 @@ a:active {
     justify-content: center;
     flex-wrap: wrap;
     width: 80%;
-    margin: 40px auto 20px auto;
+    margin: 2.5em auto 1.25em auto;
     text-align: center;   
 }
 
@@ -328,20 +330,20 @@ a:active {
     top: 5vh;
     left: 6vh;
     background: rgba(255, 68, 0, 0);
-    margin: 0px 40px 40px 60px;
+    margin: 0em 2.5em 2.5em 3.75em;
 }
 
 .portfolio-project-tablet-column {
     display: flex;
     width: 80%;
-    margin: 40px auto 20px auto;
+    margin: 2.5em auto 1.25em auto;
     flex-wrap: wrap;
 }
 
 .portfolio-project-gallery {
     display: flex;
     width: 65%;
-    margin: 30px 60px 40px 40px;
+    margin: 1.875em 3.75em 2.5em 2.5em;
 }
 
 .portfolio-project-portrait {
@@ -366,15 +368,15 @@ a:active {
     padding: 1rem;
     text-align: center;
     background-image: url(/img/background-tiles/background-tile-footer.jpg);
-    background-size: 150px;
+    background-size: 10em;
     background-repeat: repeat;
-    margin-top: 100px;
+    margin-top: 6.25em;
     height: 85vh;
     padding: 60px;
 }
 
 .footer-logo {
-    width: 50px;
+    width: 3.25em;
 }
 
 .social-media-icon-group {
@@ -454,18 +456,11 @@ a:active {
     text-align: center;
 }
 
-.Carousel-Instruction-Text {
-    text-align: right;
-    text-transform: uppercase;
-    margin-top: 270px;
-    margin-right: 60px;
-}
-
 
 
 /* PORTFOLIO GRID GALLERY */
 .portfolio-grid-gallery-title {
-    margin-top: 150px;
+    margin-top: 9.5em;
     padding: 2em;
 }
 
@@ -475,7 +470,7 @@ a:active {
 }
 
 .portfolio-grid-gallery-section {
-    padding: 30px 0px 30px 0px;
+    padding: 1.5em 0px 1.5em 0px;
     font-size: 1em;
 }
 
@@ -486,12 +481,12 @@ a:active {
 }
 
 .portfolio-grid-gallery-img {
-    border-radius: 10px;
-    width: 450px;
+    border-radius: 1.6em;
+    width: 28.5em;
 }
 
 .portfolio-grid-gallery-arrow {
-    margin-bottom: 150px;
+    margin-bottom: 9.5em;
     padding: 2em;
 }
 
@@ -512,7 +507,7 @@ a:active {
 .comic-reader_phone {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 1.25em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -540,8 +535,8 @@ a:active {
 #fairy-door_slider {
     position: relative;
     overflow: hidden;
-    margin: 10px auto 0px auto;
-    border-radius: 4px;
+    margin: 1.6em auto 0px auto;
+    border-radius: 0.25em;
 }
 
 #fairy-door_slider ul {
@@ -557,7 +552,7 @@ a:active {
     display: block;
     float: left;
     /*margin: 0;
-  padding: 0;*/
+    padding: 0;*/
     width: 1400px;
     height: 404px;
     background: #ccc;
@@ -645,19 +640,222 @@ a.control_next {
 }
 
 /* Laptops and Desktops */
-@media only screen and (min-width: 1025px) {}
+@media only screen 
+    and (min-width: 1025px) {
+        .hero-section-desktop {
+            display: none;
+        }
+        .carousel-portfolio-gallery {
+            display: none;
+        }
+        
+        .portfolio-grid-gallery {
+            grid-template-columns: auto auto auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 18.75em;
+        }
+        
+        .portfolio-project-desktop-column {
+            display: none;
+        }
+        .portfolio-project-gallery {
+            width: 100%;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+}
 
 /* Tablet and Lo-Res Laptops and Desktops */
-@media only screen and (min-width: 961px) {}
+@media only screen 
+    and (min-width: 961px) {
+        .hero-section-desktop {
+            display: none;
+        }
+        
+        .portfolio-grid-gallery {
+            grid-template-columns: auto auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 27em;
+        }
+        
+        .portfolio-project-desktop-column {
+            display: none;
+        }
+        .portfolio-project-gallery {
+            width: 100%;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+}
 
 /* Tablets and iPads */
-@media only screen and (min-width: 641px) {}
+@media only screen 
+    and (min-width: 641px) {
+        .footer-bio-text {
+            width: auto;
+        }
+        
+        .hero-section-desktop {
+            display: none;
+        }
+        
+        .portfolio-grid-gallery {
+            grid-template-columns: auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 90%;
+        }
+        
+        .portfolio-project-desktop-column {
+            display: none;
+        }
+        .portfolio-project-gallery {
+            width: 100%;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+}
 
 /* Smaller Tablets and E-Readers */
-@media only screen and (min-width: 481px) {}
+@media only screen 
+    and (min-width: 481px) {
+        .all-page-footer {
+            height: auto;
+        }
+        .footer-bio-text {
+            width: auto;
+        }
+        .social-media-icon-group {
+            flex-direction: column;
+        }
+        
+        .hero-section-desktop {
+            display: none;
+        }
+        
+        .portfolio-grid-gallery {
+            grid-template-columns: auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 100%;
+        }
+        
+        .portfolio-project-desktop-column {
+            display: none;
+        }
+        .portfolio-project-gallery {
+            width: 100%;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+        
+}
 
 /* Smartphones, Android phones, iPhones */
-@media only screen and (min-width: 320px) {}
+@media only screen 
+    and (min-width: 320px) {
+        .all-page-footer {
+            height: auto;
+        }
+        .footer-bio-text {
+            width: auto;
+        }
+        .social-media-icon-group {
+            flex-direction: column;
+        }
+        
+        .hero-section-desktop {
+            display: none;
+        }
+        
+        .portfolio-grid-gallery {
+            grid-template-columns: auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 100%;
+        }
+        
+        .portfolio-project-desktop-column {
+            display: none;
+        }
+        .portfolio-project-gallery {
+            width: 100%;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+}
 
 
 
@@ -665,6 +863,7 @@ a.control_next {
 
 /* All iPad Sizes*/
 /* iPad 1, 2, Mini and Air */
+/*
 @media only screen
     and (max-width: 768px)
     and (max-height: 1024px) {
@@ -734,9 +933,11 @@ a.control_next {
             width: 80%;
         }        
 }
+*/
 
 
 /* iPad 3, 4 and Pro 9.7" also iPad 6th gen */
+/*
 @media only screen
     and (max-width: 1536px)
     and (max-height: 2048px) {
@@ -813,9 +1014,11 @@ a.control_next {
             width: 60%;
         }        
 }
+*/
 
 
 /* iPad Pro 10.5" */
+/*
 @media only screen
     and (max-width: 834px)
     and (max-height: 1112px) {
@@ -884,9 +1087,11 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 
 /* iPad Pro 12.9" */
+/*
  @media only screen
     and (max-width: 1024px)
      and (max-height: 1366px) {
@@ -955,10 +1160,12 @@ a.control_next {
             width: 70%;
         }
 }
+*/
 
 
 /* All iPhone Sizes*/
 /* iPhone 4 and 4S */
+/*
 @media only screen
     and (max-width: 320px)
     and (max-height: 480px) {
@@ -1027,7 +1234,9 @@ a.control_next {
             width: 80%;
         }        
 }
+*/
 
+/*
 @media only screen
     and (max-width: 640px)
     and (max-height: 960px) {
@@ -1096,9 +1305,11 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 
 /* iPhone 5, 5S, 5C and 5SE */
+/*
 @media only screen
     and (max-width: 320px)
     and (max-height: 568px) {
@@ -1167,7 +1378,9 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
+/*
 @media only screen
     and (max-width: 640px)
     and (max-height: 1136px) {
@@ -1236,9 +1449,11 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 
 /* iPhone 6, 6S, 7 and 8 */
+/*
 @media only screen
     and (max-width: 375px)
     and (max-height: 667px) {
@@ -1307,7 +1522,9 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
+/*
 @media only screen
     and (max-width: 750px)
     and (max-height: 1334px) {
@@ -1376,9 +1593,11 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 
 /* iPhone 6+, 7+ and 8+ */
+/*
 @media only screen
     and (max-width: 414px)
     and (max-height: 736px) {
@@ -1447,7 +1666,9 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
+/*
 @media only screen
     and (max-width: 1242px)
     and (max-height: 2208px) {
@@ -1516,9 +1737,11 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 
 /* iPhone X */
+/*
 @media only screen
     and (max-width: 375px)
     and (max-height: 812px) {
@@ -1587,7 +1810,9 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
+/*
 @media only screen
     and (max-width: 1125px)
     and (max-height: 2436px) {
@@ -1656,11 +1881,162 @@ a.control_next {
             width: 80%;
         }
 }
+*/
 
 /* Xiaomi Mi 9T */
+/*
 @media only screen
     and (max-width: 360px)
-    and (max-height: 780px) {}
+    and (max-height: 780px) {
+        .allpage-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .allpage-footer {
+            height: 88vh;
+        }
+        .footer-bio-text {
+            width: auto;
+        }
+        
+        .hero-section-desktop {
+            display: none;
+        }
+        .hero-section-desktop-column {
+            display: none;
+        }
+        .carousel-portfolio-gallery {
+            display: none;
+        }
+        .Carousel-Instruction-Text {
+          display: none;
+        }
+        
+        .portfolio-grid-gallery-title {
+            margin-top: 50px;
+            padding: 2em;
+        }
+        .portfolio-grid-gallery {
+          grid-template-columns: auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 100%;
+        }
+        
+        .portfolio-project-desktop-column {
+            display:none;
+        }
+        .portfolio-project-gallery {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            padding-top: 3em;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+        .comic-tablet-width {
+            width: 80%;
+        }        
+}
+*/
+
+/*
+@media only screen
+    and (max-width: 720px)
+    and (max-height: 1560px) {
+        .allpage-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .allpage-footer {
+            height: 88vh;
+        }
+        
+        .nav-logo {
+            width: 3em;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+        .footer-logo {
+            width: 3em;
+        }
+        .footer-bio-text {
+            width: auto;
+        }
+        .social-media-icon-group {
+            flex-direction: column;
+        }
+        
+        .hero-section-desktop {
+            display: none;
+        }
+        .hero-section-desktop-column {
+            display: none;
+        }
+        .carousel-portfolio-gallery {
+            display: none;
+        }
+        .Carousel-Instruction-Text {
+          display: none;
+        }        
+        
+        .portfolio-grid-gallery-title {
+            margin-top: 50px;
+            padding: 2em;
+        }
+        .portfolio-grid-gallery {
+          grid-template-columns: auto;
+        }
+        .portfolio-grid-gallery-img {
+            width: 100%;
+        }
+        
+        .portfolio-project-desktop-column {
+            display:none;
+        }
+        .portfolio-project-gallery {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            padding-top: 3em;
+        }
+        .portfolio-project-portrait {
+            width: 100%;
+        }
+        
+        .comic-reader_desktop {
+            display: none;
+        }
+        .comic-reader_desktop-text {
+            display: none;
+        }
+        .title-comic-reader {
+            display: none;
+        }
+        .subtitle-comic-reader {
+            display: none;
+        }
+        .comic-tablet-width {
+            width: 100%;
+        }
+}
+*/
 
 @media only screen
     and (max-width: 1080px)
@@ -1685,7 +2061,7 @@ a.control_next {
     and (max-height: 1920px) {}
 
 
-/* Galaxy S6 */
+/* Galaxy S6, Google Pixel XL */
 @media only screen
     and (max-width: 360px)
     and (max-height: 640px) {}
@@ -1697,7 +2073,6 @@ a.control_next {
 
 /* HTC One */
 /* Google Pixel */
-/* Google Pixel XL */
 /* Nexus 4 */
 /* Nexus 5 */
 /* Nexus 6 and 6P */

@@ -28,7 +28,7 @@ html {
 }
 
 body {
-/*    overflow: hidden;*/
+    
 }
 
 .arrow-to-top-black {
@@ -371,7 +371,7 @@ a:active {
     background-size: 10em;
     background-repeat: repeat;
     margin-top: 6.25em;
-    height: 85vh;
+    min-height: 100vh;
     padding: 60px;
 }
 
@@ -461,7 +461,7 @@ a:active {
 /* PORTFOLIO GRID GALLERY */
 .portfolio-grid-gallery-title {
     margin-top: 9.5em;
-    padding: 2em;
+    padding: 2em 2em 0em 2em;
 }
 
 .portfolio-grid-gallery {
@@ -631,6 +631,13 @@ a.control_next {
         .hero-section-tablet-column {
             display: none;
         }
+        .hero-section-desktop {
+            display: initial;
+        }
+        .carousel-portfolio-gallery {
+            display: initial;
+        }
+        
         .portfolio-project-tablet-column {
             display: none;
         }
@@ -641,7 +648,7 @@ a.control_next {
 
 /* Laptops and Desktops */
 @media only screen 
-    and (min-width: 1025px) {
+    and (max-width: 1280px) {
         .hero-section-desktop {
             display: none;
         }
@@ -682,11 +689,14 @@ a.control_next {
 
 /* Tablet and Lo-Res Laptops and Desktops */
 @media only screen 
-    and (min-width: 961px) {
+    and (max-width: 1025px) {
         .hero-section-desktop {
             display: none;
         }
         
+        .portfolio-grid-gallery-title {
+            margin-top: 8em;
+        }
         .portfolio-grid-gallery {
             grid-template-columns: auto auto;
         }
@@ -720,7 +730,7 @@ a.control_next {
 
 /* Tablets and iPads */
 @media only screen 
-    and (min-width: 641px) {
+    and (max-width: 960px) {
         .footer-bio-text {
             width: auto;
         }
@@ -729,6 +739,9 @@ a.control_next {
             display: none;
         }
         
+        .portfolio-grid-gallery-title {
+            margin-top: em;
+        }
         .portfolio-grid-gallery {
             grid-template-columns: auto;
         }
@@ -762,7 +775,7 @@ a.control_next {
 
 /* Smaller Tablets and E-Readers */
 @media only screen 
-    and (min-width: 481px) {
+    and (max-width: 640px) {
         .all-page-footer {
             height: auto;
         }
@@ -811,7 +824,7 @@ a.control_next {
 
 /* Smartphones, Android phones, iPhones */
 @media only screen 
-    and (min-width: 320px) {
+    and (max-width: 480px) {
         .all-page-footer {
             height: auto;
         }
@@ -826,6 +839,9 @@ a.control_next {
             display: none;
         }
         
+        .portfolio-grid-gallery-title {
+            margin-top: 5em;
+        }
         .portfolio-grid-gallery {
             grid-template-columns: auto;
         }

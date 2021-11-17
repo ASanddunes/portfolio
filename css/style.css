@@ -439,7 +439,7 @@ a:active {
     top: 50%;
     width: 1000px;
     height: 105vh;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 #Carousel-Container {

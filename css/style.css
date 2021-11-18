@@ -288,6 +288,7 @@ a:active {
     width: 3.25em;
     padding-left: 3em;
     padding-right: 3em;
+    cursor: pointer;
 }
 
 .navigation-content {
@@ -396,6 +397,7 @@ a:active {
 
 .footer-logo {
     width: 3.25em;
+    cursor: pointer;
 }
 
 .social-media-icon-group {

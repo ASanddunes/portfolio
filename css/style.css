@@ -677,6 +677,9 @@ a.control_next {
             display: none;
         }
         
+        .portfolio-grid-gallery-title {
+            margin-top: 8em;
+        }
         .portfolio-grid-gallery {
             grid-template-columns: auto auto auto;
         }

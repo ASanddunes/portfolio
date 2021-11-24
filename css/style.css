@@ -203,6 +203,18 @@ a:active {
     text-shadow: none;
 }
 
+.carousel-headings {
+    font-family: "Raleway";
+    color: rgba(225, 225, 225, 0.9);
+    font-size: 1.15em;
+    font-weight: 700;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    text-decoration: none;
+    margin-top: 2.0em;
+    margin-bottom: 0.5em;
+}
+
 .carousel-instruction-text {
     text-align: right;
     text-transform: uppercase;
@@ -213,6 +225,16 @@ a:active {
     font-size: 1.5em;
     text-align: center;
     padding: 1em;
+}
+
+.portfolio-grid-gallery-subheadings {
+    font-size: 0.85em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+    text-align: center;
+    padding: 0.5em 0em 1.25em 0em;
 }
 
 .portfolio-grid-subtitle {
@@ -252,8 +274,8 @@ a:active {
 
 .comic-reader_desktop-text {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 70ch;
+    margin-top: 1.35em;
 }
 
 .title-comic-reader {
@@ -640,6 +662,7 @@ $color3: #1FA9D6;
 .portfolio-grid-gallery {
     display: grid;
     grid-template-columns: auto auto auto;
+    margin-bottom: 22em;
 }
 
 .portfolio-grid-gallery-section {
@@ -658,18 +681,19 @@ $color3: #1FA9D6;
     width: 28.5em;
 }
 
-.portfolio-grid-gallery-arrow {
-    margin-bottom: 20em;
-    padding: 2em;
-}
-
-
 
 /* COMIC READERS */
 /* Special Columns*/
 .comic-reader_text {
     width: 100%;
     text-align: center;
+}
+
+.comic-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 .comic-reader_desktop {
@@ -697,10 +721,6 @@ $color3: #1FA9D6;
 }
 
 .comic-fairy-door-background-tablet {
-    background-color: white;
-}
-
-.tablet-fairy-door-background {
     background-color: white;
 }
 
@@ -817,6 +837,9 @@ a.control_next {
         .comic-letting-go-background-tablet {
             display:none;
         }
+        .comic-fairy-door-background-tablet {
+            display:none;
+        }
 }
 
 /* Laptops and Desktops */
@@ -907,6 +930,11 @@ a.control_next {
 /* Tablets and iPads */
 @media only screen 
     and (max-width: 960px) {
+        .arrow-sticky {
+            right: 2.5em;
+            bottom: 2.5em;
+        }
+        
         .footer-bio-text {
             width: auto;
         }
@@ -1001,6 +1029,11 @@ a.control_next {
 /* Smartphones, Android phones, iPhones */
 @media only screen 
     and (max-width: 480px) {
+        .arrow-sticky {
+            right: 1.5em;
+            bottom: 1em;
+        }
+        
         .allpage-navigation {
             margin: auto;
         }

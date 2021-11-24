@@ -52,15 +52,10 @@ iframe {
     right: 3.5em;
     bottom: 2.5em;
     z-index: 2000;
-/*    color: #cbcbcb;*/
-/*    color: #43abc9;*/
-    color: rgba(0,0,0,0.8);
     cursor: pointer;
     text-shadow: none;
     border-radius: 50%;
-    background-image: url(/img/background-tiles/background-tile-footer.jpg);
-    background-size: 10em;
-    background-repeat: repeat;
+    background-color: #a8a8a8;
 }
 
 .arrow-button {
@@ -90,7 +85,6 @@ allpage-glue {}
     color: rgba(255, 255, 255, 1.0);
     font-weight: bold;
     font-size: 2.5em;
-/*    letter-spacing: 0.06em;*/
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
@@ -133,7 +127,6 @@ h3 {
     color: rgba(225, 225, 225, 0.9);
     font-size: 1.15em;
     font-weight: 700;
-/*    letter-spacing: 0.04em;*/
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
     text-decoration: none;
@@ -146,7 +139,6 @@ p {
     color: rgba(255, 255, 255, 1.0);
     font-size: 1.15em;
     line-height: 1.5;
-/*    text-align: justify;*/
     text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
     filter: dropshadow(color=#000000, offx=1, offy=1);
     margin-top: -0.5em;
@@ -161,23 +153,13 @@ a {
     text-decoration: none;
 }
 
-a:link {
-/*    color:RGBA(67, 171, 201, 1.0);*/
-}
-
 a:hover {
     color: #107896;
     cursor: pointer;
-/*    text-decoration: underline;*/
-}
-
-a:visited {
-/*    color: RGBA(67, 171, 201, 0.5);*/
 }
 
 a:active {
     color: RGBA(192, 47, 29, 1.0);
-/*    text-decoration: underline;*/
 }
 
 .allpage-navigation a {
@@ -235,17 +217,6 @@ a:active {
     filter: dropshadow(color=#000000, offx=1, offy=1);
     text-align: center;
     padding: 0.5em 0em 1.25em 0em;
-}
-
-.portfolio-grid-subtitle {
-    font-size: 0.7em;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-shadow: -1px -1px 4px rgba(0, 0, 0, .8);
-    filter: dropshadow(color=#000000, offx=1, offy=1);
-    text-align: center;
-    padding: 0px 0px 20px 0px;
-    margin-top: 5px;
 }
 
 .portfolio-piece-description {
@@ -323,122 +294,11 @@ a:active {
     justify-content: center;
 }
 
-$color1: white;
-$color2: #342643;
-$color3: #1FA9D6;
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 .error {
     font-size: 4em;
     color: $color1;
     position:relative;
 }
-
-// Glitch animation from https://codepen.io/lbebber/pen/ypgql
-@keyframes noise-anim{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(200)+px,9999px,random(200)+px,0);
-    }
-  }
-}
-
-.error:after{
-  content:attr(data-content);
-  position:absolute;
-  left:2px;
-  text-shadow:-1px 0 red;
-  top:0;
-  color:$color1;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim 2s infinite linear alternate-reverse;
-}
-
-@keyframes noise-anim-2{
-  $steps:20;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      clip:rect(random(200)+px,9999px,random(200)+px,0);
-    }
-  }
-}
-
-.error:before{
-  content:attr(data-content);
-  position:absolute;
-  left:-2px;
-  text-shadow:1px 0 blue; 
-  top:0;
-  color:$color1;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  animation:noise-anim-2 3s infinite linear alternate-reverse;
-}
-
-
-
-/*
-.error {
-    animation: glitch 1s linear infinite;
-    text-align: center;
-    font-size: 4em;
-    font-family: 'Raleway';
-    color: white;
-}
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg); 
-  }
-}
-.error:before, error:after {
-    content:attr(title);
-    position: absolute;
-    left: 0;
-}
-.error:before {
-    animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg); 
-  }
-}
-.error:after {
-    animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-2px,0);
-  }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
-  }
-}
-*/
 
 
 
@@ -944,10 +804,11 @@ a.control_next {
         }
         
         .portfolio-grid-gallery-title {
-            margin-top: em;
+            margin-top: 10em;
         }
         .portfolio-grid-gallery {
             grid-template-columns: auto auto;
+            margin-bottom: 10em;
         }
         .portfolio-grid-gallery-img {
             width: 90%;
@@ -1064,6 +925,7 @@ a.control_next {
         }
         .portfolio-grid-gallery {
             grid-template-columns: auto;
+            margin-bottom: 5em;
         }
         .portfolio-grid-gallery-img {
             width: 100%;
@@ -1090,6 +952,9 @@ a.control_next {
         }
         .subtitle-comic-reader {
             display: none;
+        }
+        .comic-tablet-width {
+            width: 100%;
         }
 }
 

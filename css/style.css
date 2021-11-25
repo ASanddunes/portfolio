@@ -80,7 +80,7 @@ allpage-glue {}
 
 /* TYPOGRAPHY */
 .title {
-    font-family: "Raleway";
+    font-family: "Kabel", "Raleway";
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-weight: 600;

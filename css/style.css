@@ -538,6 +538,7 @@ a:active {
 .portfolio-grid-gallery-img {
     border-radius: 0.8em;
     width: 28.5em;
+    cursor: pointer;
 }
 
 

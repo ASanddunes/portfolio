@@ -80,7 +80,7 @@ allpage-glue {}
 
 /* TYPOGRAPHY */
 .title {
-    font-family: "Kabel", "Raleway";
+    font-family: "Raleway";
     src: url(/Kabel/Kabel_Regular.ttf);
     color: rgba(255, 255, 255, 1.0);
     font-weight: 600;
@@ -536,7 +536,7 @@ a:active {
 }
 
 .portfolio-grid-gallery-img {
-    border-radius: 0.8em;
+    border-radius: 0.4em;
     width: 28.5em;
     cursor: pointer;
 }

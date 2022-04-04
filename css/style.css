@@ -807,11 +807,18 @@ a.control_next {
             margin-top: 10em;
         }
         .portfolio-grid-gallery {
-            grid-template-columns: auto auto;
-            margin-bottom: 10em;
+            grid-template-columns: 50% 50%;
+            
+/*            margin-bottom: 10em;*/
         }
+        
+        .portfolio-grid-gallery-section {
+            padding: 0em 0px 0em 0px;
+            font-size: 1em;
+        }
+        
         .portfolio-grid-gallery-img {
-            width: 90%;
+            width: 75%;
         }
         
         .portfolio-project-desktop-column {

@@ -804,7 +804,7 @@ a.control_next {
         }
         
         .portfolio-grid-gallery-title {
-            margin-top: 10em;
+            margin-top: 5em;
         }
         .portfolio-grid-gallery {
             grid-template-columns: 50% 50%;
@@ -812,7 +812,7 @@ a.control_next {
         }
         
         .portfolio-grid-gallery-section {
-            padding: 1em 0px 1em 0px;
+            padding: 1.5em 0px 1.5em 0px;
             font-size: 1em;
         }
         

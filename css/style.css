@@ -447,6 +447,12 @@ a:active {
 
 /* CAROUSEL */
 /* hardware accelatator class */
+#fps
+{
+	margin-top:5px;
+	margin-left:35px;
+}
+
 .trans3d {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: translate3d(0, 0, 0);

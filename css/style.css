@@ -523,6 +523,12 @@ a:active {color: RGBA(192, 47, 29, 0.8);}
         .arrow-sticky {right: 2.5em; bottom: 2.5em;}
         
         .all-page--portfolio-grid-gallery {grid-template-columns: auto auto;}
+        
+        .all-page--portfolio-grid-gallery--icon p {
+            opacity: 1;
+            transform: scale(1);
+            transition: 0.0s;
+        }
             
         .all-page--footer--body-text {width: auto;}
         
@@ -565,6 +571,11 @@ a:active {color: RGBA(192, 47, 29, 0.8);}
 /* Smaller Tablets and E-Readers */
 @media only screen 
     and (max-width: 640px) {
+        .all-page--portfolio-grid-gallery--icon p {
+            transform: scale(0.9);
+            top: 30%;
+        }
+        
         .portfolio-project--image--portrait {
             width: 100%;
         }
@@ -582,4 +593,9 @@ a:active {color: RGBA(192, 47, 29, 0.8);}
         .index--hero-section--text {width: auto;}
         
         .all-page--portfolio-grid-gallery {grid-template-columns: auto;}
+        
+        .all-page--portfolio-grid-gallery--icon p {
+            transform: scale(1.25);
+            top: 40%;
+        }
 }

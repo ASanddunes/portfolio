@@ -142,22 +142,16 @@ a:active {color: RGBA(192, 47, 29, 0.8);}
 /* 404 PAGE CSS */
 .error-screen-column {
     display: flex;
-    margin: auto;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     height: 98vh;
-    overflow: hidden;
 }
 .error-arrow {
-    display:flex;
-    z-index: 2000;
+    display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 .error {
     font-size: 4em;
-    color: $color1;
-    position:relative;
 }
 
 
